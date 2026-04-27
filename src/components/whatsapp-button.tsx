@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const WA_NUMBER = "5511999999999";
+const WA_NUMBER = "5511978535723";
 const WA_MESSAGE = encodeURIComponent(
   "Oi! Quero saber mais sobre a criação do meu site profissional."
 );

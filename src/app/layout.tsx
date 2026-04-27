@@ -81,7 +81,19 @@ function StructuredData() {
     name: SITE_NAME,
     description: SITE_DESC,
     url: SITE_URL,
+    telephone: "+5511978535723",
     priceRange: "R$1.500 - R$2.000",
+    sameAs: [
+      "https://www.instagram.com/signastudios.ai/",
+      "https://www.facebook.com/profile.php?id=61567664831215",
+      "https://wa.me/5511978535723",
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+5511978535723",
+      contactType: "customer service",
+      availableLanguage: ["Portuguese"],
+    },
     areaServed: {
       "@type": "Country",
       name: "Brasil",

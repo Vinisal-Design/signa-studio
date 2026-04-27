@@ -56,7 +56,7 @@ export function Footer() {
 
         <div className="mt-10 flex justify-center gap-6">
           <a
-            href="https://wa.me/5511999999999"
+            href="https://wa.me/5511978535723"
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.03] border border-white/[0.06] text-text-dim transition-all duration-300 hover:text-foreground hover:bg-white/[0.06] hover:border-white/[0.1]"
@@ -67,7 +67,7 @@ export function Footer() {
             </svg>
           </a>
           <a
-            href="https://instagram.com/signastudio"
+            href="https://www.instagram.com/signastudios.ai/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.03] border border-white/[0.06] text-text-dim transition-all duration-300 hover:text-foreground hover:bg-white/[0.06] hover:border-white/[0.1]"
@@ -75,6 +75,17 @@ export function Footer() {
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61567664831215"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.03] border border-white/[0.06] text-text-dim transition-all duration-300 hover:text-foreground hover:bg-white/[0.06] hover:border-white/[0.1]"
+            aria-label="Facebook"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
             </svg>
           </a>
         </div>
