@@ -53,7 +53,8 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.25, ease }}
         >
-          <span className="underline-glow text-foreground">Sem você pagar nada</span>{" "}
+          <span className="underline-glow text-foreground">Sem você pagar nada</span>
+          <br className="sm:hidden" />{" "}
           antes de ver pronto e gostar.
         </motion.p>
 
