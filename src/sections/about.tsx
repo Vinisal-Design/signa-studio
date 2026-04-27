@@ -46,7 +46,7 @@ export function About() {
               por sites amadores ou por agencias que cobram caro e entregam devagar.
             </p>
             <p className="mt-4 text-[15px] leading-[1.7] text-text-muted">
-              Desenvolvemos o <span className="text-foreground font-medium">Metodo Sprint 24</span> —
+              Desenvolvemos o <span className="text-foreground font-medium">Metodo Sprint 24</span>,
               um processo enxuto que elimina reunioes desnecessarias, burocracia e overhead.
               O resultado: sites profissionais de alta qualidade entregues em 24 horas, por uma
               fracao do preco de mercado.
@@ -73,7 +73,7 @@ export function About() {
                   <div className="card-glow relative overflow-hidden rounded-2xl aspect-[3/4]">
                     <img
                       src={person.image}
-                      alt={`${person.name} — ${person.role} na SIGNA STUDIO`}
+                      alt={`${person.name}, ${person.role} na SIGNA STUDIO`}
                       className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
                       loading="lazy"
                       width={400}

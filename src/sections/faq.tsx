@@ -7,7 +7,7 @@ import { FadeIn, StaggerContainer, StaggerItem, MeshBackground } from "@/compone
 const faqs = [
   {
     q: "24 horas de verdade? Como e possivel?",
-    a: "Sim, 24 horas uteis. Sem asterisco. Temos um processo enxuto chamado Metodo Sprint 24 — especializado e refinado em mais de 200 projetos. Voce manda o briefing, nos entregamos.",
+    a: "Sim, 24 horas uteis. Sem asterisco. Temos um processo enxuto chamado Metodo Sprint 24, especializado e refinado em mais de 200 projetos. Voce manda o briefing, nos entregamos.",
   },
   {
     q: "R$2.000 por um site profissional? Qual e o truque?",
@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "Reformar ou fazer um novo?",
-    a: "Se a estrutura esta ok e o problema e visual, a reforma (R$1.500) resolve. Se o site e antigo demais, o novo (R$2.000) e o caminho. Manda o link — damos diagnostico honesto em 2 horas.",
+    a: "Se a estrutura esta ok e o problema e visual, a reforma (R$1.500) resolve. Se o site e antigo demais, o novo (R$2.000) e o caminho. Manda o link, damos diagnostico honesto em 2 horas.",
   },
 ];
 

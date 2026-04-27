@@ -14,7 +14,7 @@ const SITE_DESC =
   "Crie seu site profissional em 24 horas. Design exclusivo, SEO otimizado e 100% responsivo para dentistas, psicologos, restaurantes, coaches e prestadores de servico. A partir de R$1.500 com garantia total de satisfacao.";
 
 export const metadata: Metadata = {
-  title: `${SITE_NAME} — Site Profissional em 24 Horas | Criacao Express de Sites`,
+  title: `${SITE_NAME} | Site Profissional em 24 Horas | Criacao Express de Sites`,
   description: SITE_DESC,
   keywords: [
     "criacao de site profissional",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: `${SITE_NAME} — Site Profissional em 24 Horas`,
+    title: `${SITE_NAME} | Site Profissional em 24 Horas`,
     description: SITE_DESC,
     type: "website",
     locale: "pt_BR",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — Site Profissional em 24 Horas`,
+    title: `${SITE_NAME} | Site Profissional em 24 Horas`,
     description: SITE_DESC,
   },
   robots: {

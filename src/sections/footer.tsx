@@ -80,7 +80,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/[0.04] pt-8 text-[11px] text-text-dim sm:flex-row">
-          <p>&copy; {year} SIGNA STUDIO — Todos os direitos reservados.</p>
+          <p>&copy; {year} SIGNA STUDIO. Todos os direitos reservados.</p>
           <p>
             Feito com precisao por{" "}
             <span className="text-accent-light">SIGNA STUDIO</span>

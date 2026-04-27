@@ -31,7 +31,7 @@ const plans = [
     features: [
       "Design exclusivo e premium",
       "Ate 7 secoes estrategicas",
-      "100% responsivo — perfeito em qualquer tela",
+      "100% responsivo, perfeito em qualquer tela",
       "SEO otimizado para Google",
       "Integracao WhatsApp + formulario",
       "Textos persuasivos escritos por nos",
@@ -55,7 +55,7 @@ const plans = [
       "Relatorios mensais de performance",
       "Suporte prioritario via WhatsApp",
       "Otimizacao continua de velocidade",
-      "Sem fidelidade — cancele quando quiser",
+      "Sem fidelidade, cancele quando quiser",
     ],
     popular: false,
     ctaText: "Quero manutencao",

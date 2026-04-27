@@ -24,9 +24,9 @@ const marqueeItems = [
 ];
 
 const trustBadges = [
-  "Design exclusivo — nao usamos templates",
-  "100% responsivo — perfeito no celular",
-  "SEO otimizado — apareça no Google",
+  "Design exclusivo, nao usamos templates",
+  "100% responsivo, perfeito no celular",
+  "SEO otimizado, apareca no Google",
   "Dominio + hospedagem inclusos",
 ];
 

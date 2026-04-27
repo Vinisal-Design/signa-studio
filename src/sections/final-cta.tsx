@@ -43,7 +43,7 @@ export function FinalCTA() {
           viewport={{ once: true }}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
-          O profissional do outro lado da rua — com site bonito e agendamento online —
+          O profissional do outro lado da rua, com site bonito e agendamento online,
           esta recebendo os clientes que deveriam ser seus.{" "}
           <span className="text-foreground">A diferenca e presenca online.</span>
         </motion.p>
@@ -78,7 +78,7 @@ export function FinalCTA() {
           viewport={{ once: true }}
           transition={{ delay: 1.2 }}
         >
-          P.S. — Voce nao paga nada adiantado e tem garantia de satisfacao.
+          P.S. Voce nao paga nada adiantado e tem garantia de satisfacao.
           O unico risco e continuar com um site que espanta clientes.
         </motion.p>
       </motion.div>

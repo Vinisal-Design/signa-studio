@@ -5,21 +5,21 @@ import { FadeIn, StaggerContainer, StaggerItem, MeshBackground } from "@/compone
 const testimonials = [
   {
     name: "Dr. Marcelo Ribeiro",
-    role: "Dentista — Campinas, SP",
+    role: "Dentista, Campinas, SP",
     text: "Ja tinha pago R$4.000 para uma agencia que levou 3 meses. A Signa fez em 24 horas um site que eu tive vergonha de comparar com o anterior. Ja recuperei o investimento em menos de um mes.",
     initials: "MR",
     rating: 5,
   },
   {
     name: "Fernanda Oliveira",
-    role: "Nutricionista — Belo Horizonte, MG",
+    role: "Nutricionista, Belo Horizonte, MG",
     text: "Achei que 24 horas era papo de marketing. Mandei a mensagem as 10h de segunda. Na terca de manha, meu site estava pronto. Profissional, moderno, com minha cara. Melhor investimento pro consultorio.",
     initials: "FO",
     rating: 5,
   },
   {
     name: "Rafael Menezes",
-    role: "Bistro — Curitiba, PR",
+    role: "Bistro, Curitiba, PR",
     text: "Nosso restaurante existia ha 12 anos e nunca teve site de verdade. A Signa criou um site que finalmente mostra quem nos somos. Reservas diretas aumentaram. Recomendo de olhos fechados.",
     initials: "RM",
     rating: 5,
