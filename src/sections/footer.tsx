@@ -88,7 +88,25 @@ export function Footer() {
               <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
             </svg>
           </a>
+          <a
+            href="mailto:contact@signastudio.app"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.03] border border-white/[0.06] text-text-dim transition-all duration-300 hover:text-foreground hover:bg-white/[0.06] hover:border-white/[0.1]"
+            aria-label="Email"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>
+            </svg>
+          </a>
         </div>
+
+        <FadeIn className="mt-6">
+          <a
+            href="mailto:contact@signastudio.app"
+            className="block text-center text-[13px] text-text-dim transition-colors duration-300 hover:text-foreground"
+          >
+            contact@signastudio.app
+          </a>
+        </FadeIn>
 
         {/* Micro-Meta 4 — frame destino brasileiro (Cialdini consistency + Klaff prize) */}
         <FadeIn className="mt-14">
