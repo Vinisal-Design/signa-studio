@@ -36,8 +36,15 @@
   --font-mono: var(--font-mono);
 }
 
+/* Lenis owns smooth scroll — native smooth would fight it. */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -46,6 +53,17 @@ body {
   font-family: var(--font-body), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
 }
 
 ::selection {
@@ -165,22 +183,27 @@ body {
 
 .animate-marquee {
   animation: marquee 35s linear infinite;
+  will-change: transform;
 }
 
 .animate-float {
   animation: float 8s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-mesh-drift {
   animation: mesh-drift 25s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-mesh-drift-reverse {
   animation: mesh-drift-reverse 30s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-glow-breathe {
   animation: glow-breathe 4s ease-in-out infinite;
+  will-change: opacity;
 }
 
 /* ═══ DECORATIVE GRID ═══ */
@@ -486,9 +509,24 @@ html.lenis body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
   .hero-bg-beams,
-  .hero-bg-grain {
-    animation: none;
+  .hero-bg-grain,
+  .animate-marquee,
+  .animate-float,
+  .animate-mesh-drift,
+  .animate-mesh-drift-reverse,
+  .animate-glow-breathe,
+  .animate-scroll-bounce {
+    animation: none !important;
   }
 }
 

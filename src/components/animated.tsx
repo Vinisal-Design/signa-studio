@@ -333,13 +333,20 @@ export function Marquee({
   speed?: number;
 }) {
   return (
-    <div className={`overflow-hidden ${className}`}>
+    <div
+      className={`overflow-hidden ${className}`}
+      style={{ contain: "paint" }}
+    >
       <div
         className="flex whitespace-nowrap"
-        style={{ animation: `marquee ${speed}s linear infinite` }}
+        style={{
+          animation: `marquee ${speed}s linear infinite`,
+          willChange: "transform",
+        }}
+        aria-hidden={false}
       >
         {children}
-        {children}
+        <span aria-hidden>{children}</span>
       </div>
     </div>
   );
@@ -380,21 +387,42 @@ export function ParallaxSection({
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
+    if (
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
+
+    let rafId = 0;
+    let pending = false;
+
+    const update = () => {
+      pending = false;
       if (!ref.current) return;
       const rect = ref.current.getBoundingClientRect();
       const viewH = window.innerHeight;
       const progress = (viewH - rect.top) / (viewH + rect.height);
       setOffset((progress - 0.5) * speed * 100);
     };
+
+    const handleScroll = () => {
+      if (pending) return;
+      pending = true;
+      rafId = requestAnimationFrame(update);
+    };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
+    update();
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
   }, [speed]);
 
   return (
     <div ref={ref} className={className}>
-      <motion.div style={{ y: offset }}>
+      <motion.div style={{ y: offset, willChange: "transform" }}>
         {children}
       </motion.div>
     </div>
