@@ -343,10 +343,9 @@ export function Marquee({
           animation: `marquee ${speed}s linear infinite`,
           willChange: "transform",
         }}
-        aria-hidden={false}
       >
-        {children}
-        <span aria-hidden>{children}</span>
+        <div className="flex shrink-0">{children}</div>
+        <div className="flex shrink-0" aria-hidden="true">{children}</div>
       </div>
     </div>
   );
