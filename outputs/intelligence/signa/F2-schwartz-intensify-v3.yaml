@@ -1,0 +1,318 @@
+schwartz_intensify_v3:
+  task_id: COPY-2026-04-27-001-SIGNA-FULLSITE
+  invoked_by: copy-chief
+  invoked_at: 2026-04-27
+  framework_applied: "Breakthrough Advertising Ch.7 — 7-Step Intensification"
+  diagnosis_status: |
+    v2 falha porque usa generalidades onde precisa de especificidade visceral.
+    O prospect NAO sente — ele lê e segue. Intensificacao = fazer ele SENTIR
+    a perda antes da compra.
+
+  cross_section_themes:
+    primary_thread: |
+      O Marcelo e a Claudia compartilham UM medo nuclear nao verbalizado:
+      "Vou ser o profissional invisivel enquanto meu concorrente — que nao
+      e melhor que eu — fica com o cliente". Toda section deve tocar nessa
+      ferida em frequencia diferente. Hero arde, How-It-Works diagnostica,
+      About valida, Pricing matematiza, Portfolio prova, Proofs lembra,
+      FAQ desarma, Final-CTA queima ultima resistencia, Footer fecha o circuito.
+    secondary_thread: |
+      "Tempo e o ativo escasso, dinheiro e renovavel". Marcelo cobra hora.
+      Claudia perde reserva por nao atender o telefone. CADA section precisa
+      respeitar o tempo deles — copy curta, scan-friendly, zero floreio.
+    tertiary_thread: |
+      Trauma anterior (pattern_01 verbatims). Toda promessa precisa do antidoto
+      do trauma. "24h" sozinho cheira a mentira. "24h, e se atrasar 1h por culpa
+      nossa, manutencao do mes e gratis, em contrato" e antidoto.
+
+  sections:
+    hero:
+      current_v2_diagnosis: |
+        Headline "Site profissional. Em 24 horas. Por 1/3 do preco." e CORRETA
+        em angulo (operador validou) mas MORTA em entrega. Tres frases-tijolo
+        sem juncao emocional. Sub-headline e generica B2B SaaS. Trust badges
+        sao feature listing, nao prova. Marquee e decoracao, nao gatilho.
+      amplification_technique: "Inject + Stretch"
+      technique_rationale: |
+        INJECT: A v2 enuncia o produto. Falta INJETAR o estado mental do
+        prospect ANTES do produto. STRETCH: A promessa "24h por 1/3 do preco"
+        e curta demais pra carregar o peso de E5. Precisa STRETCH em direcao
+        a stake real sem virar parede de texto.
+      awareness_escalation: |
+        B2 Solution Aware (3) → Product Aware (4) em UMA passada — nomeando
+        "Metodo Sprint 24" como mecanismo unico. "Big Secret Lead" do Ford serve.
+      mass_desire_anchor: |
+        "Nao perder cliente pro concorrente que tem site bom". NAO ancorar em
+        "ter site bonito" (vaidade) ou "sucesso digital" (jargao morto).
+        Ancorar em PERDA ATIVA acontecendo AGORA enquanto rola a tela.
+      virgin_claim_to_deploy: |
+        "Em 2026, o cliente decide em 3 segundos se confia em voce ou nao —
+        olhando seu site no celular dele."
+      concrete_directives:
+        - 'Headline (estrutura): Promise direta + Mechanism nomeado + Proof anchor. "Site profissional de agencia. Em 24h. R$ 1.500. Sem voce pagar nada antes de gostar."'
+        - 'Sub-headline: "A gente faz o que agencia de R$ 12.000 entrega em 60 dias. Em 24h uteis. Pra voce parar de perder cliente pro concorrente que ja tem site bom."'
+        - 'Trust badges (substituir feature list por PROVA): "1ª parcela so apos voce aprovar" / "Atrasamos 1h, manutencao do mes e gratis" / "Money-back em contrato" / "10+ sites ja entregues"'
+        - 'Marquee adiciona contexto: "Quem ja confiou:" + scroll de profissoes.'
+        - 'Badge "3 vagas abertas esta semana": VALIDAR se e real. Se nao, REMOVER.'
+      handoff_to_master: gary-halbert
+      handoff_specialist: john-carlton
+      handoff_warning: |
+        HALBERT: Sem "Dear Friend". Tela de mobile, nao envelope amarelo.
+        CARLTON: Simple Writing System pass — corte toda palavra que faz franzir testa.
+        AMBOS: Mark Ford passa Rule of One depois.
+
+    how-it-works:
+      current_v2_diagnosis: |
+        H2 "Cliente decide em 3 segundos" tem o INSIGHT certo mas DESCOLADO da
+        promessa. 3 cards "why it matters" sao didaticos demais. 3 steps
+        corretos mas chatos. Includes box: feature listing puro.
+      amplification_technique: "Stylize + Tighten"
+      technique_rationale: |
+        STYLIZE: Voz — atualmente parece manual. Cada bullet vira FRASE com
+        peso. TIGHTEN: 12 blocos cognitivos. Marcelo nao tem paciencia.
+        Cortar pra 3 steps + 1 promessa anti-objecao no final.
+      awareness_escalation: |
+        Product Aware → Most Aware. Sai daqui pronto pro pricing.
+      mass_desire_anchor: |
+        "Nao quero passar pela novela de novo" (verbatim dentista-02).
+        Trauma anterior em primeiro plano.
+      virgin_claim_to_deploy: |
+        "A maioria das agencias demora 60 dias porque tem 8 reunioes, 4
+        aprovacoes e 1 gerente de conta. A gente cortou tudo isso. So sobrou
+        o que importa: o codigo do site."
+      concrete_directives:
+        - 'H2 substituir: "Por que agencia demora 60 dias e a gente faz em 24h."'
+        - 'Cortar os 3 cards de "why it matters" — repetem hero. Direto pros 3 steps.'
+        - 'Steps reescritos: "1. WhatsApp de 15min (sem brief de 47 paginas) → 2. A gente faz, voce dorme (24h uteis) → 3. Aprovou? No ar. So entao paga."'
+        - 'Trocar includes box por UMA frase fechadora: "Tudo que voce ve em site de agencia de R$ 12 mil. Pelo preco de uma campanha de Google Ads de 2 semanas."'
+      handoff_to_master: perry-marshall
+      handoff_specialist: tim-urban
+      handoff_warning: |
+        PERRY: Insight cascade em 90s de leitura. Insight: "demora porque tem
+        teatro, sem teatro 24h e o normal".
+        URBAN: Concept naming — sugestao "Teatro Corporativo" (SOUL §2).
+
+    about:
+      current_v2_diagnosis: |
+        H2 "4 especialistas. Um unico objetivo." e generic agency-speak. Body
+        acerta angulo mas e impessoal — fala da industria, nao da SIGNA. 4
+        principios listados como manifesto, nao demonstrados. Falta CAUSA pessoal.
+      amplification_technique: "Restate + Inject"
+      technique_rationale: |
+        RESTATE: 4 principios como decisoes de negocio com consequencia
+        financeira ("abre mao de X em troca de Y"). INJECT: IDENTIDADE — quem
+        sao os 4, por que decidiram cobrar R$ 1.500.
+      awareness_escalation: |
+        Most Aware. Remove ULTIMA RESISTENCIA: "esses 4 caras vao sumir como
+        o freelance da ultima vez?".
+      mass_desire_anchor: |
+        Pattern_01 trauma + Pattern_05 medo de pegadinha. SIGNA precisa ser
+        tangivel (4 nomes reais).
+      virgin_claim_to_deploy: |
+        "Somos quatro devs brasileiros (Enzo, Vinicius, Joao, Victor). Nao
+        somos agencia. Nao temos sala alugada nem gerente de conta. Por isso
+        cobramos R$ 1.500 e nao R$ 12.000 — voce paga o codigo, nao o teatro."
+      concrete_directives:
+        - 'H2 substituir: "Quatro devs. Sem teatro corporativo."'
+        - 'Lead nominal: "Enzo de Farias. Vinicius Almeida. Joao Lozano. Victor Ferreira. Quatro devs brasileiros. Sem agencia, sem gerente de conta, sem sala alugada com mesa de pingue-pongue. So codigo, WhatsApp e prazo cumprido."'
+        - 'Os 4 principios viram CONSEQUENCIA da estrutura: "Voce nao paga adiantado. (Por que? Porque a gente acredita no produto. Se nao gostar, voce nao deveria ter pago.)"'
+        - 'Adicionar motivo pessoal: "A gente abriu a SIGNA porque cansou de ver dentista pagando R$ 12.000 por site que ele nao precisa. Site profissional honesto deveria custar 1/3 disso. Ponto."'
+      handoff_to_master: joanna-wiebe
+      handoff_specialist: david-ogilvy
+      handoff_warning: |
+        WIEBE: Use verbatims hipoteticos pattern_01 — marque hypothesis. Nao
+        invente nome de cliente (Rule #4).
+        OGILVY: Premium voice pass SEM hype, SEM "premium"/"exclusivo". Os 4
+        nomes reais SAO a autoridade.
+
+    pricing:
+      current_v2_diagnosis: |
+        OPERADOR e EU concordamos: pricing v2 e a MELHOR section em estrutura.
+        Headline e Hormozi-tier. 3 planos com badge ROI funcionam. Tabela ROI
+        e comparativa funcionam. Garantia tripla funciona. FALTA: textura de
+        COPY nas descricoes (descritivas, nao persuasivas) e calibracao de voz.
+      amplification_technique: "Tighten (cirurgico, nao reescrita)"
+      technique_rationale: |
+        Estrutura PASS. Schwartz nao reconstroi, AFIA. Cada descricao ganha 1
+        frase de mordida. Cada feature vira bullet Bencivenga.
+      awareness_escalation: |
+        Marcelo em decisao. Nao precisa elevar — precisa BAIXAR FRICCAO.
+      mass_desire_anchor: |
+        Pattern_05 "ta barato demais, tem pegadinha". Pricing precisa
+        EXPLICAR porque do preco baixo (cortamos teatro), nao esconder.
+      virgin_claim_to_deploy: |
+        "R$ 2.000 dividido pelo numero de clientes que voce vai fechar com
+        site bom em 12 meses = quanto custa por cliente novo adquirido."
+      concrete_directives:
+        - 'Cada plano: descricao ganha UMA frase fechadora visceral. Reforma: "Voce ja tem trafego. Seu site so precisa parar de espantar quem clica." Site Sprint: "Comeca certo. Nao tem que refazer em 1 ano." Manutencao: "Site bom virou site velho em 8 meses. A gente nao deixa."'
+        - 'Cada feature: regra "feature → significa que → beneficio". "100% responsivo" → "Abre perfeito no celular do paciente — onde 80% dele te procura."'
+        - 'Tabela comparativa: na linha SIGNA, adicionar coluna "Por que e possivel": "Sem gerente de conta. Sem sala alugada. Sem brief de 47 paginas. So dev + cliente + WhatsApp."'
+        - 'Garantia tripla: trocar "O risco e todo nosso." por "Voce nao tem o que perder. A gente sim — nosso nome." (reciprocidade — Cialdini)'
+      handoff_to_master: alex-hormozi
+      handoff_specialist: dan-kennedy
+      handoff_warning: |
+        HORMOZI: NAO REESCREVA ESTRUTURA. Polimento cirurgico. Value Equation
+        em microcopy. ZERO hype-Hormozi-loud-mode. Voz l0z4n0.
+        KENNEDY: 3Ms na voz da SIGNA. Sem "NO B.S." cuss-words. Sem urgencia
+        fabricada. Urgencia real (cada dia sem site = cliente perdido).
+
+    portfolio:
+      current_v2_diagnosis: |
+        H2 "Tipo de site que construimos" — "tipo de" e qualificador defensivo.
+        6 showcases com Unsplash placeholders. Metrica "100/100 PageSpeed" e
+        TECNICO DEMAIS pro Marcelo. Tags decorativas.
+      amplification_technique: "Dramatize (Step 2)"
+      technique_rationale: |
+        Cada showcase = MICRO-HISTORIA: antes / depois / consequencia. Sem
+        dramatizacao, e portfolio Wix. Com dramatizacao, e prova viva.
+      awareness_escalation: |
+        Marcelo em duvida final ("vai funcionar pro meu nicho?"). Portfolio
+        faz ele se VER em UM dos showcases.
+      mass_desire_anchor: |
+        Pattern_03 inveja: "queria ter site bonito como o do concorrente bom".
+      virgin_claim_to_deploy: |
+        "Olha, sem flora — esses sites estao no ar. Voce pode abrir cada um
+        agora e validar."
+      concrete_directives:
+        - 'H2 substituir: "Sites no ar agora. Voce pode abrir cada um."'
+        - 'Cada card: substituir "100/100 PageSpeed" por frase de BENEFICIO. Dentista: "Pacientes marcam consulta direto pelo WhatsApp em 2 cliques." Restaurante: "Reservas dobram nas noites de quarta — campanha rodando junto."'
+        - 'Cada card: adicionar "antes da SIGNA": "Tinha site Wix de 2019 — nao trazia paciente."'
+        - 'Tags decorativas → anti-objecao: "Entregue em 22h" / "0 reuniao presencial" / "Money-back nao acionado"'
+        - 'CTA final: "Seu nicho nao esta aqui? Manda WhatsApp. A gente ja fez pra mais 4 que nao colocamos no site."'
+      handoff_to_master: gary-bencivenga
+      handoff_specialist: david-deutsch
+      handoff_warning: |
+        BENCIVENGA: Cada showcase = mini-fascination. Sem nome real (Rule #4)
+        mas com PEGADA de historia.
+        DEUTSCH: Cadencia dos 6 cards — 2 historicos, 2 metricos, 2 anti-objecao.
+
+    testimonials:
+      current_v2_diagnosis: |
+        6 cards sao FEATURE LISTING. Falta NARRATIVA — cada motivo deveria
+        ser mini-bullet Bencivenga. Falta ESCALADA do mais obvio ao mais profundo.
+      amplification_technique: "Inject + Escalate (Step 6)"
+      technique_rationale: |
+        INJECT: Cada motivo + mecanismo psicologico. ESCALATE: reordenar do
+        mais factual (24h) ao mais emocional (deixar de ser invisivel).
+      awareness_escalation: |
+        "Convencer-se finalmente". 6 motivos = 6 objecoes finais desarmadas.
+      mass_desire_anchor: |
+        Pattern_05 medo de pegadinha + Pattern_01 trauma. Cada motivo
+        enderecado a uma objecao real do verbatim.
+      virgin_claim_to_deploy: |
+        "6 motivos. Cada um deles desarma uma duvida que voce ja teve com
+        outro fornecedor. Le devagar."
+      concrete_directives:
+        - 'H2 substituir: "6 motivos. Cada um desmonta uma duvida que voce ja teve."'
+        - 'Cada motivo: "Promessa + Por que + Anti-trauma". "24h prazo. (Briefing 15min via WhatsApp segunda → terca site no ar. Nao "uns 2-3 dias". 24h uteis em contrato.) Diferente da agencia que prometeu 30 dias e entregou em 90."'
+        - 'Reordenar FACTUAL → EMOCIONAL: 1) 24h prazo / 2) 1/3 preco / 3) 0 adiantado / 4) Money-back / 5) WhatsApp direto / 6) Aparece no Google e na IA (gancho pro futuro)'
+        - 'Adicionar fechadora: "Se algum desses 6 nao for verdade, manda WhatsApp e a gente devolve seu tempo de leitura."'
+      handoff_to_master: gary-bencivenga
+      handoff_specialist: parris-lampropoulos
+      handoff_warning: |
+        BENCIVENGA: 6 fascinations. Voz l0z4n0 — sem "amazing"/"incredible".
+        LAMPROPOULOS: 700-to-100 condensador. Maximo punch por palavra.
+
+    faq:
+      current_v2_diagnosis: |
+        H2 BOM (Klaff frame control). 8 perguntas cobrem territorio mas
+        RESPOSTAS sao defensivas, nao ofensivas (Klaff "frame control"). Falta
+        1-2 perguntas VISCERAIS nao verbalizadas.
+      amplification_technique: "Restate + Inject"
+      technique_rationale: |
+        RESTATE: cada resposta como reframe, nao defesa. Klaff: "Don't answer
+        the question — change the question". INJECT: 1-2 perguntas viscerais
+        que o prospect tem mas nao articula.
+      awareness_escalation: |
+        ULTIMA milha. Cada FAQ resolvida = clique no CTA. Mal resolvida = aba fechada.
+      mass_desire_anchor: |
+        Pattern_05 (pegadinha) + pattern_01 (trauma) DOMINANTES.
+      virgin_claim_to_deploy: |
+        "Por que voces conseguem cobrar R$ 1.500 quando agencia cobra R$ 12.000?"
+        — "Cortamos: gerente de conta, sala alugada, brief de 47 paginas, ciclo
+        de 30 dias. Sobrou: dev + voce + WhatsApp. Mesmo codigo. Sem o teatro."
+      concrete_directives:
+        - 'Adicionar 2 perguntas viscerais: "Por que ta tao barato? Tem pegadinha?" e "Como sei que voces nao vao sumir tipo o ultimo cara que me ferrou?"'
+        - 'Padrao Klaff: "Pergunta nao e [X], pergunta certa e [Y]". "ROI? Pergunta certa nao e ROI. E quanto voce ja perdeu nos ultimos 12 meses por ter site ruim. Faz a conta antes."'
+        - 'Cada resposta: maximo 60 palavras.'
+        - 'Pergunta "fora-Brasil": REMOVER agora se i18n e Onda 2. Adicionar quando lancar EN/ES.'
+      handoff_to_master: oren-klaff
+      handoff_specialist: clayton-makepeace
+      handoff_warning: |
+        KLAFF: STRONG framework adaptado pra FAQ — cada resposta mini-pitch.
+        MAKEPEACE: Visceral pass nas 2-3 perguntas mais carregadas (pegadinha,
+        vao-sumir, money-back). Sem virar piegas. Versao l0z4n0.
+
+    final-cta:
+      current_v2_diagnosis: |
+        H2 "Cada dia sem site bom e cliente fechando..." e VOZ NUCLEAR DA
+        SIGNA — CORRETA. Sub e bom mas seco. CTA correto. P.S. pode
+        intensificar. Nao precisa de Restate. Precisa PEAK INTENSITY.
+      amplification_technique: "Stretch + Universality + Immediacy"
+      technique_rationale: |
+        STRETCH: "cada dia" → "cada hora" — escala cumulativa.
+        UNIVERSALITY: ISSO ja esta acontecendo. IMMEDIACY: urgencia REAL
+        ("proxima vaga aberta e quinta" — se for verdade).
+      awareness_escalation: |
+        Most Aware → Acting Now. Ultima milha.
+      mass_desire_anchor: |
+        Pattern_03 inveja em INTENSIDADE MAXIMA. Pattern_02 custo de
+        oportunidade matematizado em escala diaria.
+      virgin_claim_to_deploy: |
+        "Enquanto voce le esta frase, alguem que precisa do que voce vende
+        esta no Google. Vai clicar no concorrente que tem site bom. Voce
+        nao apareceu — voce nao existe pra ele."
+      concrete_directives:
+        - 'H2 manter (nucleo). Adicionar linha apos: "Faz a conta. Quantos clientes voce ja perdeu nos ultimos 12 meses por isso?"'
+        - 'Sub-headline: "WhatsApp agora. 2h orcamento na sua mao. 24h site no ar. Voce ainda nao gastou um real. So entao a gente cobra."'
+        - 'CTA primario manter. CTA secundario adicional pra B3 hesitante: "Diagnostico gratis em 2h"'
+        - 'P.S. SHIFT de risco: "P.S. O risco real nao e contratar a SIGNA. Voce nao paga nada antes de gostar. O risco real e nao contratar — e continuar perdendo cliente pra quem ja resolveu isso."'
+      handoff_to_master: gary-halbert
+      handoff_specialist: clayton-makepeace
+      handoff_warning: |
+        HALBERT: Coletor de Yes. Sem "Dear Friend". Frase brasileira. Mordida final.
+        MAKEPEACE: PERIGO de hype/medo fabricado. SOUL §4.2 baniu "ultima
+        oportunidade". Use SO o medo REAL: concorrente ja agiu, voce nao.
+
+    footer:
+      current_v2_diagnosis: |
+        Funcional mas anonimo — qualquer agencia poderia ter esse footer.
+      amplification_technique: "Tighten (cirurgico)"
+      technique_rationale: |
+        Footer = SELO. Brand seal Ogilvy: brevidade + peso + ancora final.
+      awareness_escalation: "N/A — fora do funil principal."
+      mass_desire_anchor: "N/A — closure, nao decisao."
+      virgin_claim_to_deploy: |
+        "SIGNA Studio — codigo, nao teatro."
+      concrete_directives:
+        - 'Tagline: "Sites profissionais. Em 24h. Por 1/3 do preco. Sem teatro corporativo."'
+        - 'Adicionar credito honesto abaixo do logo: "Feito por 4 devs brasileiros. Enzo, Vinicius, Joao, Victor. WhatsApp acima."'
+        - 'Substituir placeholders (5511999999999 + signastudio) — operador fornece numeros reais.'
+      handoff_to_master: david-ogilvy
+      handoff_specialist: null
+      handoff_warning: |
+        OGILVY: Brand seal sem hype. SEM "premium" americano. Voz l0z4n0:
+        peso brasileiro honesto, nao Madison Avenue.
+
+  schwartz_self_assessment_soul:
+    alignment_with_soul:
+      - "§5 hierarquia DINHEIRO>TEMPO>RISCO respeitada — hero comeca pelo dinheiro/preco/garantia, tecnica pro fundo (FAQ apenas)."
+      - "§4.2 banimento honrado: zero 'AGEO', 'LLMO', 'Schema.org', 'transforme', 'desbloqueie'. Capability tech foi traduzida (FAQ pergunta sobre IA)."
+      - "§7 avatares Marcelo + Claudia referenciados em mass_desire_anchor das 9 sections."
+    voice_cosplay_risks_avoided:
+      - "Nao escrevi copy final — escrevi DIRETIVAS. Cada master executa em sua propria voz, calibrada por SOUL."
+      - "Resisti hype Schwartz classico ('imagine your life in 30 days'). Stake real ja acontecendo agora."
+      - "Nao impus minha era (NYC mailorder 1960s). Toda prescricao WhatsApp-era 2026 BR."
+    handoff_warnings_summary:
+      critical_for_next_phase:
+        - "PRICING e PASS estrutural. Hormozi NAO REESCREVE, polimento cirurgico."
+        - "PORTFOLIO precisa screenshots reais. Bencivenga marca [SCREENSHOT REAL HERE]."
+        - "ABOUT precisa USAR 4 nomes reais (Enzo, Vinicius, Joao, Victor). Wiebe nao esquece."
+        - "FAQ pode introduzir LLMO/IA mas em traducao publica (translation_table Todd Brown v2)."
+        - "TODA section: trauma anterior + medo pegadinha sao TEMA NUCLEAR. Garantia em 4+ sections."
+  next_recommended_action: |
+    Antes de Halbert pegar hero, recomendo rodar Collier (Enter the
+    Conversation) — vai gerar o "estado mental que Marcelo tem 3 segundos
+    antes de abrir o site" que CASA com Schwartz Step 7 (Immediacy).
+    Sem Collier, Halbert escreve no escuro. Com Collier, Halbert tem o
+    monologo interno do Marcelo na mao.

@@ -1,0 +1,75 @@
+mark_ford_rule_of_one_pass:
+  task_id: COPY-2026-04-27-001-SIGNA-FULLSITE-V3-HERO
+  pass_after: [gary-halbert, john-carlton]
+  ford_verdict: APPROVED_FOR_QG
+
+  six_leads_diagnosis:
+    primary_lead_used: "Big Secret Lead (HIBRIDO com Problem-Solution)"
+    rationale: |
+      MOVIMENTO 1 (linha 1-2 H1): Problem-Solution Lead
+      → "Você sabe que precisa refazer esse site" = nomeação direta da dor
+      MOVIMENTO 2 (linha 3 + subline + sub-headline): Big Secret Lead
+      → "A gente faz em 24h. Por R$ 1.500" = mecanismo VIRGEM (Método Sprint 24)
+      Schwartz E4→E5 transição justifica hibrido. F2 alignment: PASS.
+    is_consistent_with_F2_diagnosis: yes
+
+  rule_of_one_audit:
+    one_idea:
+      identified: "Site profissional honesto não precisa custar R$ 12.000 nem demorar 60 dias — e você não paga até gostar."
+      verdict: PASS
+    one_promise:
+      identified: "Em 24h seu site está no ar — e você não paga nada antes de gostar"
+      verdict: PASS (reforço tetra-vetorial estratégico)
+    one_offer:
+      identified: "Método Sprint 24 (R$ 1.500 ancora) com garantia tripla — implícito no hero"
+      verdict: PASS
+    one_audience:
+      identified: "Estado mental compartilhado: 'eu sei que preciso, tenho medo, quero que funcione sem entender'"
+      verdict: CONDITIONAL_PASS
+      resolution: |
+        Carlton argumentou stratification. Ford ACEITA com defesa estrutural:
+        Rule of One audience NAO e demografia, e ESTADO MENTAL. Marcelo (B2)
+        e Cláudia (B3), apesar de demograficamente diferentes, compartilham
+        o monólogo interno central. Hero fala com esse estado mental — ambos
+        se reconhecem porque a briga interna é a mesma.
+
+  dual_audience_verdict:
+    ford_decision: ACCEPT
+    rationale: "Estado mental compartilhado > demografia diferente. Schwartz e Collier aprovariam."
+
+  final_blocking_flags: []
+
+  ford_quality_assessment:
+    estimated_qg_score: 88/100
+    confidence_level: HIGH
+    score_breakdown:
+      C1_voice_alignment: "4.6/5 (SOUL §3 executado, voz Halbert preservada)"
+      C2_intelligence_integration: "4.7/5 (Collier + Schwartz + Hopkins integrados RAW)"
+      C3_framework_execution: "4.5/5 (Big Secret + Problem-Solution hibrido)"
+      C4_persuasion_architecture: "4.4/5 (Lead conversation entry + body risk reversal + close CTA duplo)"
+      C5_actionability: "4.5/5 (CTA primary forte, secondary baixa fricção)"
+      C6_naturalidade_BR: "4.7/5 (Carlton garantiu zero anglicismo)"
+      weighted_total: 0.88
+
+  handoff_to_copy_chief:
+    verdict: APPROVED_FOR_QG
+    next_steps:
+      - "Persistir hero v3 final consolidado"
+      - "Rodar QG-COPY formal (6 critérios, threshold ≥0.85)"
+      - "Rodar Sugarman 30 triggers (≥80% coverage)"
+      - "Rodar Hopkins re-audit (target ≥85, estimate 88-92)"
+      - "Apresentar ao operador"
+    critical_warnings:
+      - "PLACEHOLDER #1: [WHATSAPP_NUMBER_PLACEHOLDER]"
+      - "PLACEHOLDER #2: [BADGE_SUPERIOR_OPERATOR_VALIDATE]"
+      - "Sub-headline 49 palavras — limite mobile"
+      - "Dual audience documented as CONSCIOUS DECISION"
+
+  architectural_quality_seal:
+    - "Architecture of Persuasion (Lead + Subline + Body + Close + Amplifiers)"
+    - "6 Leads (Big Secret + Problem-Solution hybrid)"
+    - "Rule of One (1 idea, 1 promise, 1 offer, 1 mental state)"
+    - "Copy Logic estimate 88/100"
+    - "SOUL voice preservation"
+    - "Specificity Hopkins (R$ 1.500, 24h, 10+, 47 paginas, 2 horas)"
+    - "Risk reversal quadruplicado"

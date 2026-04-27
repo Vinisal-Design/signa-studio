@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,10 +8,17 @@ const inter = Inter({
   display: "swap",
 });
 
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+});
+
 const SITE_NAME = "SIGNA STUDIO";
 const SITE_URL = "https://site-express-rho.vercel.app";
 const SITE_DESC =
-  "Crie seu site profissional em 24 horas. Design exclusivo, SEO otimizado e 100% responsivo para dentistas, psicologos, restaurantes, coaches e prestadores de servico. A partir de R$1.500 com garantia total de satisfacao.";
+  "Site profissional no ar em 24 horas. Visual com cara propria, aparece no Google, integrado com WhatsApp. A partir de R$ 1.500. Voce so paga depois de aprovar. Para dentistas, advogados, psicologos, restaurantes e negocio local que precisa de cliente novo todo dia.";
 
 export const metadata: Metadata = {
   title: `${SITE_NAME} | Site Profissional em 24 Horas | Criacao Express de Sites`,
@@ -74,7 +81,7 @@ function StructuredData() {
     name: SITE_NAME,
     description: SITE_DESC,
     url: SITE_URL,
-    priceRange: "R$750 - R$2.000",
+    priceRange: "R$1.500 - R$2.000",
     areaServed: {
       "@type": "Country",
       name: "Brasil",
@@ -84,7 +91,6 @@ function StructuredData() {
       "Web Design",
       "Landing Pages",
       "Redesign de Sites",
-      "Manutencao de Sites",
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -102,13 +108,6 @@ function StructuredData() {
           name: "Site Sprint Profissional",
           description: "Site profissional do zero em 24 horas com design exclusivo",
           price: "2000",
-          priceCurrency: "BRL",
-        },
-        {
-          "@type": "Offer",
-          name: "Manutencao Sprint",
-          description: "Manutencao mensal com atualizacoes ilimitadas",
-          price: "750",
           priceCurrency: "BRL",
         },
       ],
@@ -138,7 +137,7 @@ function StructuredData() {
         name: "Quanto custa criar um site profissional?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "A SIGNA STUDIO oferece sites profissionais a partir de R$1.500 (reforma) e R$2.000 (site novo). Manutencao mensal por R$750/mes. Garantia total de satisfacao.",
+          text: "A SIGNA STUDIO oferece sites profissionais a partir de R$1.500 (reforma) e R$2.000 (site novo). Garantia total de satisfacao.",
         },
       },
       {
@@ -188,7 +187,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} h-full antialiased`}>
+    <html lang="pt-BR" className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}>
       <head>
         <StructuredData />
       </head>

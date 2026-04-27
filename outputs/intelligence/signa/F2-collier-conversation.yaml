@@ -1,0 +1,389 @@
+collier_enter_conversation:
+  task_id: COPY-2026-04-27-001-SIGNA-FULLSITE
+  framework: "Robert Collier — Enter the Conversation Already in Their Mind"
+  invoked_by: copy-chief
+  invoked_at: 2026-04-27
+
+  principle_applied: |
+    "Always enter the conversation already taking place in the prospect's mind.
+    You're not starting a new conversation — you're joining one that's been
+    running in his head for weeks, months, years."
+
+  meta_observation_for_signa: |
+    A v2 da SIGNA INTERROMPE a conversa do Marcelo. Diz: "Ola, somos a SIGNA,
+    fazemos site em 24h." Isso e bater na porta enquanto ele esta no meio de
+    uma briga interna que dura ha 14 meses. Ele nao quer apresentacao. Ele
+    quer alguem que entenda o filme em curso na cabeca dele.
+
+    Esta sessao Collier traz o que faltou: o monologo interno transcrito.
+    Halbert, Marshall, Wiebe e os outros vao ler isto e escrever NA segunda
+    pessoa do dialogo, nao na primeira pessoa do anuncio.
+
+  # ════════════════════════════════════════════════════════════════════════
+  # AVATAR B2 — MARCELO (DENTISTA, 38, R$60K/MES)
+  # ════════════════════════════════════════════════════════════════════════
+
+  avatar_b2_marcelo:
+    persona: "Dentista, 38, clinica propria 5 anos, R$60k/mes faturamento, R$4k/mes em Google Ads, site de 2019 derrubando ROAS"
+
+    context_60_seconds_before_click: |
+      Marcelo esta no Instagram Stories. Sao 22h17. Ele acabou de atender o
+      ultimo paciente, jantou frango com batata, ta no sofa. A esposa ja foi
+      dormir. Ele rola Stories — meme, meme, anuncio de implante, meme, foto
+      do colega Dr. Felipe (que ele odeia/admira) num evento da Straumann com
+      legenda "obrigado a quem confiou em nos esse mes". Marcelo trava 2
+      segundos nessa foto. Sente o aperto no peito. Continua rolando. Anuncio
+      da SIGNA aparece. Ele para.
+
+    mental_conversation_60_seconds_before_click:
+      thought_01: "Outro anuncio de site. Por que to vendo isso? O Instagram me le?"
+      thought_02: "Cara, eu PRECISO refazer esse meu site. Ta horroroso."
+      thought_03: "Mas la vem 'agencia digital' querendo me vender pacote de 12 mil."
+      thought_04: "Sera que esses caras sao serios? 24 horas? Mentira ou pegadinha."
+      thought_05: "1.500. Tem alguma coisa errada nisso. Meu site custou 4 mil e era ruim."
+      thought_06: "Mas tambem ja paguei 4 mil pra um cara que sumiu, ne. Cai uma vez."
+      thought_07: "Felipe la com agenda lotada. Site dele e foda. Eu apareco na quinta pagina do Google."
+      thought_08: "Quanto eu ja perdi de paciente novo nos ultimos 12 meses por causa desse site?"
+      thought_09: "Vou clicar. Se for groselha, eu fecho em 5 segundos."
+      thought_10: "Mas se for serio, talvez eu pare de empurrar isso de uma vez."
+
+    primary_motive_engaged: "Self-Preservation"
+    primary_motive_explanation: |
+      Aparenta Gain (faturar mais, fechar mais paciente) mas a raiz e
+      Self-Preservation: medo de virar profissional invisivel, de o Felipe
+      consolidar mercado enquanto Marcelo regride, de a clinica perder fluxo
+      e ele ter que voltar a trabalhar pra outra clinica. E a sobrevivencia
+      do estilo de vida que ele construiu em 5 anos.
+
+    secondary_motives:
+      - "Pride (ser visto como profissional de ponta, nao 'aquele dentista de 2019')"
+      - "Gain (cada paciente novo = R$ 800 ticket medio)"
+      - "Duty (sustentar familia, manter funcionarios da clinica)"
+
+    objection_chain_internal:
+      objection_01:
+        surface: "24 horas e impossivel pra fazer um site decente."
+        real: "Ja fui enganado por promessa rapida — o cara que prometeu 7 dias e entregou em 6 semanas. Promessa rapida demais cheira mal."
+      objection_02:
+        surface: "1.500 ta barato demais. Tem pegadinha."
+        real: "Se for tao barato, ou e quebrado, ou eles vao sumir depois, ou vou descobrir que tem 'taxa extra' depois. Cai em barato uma vez."
+      objection_03:
+        surface: "Como sei que voces nao vao sumir tipo o ultimo cara?"
+        real: "O ultimo me roubou 4 mil reais e 6 semanas. Nao posso passar por isso de novo — nao tenho mais tempo nem grana pra esse drama."
+      objection_04:
+        surface: "Eu nao entendo nada disso de tech."
+        real: "Tenho medo de vir reuniao tecnica, eles falarem 'JSON-LD' e 'AGEO' e eu nao saber dizer se ta bom ou nao. Vou ser passado pra tras sem saber, igual com o ultimo."
+      objection_05:
+        surface: "Vou ver outras opcoes antes."
+        real: "Se eu fechar agora e for ruim, foi minha culpa. Se eu pesquisar 3 meses e nao decidir, a culpa e do mercado. Procrastinacao defensiva."
+
+    emotional_state_descriptors:
+      - "Cansaco de ja ter tentado e dado errado (quem fez o atual)"
+      - "Inveja envergonhada (do Dr. Felipe que tem site bom e agenda lotada)"
+      - "Auto-irritacao (sabe ha 14 meses que precisa refazer e nao agiu)"
+      - "Desconfianca defensiva pre-instalada (muito anuncio mentiroso ja consumido)"
+      - "Esperanca envergonhada (ainda quer acreditar que existe um jeito honesto)"
+      - "Pressa contida (sabe que cada dia perdido e paciente fechando com Felipe)"
+
+    permission_phrases:
+      - "Sem brief de 47 paginas"
+      - "Sem reuniao de 2 horas"
+      - "Voce nao paga nada antes de aprovar"
+      - "Atrasamos 1h, manutencao do mes e gratis"
+      - "WhatsApp direto com o dev (sem gerente de conta)"
+      - "Nao somos agencia"
+      - "Cortamos o teatro"
+      - "Mesma qualidade, sem o teatro de 60 dias"
+      - "Voce ja gastou em ads — quanto desse dinheiro virou paciente?"
+      - "10+ sites no ar, voce abre cada um e valida"
+      - "Pra voce parar de perder cliente pro concorrente que ja tem site bom"
+
+    veto_phrases:
+      - "Transforme sua presenca digital"
+      - "Desbloqueie o potencial do seu negocio"
+      - "Solucao completa em marketing digital"
+      - "Atendimento humanizado e personalizado"
+      - "Estrategia 360 graus"
+      - "Stripe-grade infrastructure"
+      - "AGEO/LLMO Stack"
+      - "Schema.org markup completo"
+      - "Vagas limitadas! Ultima oportunidade!"
+      - "Curso de [qualquer coisa]"
+      - "Antes de comecar, deixa eu me apresentar..."
+      - "Somos uma agencia jovem com paixao por design"
+      - "Prezado cliente"
+      - "Olha so que demais!"
+
+    conversation_entry_master_phrase: |
+      "Voce ja sabe que precisa refazer esse site. Faz uns 8 meses que voce
+      pensa nisso toda vez que abre o Google Analytics. O que te trava nao
+      e dinheiro — e o medo de pagar de novo e dar errado de novo."
+
+  # ════════════════════════════════════════════════════════════════════════
+  # AVATAR B3 — CLAUDIA (RESTAURANTE, 52, R$35K/MES)
+  # ════════════════════════════════════════════════════════════════════════
+
+  avatar_b3_claudia:
+    persona: "Restaurante de bairro 12 anos, 52 anos, R$35k/mes, NAO roda ads, sobrinha disse 'tia precisa de Insta e site senao some'"
+
+    context_60_seconds_before_click: |
+      Claudia esta no WhatsApp respondendo cliente sobre reserva. Domingo
+      14h, restaurante fechado pra almoco hoje porque a cozinheira faltou.
+      Ela esta no sofa de casa, com o tablet. Abre o Instagram pra ver foto
+      do neto. Ve story da concorrente (o restaurante novo que abriu na
+      esquina ha 8 meses) — fila na porta, fotos de pratos com filtro
+      profissional, "reserve agora" no link da bio. Aperta o peito.
+      Continua scrollando. Anuncio da SIGNA aparece. Ela para.
+
+    mental_conversation_60_seconds_before_click:
+      thought_01: "Esse povo da esquina cresceu rapido demais. Nao e so a comida."
+      thought_02: "A Marlene falou semana passada que precisa fazer site. Eu tambem."
+      thought_03: "Mas eu nao entendo nada disso. Quem faz isso? O sobrinho? Ele cobra caro."
+      thought_04: "Site em 24 horas? Hum. Por R$ 1.500. E barato. Sera serio?"
+      thought_05: "Aquele rapaz que fez o site da Marlene cobrou 800 e o site nem abre."
+      thought_06: "Tenho medo de pagar e nao receber nada. Ja fui enganada uma vez no fornecedor de carne."
+      thought_07: "Mas se eu nao fizer nada, daqui 1 ano o povo da esquina pega tudo."
+      thought_08: "E meu marido vai ficar bravo se eu gastar 1.500 e nao funcionar."
+      thought_09: "Vou clicar. Se nao entender o que eles falam, fecho. Eu odeio coisa complicada."
+      thought_10: "Mas se for em portugues simples, eu olho com calma."
+
+    primary_motive_engaged: "Self-Preservation"
+    primary_motive_explanation: |
+      Claudia esta na sobrevivencia ECONOMICA do restaurante de 12 anos. O
+      restaurante e a aposentadoria dela, e o legado, e a identidade. O medo
+      central e ver o restaurante novo da esquina consolidar mercado e ela
+      ter que fechar daqui a 2-3 anos por irrelevancia. Self-Preservation
+      pura. Gain (mais clientes) e secundario; sobreviver e primario.
+
+    secondary_motives:
+      - "Love (sustento da familia + neto que ajuda no caixa)"
+      - "Pride (ser 'a melhor comida do bairro' por 12 anos)"
+      - "Duty (manter empregos das 3 funcionarias antigas)"
+
+    objection_chain_internal:
+      objection_01:
+        surface: "Eu nao entendo nada disso de internet."
+        real: "Tenho medo de me sentir burra na conversa. Tenho medo de pagar e nao saber se ta bom. Tenho medo de ser passada pra tras pelo jovem de tecnologia que sabe que eu nao sei."
+      objection_02:
+        surface: "Tem pegadinha nesse preco?"
+        real: "Tudo barato no meu mundo deu errado. Carne barata era ruim, funcionario barato roubou, fornecedor barato sumiu. R$ 1.500 me cheira mal — tem que ter explicacao."
+      objection_03:
+        surface: "Vai funcionar pro meu tipo de negocio?"
+        real: "Esses sites sao tudo pra dentista, advogado, gente moderninha. Eu sou restaurante de bairro tradicional. Vai parecer feio? Vai parecer cara que nao se encaixa? Vai espantar meu cliente fiel?"
+      objection_04:
+        surface: "E se eu nao gostar do que eles fizerem?"
+        real: "Eu nao sei explicar 'design'. Vou ver e nao vou saber dizer o que ta errado. Eles vao falar 'mas e moderno!' e eu vou pagar achando que e culpa minha por nao entender."
+      objection_05:
+        surface: "Meu marido vai achar uma bobagem."
+        real: "Vou ter que explicar 1.500 reais pra ele. Se nao funcionar, vai ser 'eu te disse'. Preciso de garantia que possa mostrar pra ele tambem."
+
+    emotional_state_descriptors:
+      - "Procrastinacao envergonhada (sabe ha 2 anos que precisa, vai empurrando)"
+      - "Inveja-do-jovem (do restaurante novo da esquina que 'sabe das coisas')"
+      - "Medo de ser tapeada (multiplas experiencias passadas)"
+      - "Sentimento de ter ficado pra tras na 'onda nova'"
+      - "Pressao familiar latente (sobrinha + filha + esposo opinando)"
+      - "Orgulho de 12 anos de operacao (nao quer parecer amadora ao decidir)"
+
+    permission_phrases:
+      - "Sem complicacao"
+      - "Em portugues"
+      - "Voce nao precisa entender de tech"
+      - "A gente conversa 15 minutos no WhatsApp"
+      - "Voce paga so se gostar"
+      - "Devolvemos o dinheiro se nao gostar"
+      - "Mostramos pra voce antes de cobrar nada"
+      - "Ja fizemos pra restaurante / pizzaria / etc."
+      - "Funciona pro seu tipo de negocio tradicional"
+      - "Voce nao vai precisar mexer em nada — a gente faz tudo"
+
+    veto_phrases:
+      - "Solucao em transformacao digital"
+      - "Tecnologia disruptiva"
+      - "Ecossistema de marketing"
+      - "Otimizado para SEO e indexacao em mecanismos de busca"
+      - "Stack profissional Next.js + Tailwind"
+      - "Implementamos uma estrategia 360"
+      - "Onboarding"
+      - "Setup"
+      - "Briefing tecnico"
+      - "Voce so precisa preencher esse formulario com 23 perguntas"
+      - "Plataforma"
+      - "Reuniao de alinhamento"
+
+    conversation_entry_master_phrase: |
+      "Se voce viu o restaurante novo da esquina crescer enquanto o seu
+      ficou igual, voce ja sabe que precisa de site. Voce so nao quer ser
+      enganada de novo. A gente entende — por isso voce so paga depois de
+      ver pronto e gostar."
+
+  # ════════════════════════════════════════════════════════════════════════
+  # SHARED CONVERSATION LAYER (universal — aplica a B2 e B3)
+  # ════════════════════════════════════════════════════════════════════════
+
+  shared_conversation_layer:
+    universal_thoughts:
+      - "Eu sei ha [X] meses que preciso fazer isso e nao fiz."
+      - "Vi concorrente fazer e crescer."
+      - "Ja tentei uma vez e me ferrei (ou alguem que conheco se ferrou)."
+      - "Tenho medo de pagar e nao receber valor proporcional."
+      - "Tenho medo de virar 'aquele profissional/negocio que ficou pra tras'."
+      - "Quero algo que funcione, nao quero entender como."
+    universal_fears:
+      - "Ser enganado de novo (trauma anterior reativado)"
+      - "Ser passado pra tras por nao entender o jargao"
+      - "Pagar e o cara sumir antes de entregar"
+      - "Pagar e o produto ser ruim e eu nao saber dizer porque"
+      - "Investir tempo de aprovacoes e o resultado nao trazer cliente"
+      - "Meu socio/conjuge dizer 'eu te disse' depois"
+    universal_silent_questions:
+      - "Por que esses caras conseguem cobrar tao pouco? (sinal de qualidade ruim?)"
+      - "Eles realmente tem 4 devs ou e papo? (vai ser um cara so trabalhando madrugada?)"
+      - "Se atrasarem, vou ter que cobrar — e eu odeio cobrar."
+      - "E se o site ficar bom mas nao trouxer cliente? Quem assume?"
+      - "Como eu mostro pro meu socio/familia que essa decisao foi inteligente?"
+      - "Eles vao tentar me empurrar manutencao depois, ne? Ja sei como funciona."
+      - "Tenho que dar acesso a alguma senha minha? Isso e seguro?"
+      - "Se eu cancelar no meio, perco tudo o que paguei?"
+    universal_emotional_seeking: |
+      Os dois nao querem "site". Querem ALIVIO da sensacao de estar perdendo
+      por nao agir. Ambos querem encerrar o capitulo "preciso refazer o
+      site" que esta aberto na cabeca deles ha meses/anos. A SIGNA nao vende
+      site — vende fechamento desse loop mental aberto.
+
+  # ════════════════════════════════════════════════════════════════════════
+  # COPY DIRECTIVES PER SECTION
+  # ════════════════════════════════════════════════════════════════════════
+
+  copy_directives_per_section:
+    hero:
+      what_he_is_thinking_when_lands: |
+        Marcelo: "Sera que esses caras sao serios? Vou dar 5 segundos."
+        Claudia: "Sera que entendo o que ta escrito aqui?"
+      first_sentence_must_do: "Acknowledge IMEDIATAMENTE o estado mental: ele JA SABE que precisa, ja foi enganado, esta cansado de empurrar. Conversation entry, NAO product entry."
+      first_sentence_must_NOT_do: "Apresentar a SIGNA. Listar features. Dar boas-vindas. Falar de stack."
+      example_opening_that_enters: |
+        H1: "Site profissional de agencia. Em 24 horas. R$ 1.500. So depois de voce gostar."
+        Sub: "Voce ja sabe que precisa refazer esse site. O que trava nao e o dinheiro — e o medo de pagar de novo e dar errado de novo. A gente cortou o que faz dar errado."
+      collier_principle_invoked: "Enter the Conversation + Channel Self-Preservation"
+
+    how-it-works:
+      what_he_is_thinking_after_hero: "OK, eles disseram a coisa certa. Mas COMO? 24h tem que ter pegadinha em algum lugar. Onde ta o catch?"
+      transition_must_do: "Responder a pergunta JA no ar: 'como diabos voces fazem em 24h?'. Resposta deve revelar SISTEMA real, nao trick."
+      example_opening: |
+        H2: "Por que agencia demora 60 dias e a gente faz em 24h."
+        Lead: "Agencia tem 8 reunioes, 4 aprovacoes em camadas, 1 gerente de conta no meio. A gente cortou tudo isso. Sobrou: voce, dev, WhatsApp."
+      collier_principle_invoked: "Empathy First + Bridge"
+
+    about:
+      what_he_is_thinking_after_how_it_works: "Beleza, sistema enxuto. Mas QUEM sao esses caras? Vao sumir tipo o ultimo? Como sei que existem?"
+      transition_must_do: "Materializar os 4 caras — nomes, sobrenomes, papeis. Antidoto direto ao trauma 'freelance que sumiu'."
+      example_opening: |
+        H2: "Quatro devs. Sem teatro corporativo."
+        Lead: "Enzo de Farias. Vinicius Almeida. Joao Lozano. Victor Ferreira. Quatro brasileiros. Voce conversa com a gente direto no WhatsApp — nao com gerente de conta que repassa pro dev no terceiro andar."
+      collier_principle_invoked: "Tangibilizar autoridade + Channel Pride"
+
+    pricing:
+      what_he_is_thinking_when_arrives: "Aqui ta o pulo do gato. Aqui descubro a pegadinha."
+      transition_must_do: "ANTECIPAR a suspeita visivel — explicar PORQUE consegue cobrar pouco antes que ele desconfie."
+      example_opening: |
+        H2: "Nao e gasto. E o cliente que voce ainda nao fechou."
+        Sub-lead (NOVO, Collier): "Voce esta se perguntando: por que tao barato? Resposta honesta: cortamos gerente de conta, sala alugada, brief de 47 paginas. Sobrou o codigo — mesma qualidade da agencia de R$ 12.000."
+      collier_principle_invoked: "Logical Justification (cabeca justifica o que coracao ja decidiu)"
+
+    portfolio:
+      what_he_is_thinking_when_arrives: "Vai funcionar pro MEU tipo de negocio? Quero ver gente como eu."
+      transition_must_do: "Cada showcase = mini-historia de transformacao onde Marcelo/Claudia se reconhecem."
+      example_opening: |
+        H2: "Sites no ar agora. Voce pode abrir cada um e validar."
+        Card pattern: "Antes: site Wix de 2019, nao trazia paciente. Agora: pacientes marcam consulta direto no WhatsApp em 2 cliques."
+      collier_principle_invoked: "Future Pacing + Social Proof Desire"
+
+    testimonials:
+      what_he_is_thinking_when_arrives: "Ainda tenho duvidas. Quais? Deixa eu ver se eles enderecam."
+      transition_must_do: "Cada motivo enderecado a uma OBJECAO INTERNA especifica do verbatim."
+      example_opening: |
+        H2: "6 motivos. Cada um desmonta uma duvida que voce ja teve."
+        Card 1: "24h prazo. (Briefing 15min via WhatsApp segunda → terca site no ar. Em contrato. Diferente da agencia que prometeu 30 dias e entregou em 90.)"
+      collier_principle_invoked: "Empathy mapping em formato de bullet"
+
+    faq:
+      what_he_is_thinking_when_arrives: "Antes de pagar, vou olhar isso. Aqui aparecem as perguntas que eu nao quis fazer pra eles ainda."
+      transition_must_do: "FAQ deve VERBALIZAR perguntas que ele tem mas nao admite. Klaff frame control: cada resposta = reframe."
+      example_opening: |
+        H2: "Perguntas que voce esta fazendo agora."
+        Q1 NOVA: "Por que ta tao barato? Tem pegadinha?"
+        A: "Pergunta certa. Resposta: cortamos gerente de conta, sala alugada, brief de 47 paginas. Sobrou voce, dev, WhatsApp. Mesmo codigo da agencia. Sem o teatro de R$ 12 mil."
+        Q2 NOVA: "Como sei que voces nao vao sumir tipo o ultimo cara?"
+        A: "Voce nao paga nada antes de aprovar. Se a gente sumir, voce nao perdeu um real — so o tempo do briefing de 15min. Risco zero por design."
+      collier_principle_invoked: "Verbalize the silent questions + Risk reversal"
+
+    final-cta:
+      what_he_is_thinking_when_arrives: "OK, eu basicamente decidi. Mas e se eu deixar pra amanha? Amanha e sempre amanha."
+      transition_must_do: "Quebrar a procrastinacao defensiva. Fato real: enquanto ele rola, alguem clica no Felipe."
+      example_opening: |
+        H2 manter: "Cada dia sem site bom e cliente fechando com seu concorrente."
+        NOVA linha (Collier): "Faz a conta. Voce ja empurrou essa decisao por 8 meses. Quantos pacientes voce ja perdeu nesse tempo? Esse numero so cresce a partir de agora."
+        P.S. SHIFT: "P.S. O risco real nao e contratar a SIGNA. Voce nao paga nada antes de gostar. O risco real e nao contratar — e abrir o Google Analytics em janeiro de novo, com o mesmo numero, sentindo o mesmo aperto."
+      collier_principle_invoked: "Fear of Loss + Self-Preservation amplified + ZERO fabricated urgency"
+
+    footer:
+      what_he_is_thinking_when_arrives: "Beleza, ja decidi ou ja desisti. Mas deixa eu confirmar quem sao."
+      transition_must_do: "Fechar o circuito de tangibilidade. Os 4 nomes aparecem de novo."
+      example_opening: |
+        Tagline: "Sites profissionais. Em 24h. Por 1/3 do preco. Sem teatro corporativo."
+        Credito: "Feito por 4 devs brasileiros. Enzo, Vinicius, Joao, Victor. WhatsApp [numero] / Instagram [@signastudio]."
+      collier_principle_invoked: "Brand seal as final tangibility anchor"
+
+  collier_self_assessment_soul:
+    alignment_with_soul:
+      - "§3 Voice DNA: cada thought_XX e curto (≤25 palavras), usa 'voce' direto, frase media 8-14 palavras."
+      - "§4.2 Banimento honrado: zero 'transforme', 'desbloqueie', 'AGEO' no MEU output. Palavras banidas aparecem APENAS na lista veto_phrases."
+      - "§7 Avatares Marcelo + Claudia EXPANDIDOS — Collier traz a camada emocional nominada (cansaco, inveja envergonhada, esperanca envergonhada)."
+    voice_cosplay_risks_avoided:
+      - "Resisti tentacao de copy americana traduzida ('If you ever...'). Toda frase em PT-BR popular brasileiro."
+      - "Nao usei meu padrao 'Dear Friend' / opening epistolar. Adaptado pra contexto WhatsApp/Instagram era 2026."
+      - "Resisti meu vicio de letter de 12 paginas. Cada conversation_entry e 1-3 frases."
+
+  handoff_to_executor:
+    primary_recipients: "gary-halbert (hero) + perry-marshall (how-it-works) + joanna-wiebe (about) + alex-hormozi (pricing) + gary-bencivenga (portfolio + testimonials) + oren-klaff (faq) + gary-halbert + makepeace (final-cta) + david-ogilvy (footer)"
+    critical_warnings_per_master:
+      gary_halbert:
+        warning: "Headline NAO PODE ser apresentacao da SIGNA — tem que ser ENTRADA NA CONVERSA INTERNA. Linha master: 'Voce ja sabe que precisa refazer esse site...'. Voce executa em sua voz Halbert mas PRESERVA o ato de entrar."
+        forbidden: "Frase comecando 'Apresentamos', 'Bem-vindo', 'Conheca' = morte instantanea."
+      perry_marshall:
+        warning: "Pergunta nao verbalizada apos hero: 'onde ta a pegadinha do 24h?'. Insight cascade RESPONDE essa pergunta antes que ele articule."
+        forbidden: "Filosofar sobre 'a era da IA'. Marcelo nao quer aula, quer entender o catch."
+      joanna_wiebe:
+        warning: "Voce TEM permissao pra usar verbatims hipoteticos — MARCANDO '[hypothesis verbatim - operator validates]'. Objecao real: 'vao sumir como o ultimo'."
+        forbidden: "Inventar nome de cliente real (Rule #4)."
+      alex_hormozi:
+        warning: "Marcelo vai chegar em pricing PROCURANDO o catch. ANTECIPAR a suspeita ('por que tao barato?') e responder antes que ele pergunte."
+        forbidden: "ALL CAPS. Hype-mode. 'YOU NEED THIS!'. Voz l0z4n0 (SOUL §3)."
+      gary_bencivenga:
+        warning: "Cada showcase e cada bullet precisa espelhar uma objection_chain_internal especifica. 11 objections totais. Distribui uma por bullet."
+        forbidden: "Bullet generico 'Design responsivo de qualidade premium'."
+      oren_klaff:
+        warning: "FAQ e onde universal_silent_questions VIRAM perguntas publicas. Frame-controla cada uma transformando suspeita em sabedoria do prospect. ≤60 palavras cada."
+        forbidden: "Defesa. Frase comecando 'na verdade...'. Voce reposiciona."
+      makepeace_final_cta:
+        warning: "Risco de escorregar pro hype-fear. Medo REAL e suficiente: enquanto ele rola, alguem clica no concorrente."
+        forbidden: "Vagas limitadas mentirosas. Cronometro fake. Bonus desaparecendo."
+      david_ogilvy_footer:
+        warning: "Ancora final tangivel. Os 4 nomes reaparecem aqui. Voz premium SEM premium-speak."
+        forbidden: "'Premium', 'exclusivo', 'distincao', 'sofisticacao'."
+    payload_addendum_for_next_agents: |
+      Quando Copy Chief invocar Halbert/Marshall/Wiebe/Hormozi/Bencivenga/Klaff/
+      Makepeace/Ogilvy pra F4 DRAFT, este documento (F2-collier-conversation.yaml)
+      DEVE estar no payload entre item 6 e 7 da load order canonica do Todd Brown
+      v2 §payload_load_order_canonical. Sem isto, eles escrevem no escuro.
+      Com isto, eles escrevem com o monologo interno do Marcelo na mao.
+    next_recommended_action_for_copy_chief: |
+      O payload do Halbert deve incluir LITERALMENTE:
+      - Os 10 thoughts de mental_conversation_60_seconds_before_click do Marcelo
+      - As 5 objection_chain_internal completas (surface + real)
+      - As permission_phrases (vocabulario que ele PODE usar)
+      - As veto_phrases (vocabulario que e morte instantanea)
+      - O conversation_entry_master_phrase como ANCORA da headline
+      Sem esses 5 elementos passados verbatim, Halbert escreve generic-Halbert.
+      Com eles, escreve Halbert-canalizando-Marcelo — o benchmark do operador.

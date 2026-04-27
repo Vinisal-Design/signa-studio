@@ -118,11 +118,15 @@ export function CharReveal({
         {words.map((word, wi) => (
           <span key={wi} className="inline-block">
             {word.split("").map((char, ci) => (
-              <span key={ci} className="inline-block overflow-hidden">
+              <span
+                key={ci}
+                className="inline-block overflow-hidden align-baseline"
+                style={{ paddingTop: "0.15em", paddingBottom: "0.2em" }}
+              >
                 <motion.span
                   className="inline-block"
                   variants={{
-                    hidden: { y: "110%", opacity: 0 },
+                    hidden: { y: "120%", opacity: 0 },
                     visible: { y: "0%", opacity: 1 },
                   }}
                   transition={{
@@ -185,6 +189,56 @@ export function WordReveal({
               <span className="inline-block">&nbsp;</span>
             )}
           </span>
+        ))}
+      </span>
+    </motion.span>
+  );
+}
+
+/**
+ * WordIllumination — manifesto-grade per-word reveal.
+ * Words start at opacity 0.18 and illuminate to 1.0 staggered on viewport entry.
+ * No translateY — pure illumination cascade (Academia Lendária pattern).
+ */
+export function WordIllumination({
+  text,
+  className = "",
+  delay = 0,
+  staggerMs = 50,
+}: {
+  text: string;
+  className?: string;
+  delay?: number;
+  staggerMs?: number;
+}) {
+  const words = text.split(" ");
+
+  return (
+    <motion.span
+      className={className}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-20%" }}
+    >
+      <span className="sr-only">{text}</span>
+      <span aria-hidden>
+        {words.map((word, wi) => (
+          <motion.span
+            key={wi}
+            className="inline-block"
+            variants={{
+              hidden: { opacity: 0.18 },
+              visible: { opacity: 1 },
+            }}
+            transition={{
+              duration: 0.5,
+              delay: delay + (wi * staggerMs) / 1000,
+              ease: easeOutQuart,
+            }}
+          >
+            {word}
+            {wi < words.length - 1 && <span>&nbsp;</span>}
+          </motion.span>
         ))}
       </span>
     </motion.span>

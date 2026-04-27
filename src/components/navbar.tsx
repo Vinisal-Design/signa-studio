@@ -4,8 +4,8 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
 
 const navItems = [
-  { label: "Metodo", href: "#como-funciona" },
-  { label: "Quem somos", href: "#quem-somos" },
+  { label: "Método", href: "#como-funciona" },
+  { label: "Time", href: "#time" },
   { label: "Investimento", href: "#precos" },
   { label: "Cases", href: "#portfolio" },
   { label: "FAQ", href: "#faq" },

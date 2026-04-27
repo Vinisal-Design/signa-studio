@@ -1,0 +1,64 @@
+hero_v3_halbert_draft:
+  task_id: COPY-2026-04-27-001-SIGNA-FULLSITE-V3-HERO
+  master: gary-halbert
+  status: DRAFT_PENDING_SPECIALIST_PASS
+  next_specialists: [john-carlton (Simple Writing), mark-ford (Rule of One)]
+  word_count: 108
+  written_for: marcelo (B2 dentista R$60k/mes, R$4k/mes em ads)
+
+  copy:
+    badge_superior: "[BADGE_SUPERIOR_OPERATOR_VALIDATE — manter SE 3 vagas/semana for capacidade real]"
+
+    headline_main: |
+      Você sabe que precisa
+      refazer esse site.
+      A gente faz em 24h.
+
+    headline_subline: "Pelo preço de uma campanha de Google Ads de duas semanas."
+
+    sub_headline: |
+      Você empurra essa decisão há meses. O que trava não é dinheiro —
+      é o medo de pagar de novo e dar errado de novo. A gente cortou o
+      que faz dar errado: você não paga nada antes de ver pronto e gostar.
+
+    cta_primary:
+      text: "Quero meu site em 24h"
+      destination: "[WHATSAPP_NUMBER_PLACEHOLDER]"
+
+    cta_secondary:
+      text: "Diagnóstico grátis em 2h"
+      destination: "[WHATSAPP_NUMBER_PLACEHOLDER]?text=quero%20diagnostico"
+
+    micro_copy_below_cta: "Sem briefing de 47 páginas. Sem reunião de 2 horas."
+
+    trust_badges:
+      - "1ª parcela só depois de você aprovar"
+      - "Atrasamos 1h, manutenção do mês é grátis (em contrato)"
+      - "Não gostou? 100% money-back"
+      - "10+ sites no ar — você abre cada um e valida"
+
+    marquee_intro_label: "Sites já no ar pra:"
+
+  conversation_entry_anchor: |
+    Linha 1 = eco direto do thought_02 do Marcelo (Collier conversation):
+    "Cara, eu PRECISO refazer esse meu site. Tá horroroso."
+    Headline NAO apresenta SIGNA. Termina a frase que ele esta pensando.
+
+  rule_of_one:
+    one_idea: "Site profissional honesto não precisa custar R$ 12.000 nem demorar 60 dias"
+    one_promise: "Em 24h seu site está no ar — e você não paga nada antes de gostar"
+    one_offer: "Método Sprint 24 com garantia tripla"
+    one_audience: "Marcelo (B2 dentista, sabe que precisa, traumatizado por quem fez antes)"
+
+  banimento_check:
+    banned_words_rejected: ["transforme", "potencial", "exclusivo", "moderno sozinho", "soluções", "AGEO", "LLMO", "vagas limitadas sem motivo", "última oportunidade"]
+    banned_words_found_in_draft: []
+
+  placeholders:
+    - "[WHATSAPP_NUMBER_PLACEHOLDER] — operator preenche antes do go-live"
+    - "[BADGE_SUPERIOR_OPERATOR_VALIDATE] — operator confirma se 3 vagas/semana e real"
+
+  qg_recommendation_pre_specialist:
+    estimated_score_before_specialists: 82/100
+    pending_passes: ["Carlton Simple Writing System", "Mark Ford Rule of One enforcement", "Sugarman 30 triggers", "Hopkins re-audit"]
+    target_after_full_pass: ≥ 88/100

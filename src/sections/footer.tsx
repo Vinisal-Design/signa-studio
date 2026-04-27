@@ -3,11 +3,11 @@
 import { FadeIn, LineReveal } from "@/components/animated";
 
 const footerLinks = [
-  { label: "Metodo", href: "#como-funciona" },
-  { label: "Quem somos", href: "#quem-somos" },
+  { label: "Como funciona", href: "#como-funciona" },
+  { label: "Time", href: "#time" },
   { label: "Investimento", href: "#precos" },
-  { label: "Cases", href: "#portfolio" },
-  { label: "Depoimentos", href: "#depoimentos" },
+  { label: "Sites entregues", href: "#portfolio" },
+  { label: "Por que escolher", href: "#provas" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -25,7 +25,7 @@ export function Footer() {
               SIGNA.
             </h3>
             <p className="mt-6 text-[15px] text-text-muted">
-              Sites que convertem. Entregues em 24 horas.
+              A porta do seu negócio aberta 24 horas por dia.
             </p>
           </div>
         </FadeIn>
@@ -35,9 +35,9 @@ export function Footer() {
             <a href="#" className="text-xl font-bold tracking-[-0.04em]">
               SIGNA<span className="text-accent-light">.</span>
             </a>
-            <p className="mt-3 max-w-[260px] text-[13px] leading-relaxed text-text-dim">
-              Design premium, entrega express, preco justo.
-              Para profissionais que levam seu negocio a serio.
+            <p className="mt-3 max-w-[280px] text-[13px] leading-relaxed text-text-dim">
+              Para profissionais e negócios que precisam de site bom, rápido e
+              sem dor de cabeça.
             </p>
           </div>
 
@@ -79,12 +79,16 @@ export function Footer() {
           </a>
         </div>
 
+        {/* Micro-Meta 4 — frame destino brasileiro (Cialdini consistency + Klaff prize) */}
+        <FadeIn className="mt-14">
+          <p className="mx-auto max-w-md text-center text-[12px] leading-[1.6] text-text-dim/70 italic">
+            Você chegou aqui sem a gente te empurrar. É como cliente bom chega.
+          </p>
+        </FadeIn>
+
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/[0.04] pt-8 text-[11px] text-text-dim sm:flex-row">
           <p>&copy; {year} SIGNA STUDIO. Todos os direitos reservados.</p>
-          <p>
-            Feito com precisao por{" "}
-            <span className="text-accent-light">SIGNA STUDIO</span>
-          </p>
+          <p>Site feito por nós. Como o seu vai ser.</p>
         </div>
       </div>
     </footer>

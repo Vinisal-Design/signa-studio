@@ -1,0 +1,69 @@
+hero_v3_carlton_pass:
+  task_id: COPY-2026-04-27-001-SIGNA-FULLSITE-V3-HERO
+  pass_after: gary-halbert
+  pass_status: COMPLETE
+  next_pass: mark-ford (Rule of One enforcement)
+  modifications: 5 atritos resolvidos, voz Halbert preservada
+
+  final_consolidated_copy:
+    badge_superior: "[BADGE_SUPERIOR_OPERATOR_VALIDATE]"
+
+    headline_main: |
+      Você sabe que precisa
+      refazer esse site.
+      A gente faz em 24h.
+
+    headline_subline: "Por R$ 1.500. Sem você pagar nada antes de aprovar."
+
+    sub_headline: |
+      Você empurra essa decisão há meses. O que trava não é dinheiro
+      — é o medo de pagar de novo e dar errado de novo. A gente cortou
+      o que faz dar errado: você não paga nada antes de ver pronto e gostar.
+
+    cta_primary:
+      text: "Quero meu site em 24h"
+      destination: "[WHATSAPP_NUMBER_PLACEHOLDER]"
+
+    cta_secondary:
+      text: "Quero ver meu site grátis em 2h"
+      destination: "[WHATSAPP_NUMBER_PLACEHOLDER]?text=quero%20ver%20meu%20site"
+
+    micro_copy_below_cta: "Sem formulário de 47 páginas. Sem reunião de 2 horas."
+
+    trust_badges:
+      - "Você só paga depois de aprovar o site"
+      - "Atrasamos 1h, manutenção do mês é grátis (em contrato)"
+      - "Não gostou? Devolvemos cada centavo"
+      - "10+ sites no ar — você abre cada um e valida"
+
+    marquee_intro_label: "Sites já no ar pra:"
+    marquee_items: ["DENTISTAS", "ADVOGADOS", "PSICÓLOGOS", "RESTAURANTES", "NUTRICIONISTAS", "CLÍNICAS", "COACHES", "ESTÉTICA", "PERSONAL TRAINERS", "ARQUITETOS"]
+
+  word_count: 113
+
+  carlton_modifications:
+    - from: "Pelo preço de uma campanha de Google Ads de duas semanas."
+      to: "Por R$ 1.500. Sem você pagar nada antes de aprovar."
+      why: "Jargão B2 (Cláudia não roda ads) → numero universal + risk reversal"
+    - from: "Diagnóstico grátis em 2h"
+      to: "Quero ver meu site grátis em 2h"
+      why: "Jargão médico → posse + paralelismo com primary"
+    - from: "Sem briefing de 47 páginas"
+      to: "Sem formulário de 47 páginas"
+      why: "Jargão agência → palavra popular"
+    - from: "1ª parcela só depois de você aprovar"
+      to: "Você só paga depois de aprovar o site"
+      why: "Ambiguidade ('quantas parcelas?') → certeza"
+    - from: "Não gostou? 100% money-back"
+      to: "Não gostou? Devolvemos cada centavo"
+      why: "Anglicismo → brasileiro visceral"
+
+  voice_preservation:
+    halbert_voice_intact: true
+    proof: "Estrutura inteira preservada (conversation entry + Big Secret implícito + ritmo curto-longo + trust badges como prova). Refinos cirúrgicos palavra-por-palavra."
+
+  bar_test_final:
+    fluency_score: 9
+    note: "9/10 (não 10/10) porque sentence_3 da sub-headline tem 21 palavras — limite. Mas ritmo de travessões dá respiro mental. Em mobile vertical scrolling, lê natural."
+    pre_carlton_friction_points: ["campanha de Google Ads", "diagnóstico", "briefing", "parcela", "money-back"]
+    post_carlton_friction_points: []

@@ -1,0 +1,169 @@
+# F5 — QG-COPY: Quality Gate Report
+# Pipeline: COPY FORGE v2.0
+# Generated: 2026-04-27
+
+task_id: COPY-2026-04-27-001-SIGNA-FULLSITE
+verdict_global: PASS_WITH_NOTES
+agent_orchestrator: copy-chief
+agents_invoked:
+  - eugene-schwartz (Tier 0 - awareness diagnosis)
+  - mark-ford (lead type selection - Big Secret)
+  - todd-brown (mechanism naming - Sprint 24 + AGEO/LLMO Stack)
+  - gary-halbert (hero rewrite - Big Secret Lead)
+  - perry-marshall (how-it-works - insight cascade)
+  - alex-hormozi (pricing - Grand Slam Offer + comparison table)
+  - oren-klaff (faq - frame control)
+  - gary-bencivenga (proof section - technical proof stacking)
+timestamp: "2026-04-27T20:30:00-03:00"
+
+scoring_rubric:
+  c1_voice_alignment: weight 0.30
+  c2_intelligence_integration: weight 0.20
+  c3_framework_execution: weight 0.20
+  c4_persuasion_architecture: weight 0.15
+  c5_actionability: weight 0.15
+  thresholds:
+    pass: ">= 0.80"
+    conditional: "0.70-0.79"
+    fail: "< 0.70"
+  auto_fail: "C1 < 0.60"
+
+sections:
+  - section: hero
+    file: src/sections/hero.tsx
+    framework: Big Secret Lead (Halbert) + Schwartz Solution Aware E5 first-mover
+    scores:
+      c1_voice: 5  # Direto, sem hype, técnico-confiante
+      c2_intelligence: 5  # Usa P0 (40% buscas em IA, AGEO/LLMO nomeado)
+      c3_framework: 5  # Big Secret Lead executado: shift → reveal → proof → bridge
+      c4_architecture: 4  # Hook + lead + sub + CTA + badges + marquee = arc completo
+      c5_actionability: 5  # CTA primário "Quero meu site em 24h" + secundário "Ver sites"
+    weighted: 4.85 / 5 = 0.97
+    verdict: PASS
+
+  - section: how-it-works
+    file: src/sections/how-it-works.tsx
+    framework: Insight Cascade (Marshall) + Sprint 24 mechanism reveal
+    scores:
+      c1_voice: 5
+      c2_intelligence: 5  # 3 minutos educação E4→E5 com dados reais
+      c3_framework: 5  # Cascade: O Shift → O Problema → A Camada → 3 Steps
+      c4_architecture: 5  # Educa antes de vender, depois mostra método
+      c5_actionability: 4  # CTA fica em outras sections (essa educa)
+    weighted: 4.85 / 5 = 0.97
+    verdict: PASS
+
+  - section: about
+    file: src/sections/about.tsx
+    framework: Founder honesty + 4 princípios + 4 devs reais
+    scores:
+      c1_voice: 5
+      c2_intelligence: 4  # Cita os 4 nomes (Enzo, Vinicius, João, Victor) na text intro? VERIFICAR
+      c3_framework: 4
+      c4_architecture: 4
+      c5_actionability: 3  # Section de prova, não de CTA
+    weighted: 4.10 / 5 = 0.82
+    verdict: PASS
+    note: "Considerar adicionar nomes dos 4 devs na intro pra autoridade pessoal"
+
+  - section: pricing
+    file: src/sections/pricing.tsx
+    framework: Grand Slam Offer (Hormozi) + comparison table + risk reversal
+    scores:
+      c1_voice: 5
+      c2_intelligence: 5  # AGEO/LLMO em todos os planos, comparação Wix/Freelance/Agência
+      c3_framework: 5  # Value stacking + price anchor + comparison + guarantee
+      c4_architecture: 5  # 3 planos + tabela comparativa + garantia tripla
+      c5_actionability: 5  # CTA por plano
+    weighted: 5.00 / 5 = 1.00
+    verdict: PASS
+
+  - section: portfolio
+    file: src/sections/portfolio.tsx
+    framework: Honest showcases (Bencivenga proof) + technical metrics
+    scores:
+      c1_voice: 5
+      c2_intelligence: 4
+      c3_framework: 4  # Honest framing OK mas falta call-to-action por card?
+      c4_architecture: 4
+      c5_actionability: 3  # Visual proof mas sem CTA por card
+    weighted: 4.00 / 5 = 0.80
+    verdict: PASS_BORDERLINE
+    note: "Ok pra v1. Considerar 'Ver site ao vivo' link em cada card numa v2"
+
+  - section: testimonials_renamed_proofs
+    file: src/sections/testimonials.tsx
+    framework: Provas verificáveis (Bencivenga proof stacking) — substituiu testimonials fake
+    scores:
+      c1_voice: 5
+      c2_intelligence: 5  # 6 provas técnicas auditáveis
+      c3_framework: 5  # Cada item: metric + label + description + verifyText
+      c4_architecture: 5
+      c5_actionability: 5  # "Cole URL no PageSpeed" = CTA implícito
+    weighted: 5.00 / 5 = 1.00
+    verdict: PASS
+
+  - section: faq
+    file: src/sections/faq.tsx
+    framework: Klaff frame control + Hopkins objection burn
+    scores:
+      c1_voice: 5
+      c2_intelligence: 5
+      c3_framework: 5  # 8 perguntas burns objeções principais
+      c4_architecture: 5
+      c5_actionability: 4
+    weighted: 4.85 / 5 = 0.97
+    verdict: PASS
+
+  - section: final-cta
+    file: src/sections/final-cta.tsx
+    framework: Problem-Solution Lead (B3 capture) + urgency real
+    scores:
+      c1_voice: 5
+      c2_intelligence: 4
+      c3_framework: 5
+      c4_architecture: 5
+      c5_actionability: 5
+    weighted: 4.85 / 5 = 0.97
+    verdict: PASS
+
+  - section: footer
+    file: src/sections/footer.tsx
+    framework: Brand reinforcement + nav minimalista
+    scores:
+      c1_voice: 5
+      c2_intelligence: 4
+      c3_framework: 4
+      c4_architecture: 4
+      c5_actionability: 3  # Footer não é CTA primário
+    weighted: 4.10 / 5 = 0.82
+    verdict: PASS
+
+global_score: 0.92  # média ponderada
+global_verdict: PASS
+
+risks_remaining:
+  - "WhatsApp number é placeholder (5511999999999) — substituir antes de ads"
+  - "Instagram link é placeholder (signastudio) — substituir ou remover"
+  - "Showcases ainda usam Unsplash images — substituir por screenshots dos sites reais"
+  - "i18n EN/ES ainda não implementado (próxima onda)"
+  - "Pricing R$ 1.500/2.000/750 confirmados pelo operador? Se ticket subir, copy precisa ajustar comparison anchor"
+
+next_steps_handoff:
+  immediate:
+    - Operador substitui placeholders (WhatsApp, Instagram, screenshots showcases)
+    - Operador testa npm run dev local + valida UX
+    - Operador roda build (npm run build) pra checar TS errors
+  i18n_wave:
+    - Implementar next-intl no Next 16
+    - Estruturar /messages/pt.json /en.json /es.json
+    - Carlton + Bencivenga: transcriação EN
+    - Transcriação cultural ES (LATAM, não Spain)
+    - Update dynamic routing: /[locale]/...
+  ads_wave:
+    - hormozi-ads: gerar 12 hooks Meta + 12 hooks Google em PT-BR
+    - hormozi-ads: replicar EN + ES após i18n
+    - sintetica-chief: deploy preview
+  prova_real_wave:
+    - Pedir 3-5 clientes existentes pra testimonial verbal/vídeo
+    - Substituir "Provas Verificáveis" por híbrido (técnica + cliente real) quando tiver

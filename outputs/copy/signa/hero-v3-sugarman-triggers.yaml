@@ -1,0 +1,71 @@
+sugarman_30_triggers_check:
+  task_id: COPY-2026-04-27-001-SIGNA-FULLSITE-V3-HERO
+  framework: "30 Psychological Triggers (Sugarman) - NUNCA 31"
+  threshold_pass: 80% coverage of APPLICABLE triggers
+  format_context: "HERO section visual-heavy 113 palavras"
+
+  coverage_summary:
+    present_strong: 19
+    partial: 6
+    absent: 0
+    na_intentional: 3
+    applicable_total: 27
+    final_coverage: "81.5%"
+    verdict: PASS
+
+  present_strong_triggers:
+    - "01 Involvement/Ownership: 'Quero meu site' + 'Quero ver meu site'"
+    - "02 Honesty: 'O que trava não é dinheiro — é o medo de pagar de novo e dar errado'"
+    - "03 Integrity: 'Atrasamos 1h, manutenção do mês é grátis (em contrato)'"
+    - "04 Credibility: '10+ sites no ar — você abre cada um e valida'"
+    - "05 Value/Proof: garantia tripla quadruplicada"
+    - "09 Satisfaction Conviction: 'Devolvemos cada centavo'"
+    - "10 Nature of Product: 'A gente faz em 24h' + marquee"
+    - "13 Linking: 'sem formulário de 47 páginas'"
+    - "14 Consistency: promessa repetida tetra-vetorial sem contradição"
+    - "15 Familiarity: 'Você sabe que precisa' + WhatsApp"
+    - "16 Mental Engagement: 'R$ 1.500' obriga cálculo mental"
+    - "17 Curiosity: 'A gente cortou o que faz dar errado'"
+    - "19 Fear: 'medo de pagar de novo e dar errado de novo' (verbaliza, não cria)"
+    - "20 Instant Gratification: '2h orçamento' + '24h site'"
+    - "22 Simplicity: 4 passos visíveis, zero formulário"
+    - "25 Mental Pictures: 'Sem formulário de 47 páginas'"
+    - "26 Truthful: cada claim auditável"
+    - "27 Harmonize: yes-momentum por verdades universais ('Você sabe que precisa')"
+    - "28 Belonging: marquee de nichos = tribal"
+    - "30 Specifics: 7 números específicos em 113 palavras"
+
+  partial_triggers_reinforced_in_other_sections:
+    - "06 Justify Purchase → pricing (números comparativos R$12k vs R$1.5k)"
+    - "08 Authority → about (4 nomes founders)"
+    - "12 Timing → final-cta (Schwartz Stretch + Universality)"
+    - "18 Urgency → final-cta intensification"
+    - "21 Exclusivity → resolver placeholder '3 vagas'"
+    - "23 Human Relationships → about (Enzo/Vinicius/João/Victor)"
+    - "24 Storytelling → about (motivo pessoal)"
+
+  na_intentional:
+    - "07 Greed: Self-Preservation é primary motive (Collier), greed seria off-tone"
+    - "11 Current Fads: AGEO/LLMO removido propositalmente (Hopkins)"
+    - "29 Desire to Collect: não-aplicável a serviço único"
+
+  first_sentence_test:
+    target: "Under 10 words, compels next"
+    hero_first_sentence: "Você sabe que precisa refazer esse site."
+    word_count: 7
+    pass: true
+
+  slippery_slide_test:
+    description: "Cada elemento puxa pra próximo (axiom #1)"
+    verdict: "GREASED — exit points eliminados"
+
+  sugarman_strategic_recommendation: |
+    Hero NÃO TENTA cobrir 30 triggers sozinho. Ele estabelece base forte (19),
+    e as próximas sections (about, pricing, final-cta) reforçam os 6 parciais.
+    Quando site inteiro estiver pronto: 27/27 triggers aplicáveis = 100% coverage
+    distribuído cirurgicamente. Architecture of Persuasion correta.
+
+  handoff_to_copy_chief:
+    verdict: APPROVED_FOR_OPERATOR_REVIEW
+    coverage: "81.5% PASS"
+    next_step: "Copy Chief roda QG-COPY formal final + apresenta ao operador"

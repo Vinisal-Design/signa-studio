@@ -1,0 +1,97 @@
+# F2 — INTELLIGENCE: Eugene Schwartz Diagnosis
+# Diagnostic complete (rodado em sessão Tier 0)
+# Generated: 2026-04-27
+
+task_id: COPY-2026-04-27-001-SIGNA-FULLSITE
+
+awareness_diagnosis:
+  market: SIGNA Studio (criação de sites otimizados pra IA)
+
+  primary_layer:
+    name: B2 — Rodadores de ads (profissional liberal premium)
+    level: 3 (Solution Aware)
+    mental_state:
+      - "Já tenho site, mas meu CPL tá alto"
+      - "Já contratei freelance, deu merda"
+      - "Agência cobra R$10k, fora do orçamento"
+      - "Wix dá pro gasto, mas sei que tem algo melhor"
+      - "Sei que tem solução, não sei qual escolher"
+    needs:
+      - Differentiation (mecanismo único nomeado)
+      - Why others fail (Wix, freelance, agência tradicional)
+      - Trust signals (provas técnicas, não promessas)
+      - Risk reversal (garantia explícita)
+
+  secondary_layer:
+    name: B3 — Negócios locais sem presença IA
+    level: 2 (Problem Aware → quase Solution Aware)
+    mental_state:
+      - "Sinto que tô perdendo cliente, mas não sei pra onde"
+      - "Tenho que fazer site mas tô empurrando"
+      - "Sobrinha disse que precisa de Insta, sei lá"
+      - "Vi concorrente aparecer no Google, eu não"
+    needs:
+      - Education (problema da IA na busca)
+      - Bridge (Google → IA como mesmo desafio amplificado)
+      - Empathy (sem culpa por estar atrasado)
+      - Simple path (24h, WhatsApp, garantia)
+
+sophistication_diagnosis:
+  market_history:
+    stage_1_dead: '"Tenha um site" (anos 90-2000s)'
+    stage_2_dead: '"Tenha um site profissional" (2010s)'
+    stage_3_saturated: '"Tenha um site bonito e rápido" (mid-2010s)'
+    stage_4_current: '"Tenha um site que converte / é encontrado" (2020s — saturated)'
+    stage_5_emerging: '"Tenha um site otimizado para IA recomendar" (2026+)'
+
+  current_stage: "E4 → E5 transição (oportunidade first-mover E5)"
+
+  saturated_claims_to_avoid:
+    - "site profissional"
+    - "em X dias"
+    - "otimizado pro Google"
+    - "que converte"
+    - "preço justo"
+    - "design exclusivo"
+
+  virgin_claims_to_dominate:
+    - "recomendado pela IA"
+    - "encontrado no ChatGPT, Perplexity, Gemini"
+    - "AGEO/LLMO Stack"
+    - "schema.org pra IA entender seu negócio"
+    - "site da era pós-Google"
+
+  strategic_implication: |
+    SIGNA está em janela rara: pode pular o E4 (lutando claim contra claim
+    com agências baratas) direto pro E5 (territory virgem, mecanismo único,
+    monopólio temporário de 6-12 meses até copy concorrentes alcançarem).
+
+dominant_mass_desire:
+  surface_desire: "Quero um site"
+  real_desire: "Quero não perder cliente / não queimar dinheiro de ads"
+  deepest_desire: |
+    Sobrevivência econômica na transição digital.
+    "Não quero ser o profissional invisível enquanto meu concorrente
+    é recomendado pelo ChatGPT."
+
+unique_mechanism_named:
+  name: "Sprint 24 + AGEO/LLMO Stack"
+  what_it_does: |
+    Método de entrega (Sprint 24) + camada técnica de otimização para
+    Search Engines tradicionais (SEO) + Answer Engines IA (AGEO) +
+    Large Language Models (LLMO) + GEO (Generative Engine Optimization).
+  why_it_works: |
+    Em 2026, busca está fragmentada: Google, ChatGPT, Perplexity, Gemini,
+    Bing Copilot. Cada um lê site de jeito diferente. Site comum atinge 1
+    canal. Site Sprint 24 + AGEO/LLMO atinge todos simultaneamente.
+  defensible: |
+    Não é claim, é configuração técnica auditável: Schema.org, llms.txt,
+    semantic HTML, Core Web Vitals, structured data. Você pode VALIDAR
+    cada item nas ferramentas oficiais.
+
+handoff_recommendations:
+  next_agent: todd-brown (formalize unique mechanism with E5 Method)
+  then: gary-halbert (rewrite hero with Big Secret Lead + named mechanism)
+  then: alex-hormozi (pricing as Grand Slam Offer with value equation)
+  then: oren-klaff (FAQ frame control intensification)
+  validation: claude-hopkins (scientific audit) + joe-sugarman (30 triggers check)

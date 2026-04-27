@@ -1,0 +1,112 @@
+# F1 — INTAKE: Copy Brief Estruturado
+# Pipeline: COPY FORGE v2.0
+# Generated: 2026-04-27
+
+task_id: COPY-2026-04-27-001-SIGNA-FULLSITE
+project: SIGNA Studio — Site Reforge E2E
+objective: |
+  Reescrever site institucional/sales (9 sections) end-to-end seguindo COPY FORGE.
+  Posicionar SIGNA como first-mover do Estágio 5 (E5) — agência de sites
+  otimizados para a era da IA (Google + ChatGPT + Perplexity + Gemini).
+  Site precisa converter tráfego pago (Meta Ads + Google Ads) começando amanhã,
+  com 3 idiomas (PT-BR + EN + ES) para mercado global.
+
+format: PAGE_FULL_SITE
+sections_count: 9
+sections:
+  - hero
+  - how-it-works
+  - about
+  - pricing
+  - portfolio
+  - testimonials (renomear: provas verificáveis)
+  - faq
+  - final-cta
+  - footer
+
+audience:
+  primary:
+    archetype: B2 — Profissional liberal/negócio que JÁ roda ads
+    pain: CPL alto + site mal otimizado destrói ROAS
+    awareness_level: 3 (Solution Aware)
+    sophistication_stage: 4 (transição para 5)
+  secondary:
+    archetype: B3 — Negócio local sem presença online forte
+    pain: Perdendo cliente para concorrente que aparece no Google/IA
+    awareness_level: 2 (Problem Aware)
+    sophistication_stage: 4
+
+tone: HYBRID (Real + técnico-confiante; anti-coach-speak; anti-hype)
+
+constraints:
+  word_budget_per_section:
+    hero: 80-120 words (visual-heavy)
+    how_it_works: 200-300
+    about: 250-350
+    pricing: 400-500
+    portfolio: 250-350
+    proof: 350-450
+    faq: 600-900
+    final_cta: 100-150
+    footer: 80-120
+  must_include_global:
+    - "AGEO/LLMO" como mecanismo único nomeado
+    - "Sprint 24" como nome do método
+    - "Stack profissional" (Next.js, Tailwind) como autoridade
+    - "Garantia tripla" como risk reversal
+    - "Sites otimizados para IA recomendar"
+  must_avoid:
+    - Inventar testimonials, números, nomes de clientes
+    - Hype/coach-speak ("desbloqueie", "transforme", "jornada")
+    - Saturated E4 claims ("site profissional", "em X dias", "que converte")
+  ctas_canonical:
+    primary: "Quero meu site em 24h"
+    secondary: "Diagnóstico grátis em 2h"
+    final: "Garantir minha vaga agora"
+  cta_destination: WhatsApp (wa.me/5511999999999 — placeholder)
+
+competitive_landscape:
+  - competitor: Wix / Framer / DIY
+    angle: "Você gasta 80h e entrega amador" (E5 leverage)
+  - competitor: Freelancer Fiverr/local
+    angle: "WordPress com tema, sem otimização IA, sem garantia"
+  - competitor: Agência tradicional (R$ 8-15k)
+    angle: "60 dias de reuniões, mesmo resultado, 5x o preço"
+
+pricing_anchored:
+  reforma: R$ 1.500
+  site_novo: R$ 2.000
+  manutencao: R$ 750/mês
+  comparison_anchor: "Agências cobram R$ 8.000-15.000"
+
+real_assets:
+  team_real: "Enzo de Farias, Vinicius Almeida, João Lozano, Victor Ferreira (4 devs)"
+  clients_delivered: "10+ projetos entregues (operador confirmou)"
+  showcases: "6 showcases reais construídos pelo time (usados em prospecção via flip)"
+  technical_proof:
+    - PageSpeed 100/100 nos showcases
+    - Core Web Vitals verde
+    - Schema.org configurado
+    - Stack: Next.js 16 + Tailwind 4 + Framer Motion
+  guarantees:
+    - 100% money-back se não aprovar
+    - Refazemos se não gostar
+    - Sem pagamento adiantado
+
+NOT_to_use:
+  - Foto stock como foundes (Lucas Ferreira / Marina Costa eram placeholders)
+  - "200+ sites entregues" (10+ é o real)
+  - "98% aprovação 1ª versão" (sem dado)
+  - "0 reembolsos" (sem dado)
+  - "4.9/5" (sem rating real ainda)
+  - Testimonials nominais (Marcelo, Fernanda, Rafael — todos placeholders)
+
+deadline: 2026-04-28 (rodar ads amanhã)
+context_notes: |
+  Operador confirmou:
+  - Equipe real: 4 devs
+  - 10+ clientes pagantes reais
+  - Quer começar ads PT-BR primeiro, escalar EN/ES
+  - Não quer expor nomes de clientes
+  - Showcases reais usados pra prospecção (flip + envio de proposta)
+  - Pediu E2E formal sem atalhos

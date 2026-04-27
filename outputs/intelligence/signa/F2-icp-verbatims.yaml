@@ -1,0 +1,286 @@
+# F2 — INTELLIGENCE: ICP Verbatims (RAW VOC matter for Wiebe + Halbert + Carlton)
+# Pipeline: COPY FORGE v3 ELITE
+# Created: 2026-04-27
+# Status: hypothesis_unvalidated
+#
+# IMPORTANT: Operador não tinha histórico de WhatsApp pra extrair verbatims reais
+# nesta sessão. Estes verbatims são HIPÓTESES baseadas em:
+#   1. F2-schwartz-diagnosis.yaml (mental_state per layer)
+#   2. F2-todd-brown-mechanism.yaml (emotional_fuel)
+#   3. SOUL-signa.md §7 avatar (Marcelo dentista, Cláudia restaurante)
+#   4. ICP profile genérico de profissional liberal BR 2026
+#   5. Conhecimento de domínio: Copy Chief com exposição a 100+ briefs B2/B3 BR
+#
+# REGRA: Wiebe e qualquer agente que use estes verbatims DEVE marcar no output
+# que está usando "hypothesis verbatims" (não real VOC). Operador valida depois.
+
+task_id: COPY-2026-04-27-001-SIGNA-FULLSITE
+hypothesis_unvalidated: true
+validation_status: PENDING_OPERATOR_REVIEW
+validated_by: null
+validated_at: null
+
+# ═════════════════════════════════════════════════════════════════════
+# NICHO 1: DENTISTAS (B2 — primary archetype, rodador de ads)
+# ═════════════════════════════════════════════════════════════════════
+
+dentista:
+  archetype: B2 (Solution Aware, sofisticação E4→E5)
+  persona_reference: Marcelo, 38, clínica há 5 anos, fatura R$ 60k/mês
+  core_pain: CPL alto + site velho derrubando ROAS
+
+  verbatims:
+    - id: dentista-01
+      context: "Reclamação típica em grupo de WhatsApp de dentistas"
+      quote: |
+        "Cara, tô gastando 4 mil por mês em ads e o povo clica no anúncio, vai pro site,
+        e some. Sumiu. Site horroroso, lento, parece de 2015. Mas refazer isso é uma
+        novela: agência cobra 12 mil, demora 2 meses, freelance some no meio. Não tenho
+        tempo nem grana pra esse drama."
+      emotional_register: frustração + cansaço + pressa
+      keywords_to_mine: ["clica e some", "drama", "freelance some", "12 mil", "2 meses"]
+
+    - id: dentista-02
+      context: "Pergunta direta pra colega que tem site bom"
+      quote: |
+        "Quem fez seu site? Tô precisando refazer o meu, mas não quero passar por aquela
+        novela de novo. Da última vez paguei 4 mil, esperei 6 semanas, e o cara entregou
+        um troço que abre torto no celular. Nunca mais."
+      emotional_register: trauma anterior + busca de referência confiável
+      keywords_to_mine: ["abre torto no celular", "novela", "nunca mais", "quem fez seu"]
+
+    - id: dentista-03
+      context: "Pensamento interno olhando concorrente no Instagram"
+      quote: |
+        "Pô, o Dr. Felipe ali do Tatuapé tem um site f*da. Aparece em primeiro no Google
+        quando alguém procura 'implante zona leste'. Eu apareço na quinta página. E ele
+        cobra mais caro que eu pelo mesmo procedimento. É só o site fazendo a diferença.
+        Eu sei. Mas tô empurrando isso há 1 ano."
+      emotional_register: inveja produtiva + autoconhecimento + procrastinação
+      keywords_to_mine: ["aparece em primeiro", "quinta página", "só o site fazendo a diferença", "empurrando há"]
+
+    - id: dentista-04
+      context: "Resposta à pergunta 'o que você quer no site?'"
+      quote: |
+        "Olha, eu não entendo dessa parte. Quero um site que pareça profissional, que
+        carregue rápido no celular do paciente, que tenha minhas fotos antes-depois, e
+        que o cara consiga marcar comigo pelo WhatsApp sem ter que preencher 15 campos.
+        Só isso. O resto vocês sabem."
+      emotional_register: pragmatismo + delegação + foco em conversão
+      keywords_to_mine: ["pareça profissional", "celular do paciente", "antes-depois", "WhatsApp", "15 campos"]
+
+    - id: dentista-05
+      context: "Objeção real ao receber proposta de R$ 2.000"
+      quote: |
+        "Tá barato demais. Tem pegadinha? Vocês são 4 caras só? E se um sumir? E se eu não
+        gostar? E o suporte depois? Eu prefiro pagar mais e ter segurança. Já me ferrei
+        muito com barato."
+      emotional_register: desconfiança + memória de prejuízo + busca de segurança
+      keywords_to_mine: ["pegadinha", "se eu não gostar", "ferrei com barato", "segurança"]
+
+# ═════════════════════════════════════════════════════════════════════
+# NICHO 2: ADVOGADOS (B2 — primary archetype, rodador de ads)
+# ═════════════════════════════════════════════════════════════════════
+
+advogado:
+  archetype: B2 (Solution Aware, sofisticação E4→E5)
+  persona_reference: Dra. Patrícia, 42, escritório boutique, 5 advogados, ticket alto
+  core_pain: Posicionamento + autoridade + leads qualificados
+
+  verbatims:
+    - id: advogado-01
+      context: "Conversa entre sócios sobre marketing"
+      quote: |
+        "A gente tá perdendo case pro escritório do Renato porque o site dele transmite
+        autoridade. O nosso parece de 2010. E olha que a gente é melhor tecnicamente.
+        Cliente entra no site, não sente confiança, vai embora. Tô pensando em refazer
+        mas tô com medo de gastar 10 mil e ficar igual."
+      emotional_register: frustração competitiva + medo de investimento ruim
+      keywords_to_mine: ["transmite autoridade", "melhor tecnicamente", "não sente confiança", "ficar igual"]
+
+    - id: advogado-02
+      context: "OAB ética — preocupação latente"
+      quote: |
+        "Quero um site moderno mas que não pareça de loja vendendo curso. Advogado tem
+        ética da OAB, não pode ser pegajoso. Tipo do Renato que falei: sério, limpo,
+        autoridade visível, mas sem hype. Conhece quem faz isso?"
+      emotional_register: identidade profissional + restrição regulatória
+      keywords_to_mine: ["loja vendendo curso", "pegajoso", "sério limpo", "sem hype", "ética OAB"]
+
+    - id: advogado-03
+      context: "Resposta sobre prazo"
+      quote: |
+        "60 dias?! Eu tenho audiência semana que vem. Quanto tempo isso vai consumir do
+        meu tempo? Eu não posso ficar em reunião de site por 8 horas no mês. Cobro R$ 600
+        a hora consultivo. Faz a conta: cada hora de reunião com vocês me custa 600 reais
+        de oportunidade."
+      emotional_register: custo de oportunidade + escassez de tempo
+      keywords_to_mine: ["audiência semana que vem", "8 horas no mês", "600 a hora", "custo de oportunidade"]
+
+    - id: advogado-04
+      context: "Pergunta técnica sem ser técnico"
+      quote: |
+        "Esse negócio de IA tá explodindo. Cliente meu já me perguntou se eu uso ChatGPT
+        no escritório. Meu site precisa aparecer quando alguém pergunta pra IA 'melhor
+        advogado de família em SP'? Como funciona isso?"
+      emotional_register: curiosidade + medo de ficar pra trás + abertura pra educação
+      keywords_to_mine: ["IA explodindo", "pergunta pra IA", "melhor advogado de família", "como funciona isso"]
+
+    - id: advogado-05
+      context: "Objeção ao pacote de manutenção R$ 750/mês"
+      quote: |
+        "Manutenção R$ 750 por mês? Pra quê? Site é site, não muda. Já paguei isso pra
+        agência uma vez e era só renovar SSL e olhar se tava no ar. Bullshit. Me explica
+        o que vocês fazem nesse 750."
+      emotional_register: ceticismo de manutenção + memória de upsell vazio
+      keywords_to_mine: ["pra quê", "site é site não muda", "bullshit", "me explica o que"]
+
+# ═════════════════════════════════════════════════════════════════════
+# NICHO 3: PSICÓLOGOS (B2/B3 — meio termo, ticket menor, volume maior)
+# ═════════════════════════════════════════════════════════════════════
+
+psicologo:
+  archetype: B2/B3 híbrido (Solution Aware mid-funnel)
+  persona_reference: Bia, 34, consultório próprio + plataforma online, 30 sessões/sem
+  core_pain: Volume de pacientes novos + posicionamento humano sem ser piegas
+
+  verbatims:
+    - id: psicologo-01
+      context: "Reclamação em supervisão de grupo de psis"
+      quote: |
+        "Gente, alguém aqui tem site que realmente traz paciente? O meu não traz nada.
+        Tô dependendo só do Doctoralia e do Insta. Mas o pessoal que aparece no Google
+        primeiro tem agenda lotada. Sei que é o site, mas não sei por onde começar.
+        E todo psicólogo tem aquele site igual: foto sentado em poltrona, frase sobre
+        'autoconhecimento', telefone. Genérico."
+      emotional_register: cansaço + autocrítica + necessidade de diferenciação
+      keywords_to_mine: ["traz paciente", "agenda lotada", "site igual", "autoconhecimento", "genérico"]
+
+    - id: psicologo-02
+      context: "Conversa franca sobre dinheiro (raro)"
+      quote: |
+        "Cobrar 200 a sessão e ficar sem paciente é frustrante. Eu sei meu valor, mas se
+        o paciente não me encontra, não adianta. Já investi 1.500 num site há 2 anos
+        que nunca trouxe nada. Tô com pé atrás de gastar de novo. Mas continuar sem
+        é pior."
+      emotional_register: tensão entre identidade profissional e sobrevivência financeira
+      keywords_to_mine: ["sei meu valor", "1.500 num site", "nunca trouxe nada", "pé atrás", "pior"]
+
+    - id: psicologo-03
+      context: "Medo da própria área (psi tem aversão a venda)"
+      quote: |
+        "Eu não quero um site que pareça que tô vendendo terapia tipo academia. 'Você
+        merece se cuidar!' não combina comigo. Quero algo sério, profissional, mas que
+        a pessoa sinta que pode confiar em mim sem eu ter que fazer marketing chamativo."
+      emotional_register: identidade ética + aversão a hype + busca de tom certo
+      keywords_to_mine: ["vendendo terapia", "academia", "merece se cuidar", "sem marketing chamativo"]
+
+    - id: psicologo-04
+      context: "Resposta a pergunta 'o que você precisa no site?'"
+      quote: |
+        "Preciso que: o paciente entre, leia em 30 segundos sobre minha abordagem,
+        veja minha foto e nome (sou eu, ele tá comprando MIM), e marque consulta sem
+        ter que ligar (eu odeio telefone). E que carregue rápido no celular porque a
+        maioria entra do celular antes de dormir."
+      emotional_register: pragmatismo + autoconhecimento + foco em jornada real
+      keywords_to_mine: ["30 segundos", "comprando MIM", "marque sem ligar", "antes de dormir"]
+
+    - id: psicologo-05
+      context: "Comparação real Wix vs site profissional"
+      quote: |
+        "Eu fiz o meu no Wix em 2022. Levei umas 50 horas que eu deveria ter usado
+        pra estudar. E ficou bonitinho mas não traz ninguém. Agora penso: se eu tivesse
+        contratado alguém por 1.500 e dedicado essas 50 horas a sessão, eu teria ganho
+        10 mil. Cara, fui burra."
+      emotional_register: arrependimento de DIY + cálculo retrospectivo + abertura a outsourcing
+      keywords_to_mine: ["50 horas", "ganho 10 mil", "fui burra", "Wix", "bonitinho mas"]
+
+# ═════════════════════════════════════════════════════════════════════
+# CROSS-NICHE PATTERNS (padrões que aparecem em TODOS os 3 nichos)
+# ═════════════════════════════════════════════════════════════════════
+
+cross_niche_patterns:
+  pattern_01_trauma_anterior:
+    description: "Quase todos têm história de já ter pago e se ferrado"
+    sample_phrases:
+      - "Já me ferrei"
+      - "Pé atrás de gastar de novo"
+      - "Freelance que sumiu"
+      - "Pagamento e nunca recebi"
+    copy_implication: "Garantia tripla precisa estar EM TODA section, não só pricing"
+
+  pattern_02_custo_oportunidade:
+    description: "Tempo deles é dinheiro real medido em sessões/casos/procedimentos"
+    sample_phrases:
+      - "Cada hora me custa X reais"
+      - "Não posso ficar em reunião de 8h"
+      - "Briefing de 15min cabe na minha rotina"
+    copy_implication: "Hero precisa puxar pelo TEMPO antes do PREÇO"
+
+  pattern_03_inveja_concorrente:
+    description: "Olham o concorrente que tem site bom e sabem que perdem por isso"
+    sample_phrases:
+      - "Aparece primeiro no Google"
+      - "Cobra mais caro pelo mesmo procedimento"
+      - "Tem agenda lotada"
+    copy_implication: "Final-CTA precisa intensificar isto: 'Cada dia sem site = cliente fechando com concorrente'"
+
+  pattern_04_aversao_jargao:
+    description: "Não sabem (e não querem saber) o que é Schema.org, AGEO, Next.js"
+    sample_phrases:
+      - "Eu não entendo dessa parte"
+      - "Como funciona isso?"
+      - "Vocês sabem o que é melhor"
+    copy_implication: "ZERO buzzword tech no front. Traduzir tudo pra benefício."
+
+  pattern_05_medo_de_ser_passado_pra_tras:
+    description: "Mais que querer barato, querem NÃO ser enganado"
+    sample_phrases:
+      - "Tem pegadinha?"
+      - "Tá barato demais"
+      - "Já me ferrei muito"
+    copy_implication: "Honestidade explícita > barganha. Mostrar o porquê do preço baixo (cortamos teatro), não esconder."
+
+# ═════════════════════════════════════════════════════════════════════
+# USAGE GUIDE PARA AGENTES
+# ═════════════════════════════════════════════════════════════════════
+
+usage_guide:
+  for_wiebe:
+    description: "VOC raw — copie verbatim em hero/about/proof. NÃO sanitize."
+    technique: "Use 'message mining' — pegue palavra exata do verbatim e plante no copy"
+    example:
+      input_verbatim: "tô gastando 4 mil por mês em ads e o povo clica e some"
+      output_copy: "Você gasta 4 mil por mês em ads. O cliente clica no anúncio. Vai pro seu site. E some. Conhece esse filme?"
+
+  for_halbert:
+    description: "Use trauma anterior (pattern_01) e inveja concorrente (pattern_03) como ganchos narrativos"
+    technique: "Conta história de UM dos avatares (Marcelo dentista) na primeira pessoa"
+
+  for_carlton:
+    description: "Use a aversão a jargão (pattern_04) — escreva como o vizinho de bar do Marcelo"
+    technique: "Toda frase técnica vira frase de boteco. Teste: 'Minha tia entenderia?'"
+
+  for_klaff:
+    description: "Use trauma + medo de pegadinha (pattern_05) pra reframe no FAQ"
+    technique: "Cada objeção da lista vira reframe. Reposiciona ceticismo como sabedoria do cliente."
+
+  for_marshall:
+    description: "Use aversão a jargão (pattern_04) pra construir insight cascade que ENSINA"
+    technique: "Educação como venda. Cliente sai sabendo mais do que entrou."
+
+  for_bencivenga:
+    description: "Use TODOS os patterns como matéria pra bullets/fascinations"
+    technique: "Cada bullet = trauma específico + reframe + benefício SIGNA"
+
+# ═════════════════════════════════════════════════════════════════════
+# VALIDATION CHECKLIST (operador preenche depois)
+# ═════════════════════════════════════════════════════════════════════
+
+operator_validation:
+  dentista_verbatims_realistic: null    # true/false após operador revisar
+  advogado_verbatims_realistic: null
+  psicologo_verbatims_realistic: null
+  cross_patterns_realistic: null
+  notes_from_operator: ""
+  real_verbatims_to_substitute: []      # se operador tiver os reais, listar aqui pra substituir

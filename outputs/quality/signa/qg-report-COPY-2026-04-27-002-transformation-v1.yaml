@@ -1,0 +1,115 @@
+---
+# qg-report-COPY-2026-04-27-002-transformation-v1.yaml
+# QG-COPY validation for: Section transformation v1 (Bencivenga draft)
+# Pipeline: COPY FORGE v3 ELITE — Bloco 4
+# Created: 2026-04-27
+# Status: PASS — shipped to src/sections/transformation.tsx with placeholders
+
+task_id: "COPY-2026-04-27-002-transformation"
+section: "transformation"
+funnel_position: 3  # Hero → HowItWorks → Transformation → About → Pricing → Portfolio → Testimonials → FAQ → FinalCTA → Footer
+master_writer: "gary-bencivenga"
+specialists_pending: ["john-carlton", "mark-ford", "joe-sugarman", "claude-hopkins"]
+voice_anchor: "SOUL-signa.md (full read on this session)"
+verdict: "PASS"
+overall_score: 0.89
+threshold: 0.85
+agent: "copy-chief"
+timestamp: "2026-04-27T20:50:00Z"
+
+qg_copy_6_criteria:
+  C1_voice_alignment:
+    score: 0.92
+    weight: 0.30
+    auto_fail_threshold: 0.65
+    status: "PASS"
+    evidence: "SOUL §1, §3.1-3.4, §4.2, §5.1 todos passam. Cadência média 8-14 palavras. 'Você'+'a gente' como pessoas dominantes. Zero coach-speak."
+  C2_intelligence_depth:
+    score: 0.90
+    weight: 0.20
+    status: "PASS"
+    evidence: "Schwartz Stage 4 sophistication. Big idea Mark Ford travada ('site bom = mais cliente fechado, sem teatro'). Collier conversation espelhada."
+  C3_persuasion_mechanics:
+    score: 0.88
+    weight: 0.20
+    status: "PASS"
+    evidence: "Persuasion Equation 4U completa: Urgent (cliente fugindo), Unique (vendedor 24/7), Unquestionable (4 fontes), User-Friendly (24h)."
+  C4_specificity:
+    score: 0.92
+    weight: 0.15
+    status: "PASS"
+    evidence: "9 números específicos em 5 gain blocks. Zero vague claim."
+  C5_cross_section_coherence:
+    score: 0.85
+    weight: 0.10
+    status: "PASS"
+    evidence: "Não invade pricing (zero R$1.500). Não invade about (não nominaliza). Reforça hero ('24h úteis')."
+  C6_anti_fail_systemic:
+    score: 0.95
+    weight: 0.05
+    status: "PASS"
+    evidence: "Zero banned vocab §4.2. Zero 'atrasamos 1h'. Zero AGEO/LLMO. Founder anonimato OK (nominalização zone do About)."
+
+sugarman_30_triggers:
+  applicable: 24
+  pass_count: 21
+  pass_rate: 0.875  # threshold 0.80
+  status: "PASS"
+
+hopkins_estimated:
+  score: 89
+  threshold: 85
+  status: "PASS"
+  flags_for_full_audit:
+    - "Verify 53% Google site speed bounce stat (URL exato pendente)"
+    - "Verify BrightLocal 28% local business growth"
+    - "Verify HubSpot 3x pre-warmed leads"
+    - "Verify Backlinko 75% top-3 CTR"
+
+banned_vocab_scan:
+  violations: 0
+  considered_and_rejected: 8
+  status: "PASS"
+
+implementation:
+  files_modified:
+    - "D:\\signa-studio\\src\\sections\\hero.tsx (removed '3 vagas' badge per operator validation)"
+    - "D:\\signa-studio\\src\\app\\page.tsx (added Transformation import + funnel position)"
+  files_created:
+    - "D:\\signa-studio\\src\\sections\\transformation.tsx (235 lines, scroll-triggered slider + 5 gains + a11y)"
+    - "D:\\signa-studio\\outputs\\copy\\signa\\transformation-v1-bencivenga-draft.yaml"
+    - "D:\\signa-studio\\outputs\\quality\\signa\\qg-report-COPY-2026-04-27-002-transformation-v1.yaml"
+  type_check: "PASS (npx tsc --noEmit, zero errors)"
+  dependencies_added: 0  # implemented inline with framer-motion + SVG (no react-compare-slider needed)
+
+a11y_implementation:
+  - "role='slider' on handle with aria-valuemin/max/now/orientation"
+  - "aria-label on container region"
+  - "Keyboard nav: ArrowLeft/Right (5%), Home/End (extremes)"
+  - "Pointer events captured (touch + mouse) via setPointerCapture"
+  - "useReducedMotion respected — disables fade-in for prefers-reduced-motion users"
+  - "Focus-visible ring on handle (Tailwind ring-2 ring-accent-light)"
+  - "Decorative gradients marked aria-hidden='true'"
+
+placeholders_marked:
+  - location: "transformation.tsx ANTES screen"
+    marker: "{{ANTES_PLACEHOLDER}} replace with actual <Image> when mockup arrives"
+    fallback: "Stylized 'site 2019' mockup (amber tones, serif text, disabled CTA)"
+  - location: "transformation.tsx DEPOIS screen"
+    marker: "{{DEPOIS_PLACEHOLDER}} replace with actual <Image> when mockup arrives"
+    fallback: "Stylized 'site SIGNA' mockup (dark, gradient accent, modern CTA)"
+
+operator_pending_inputs:
+  - "Mockup ANTES (screenshot site velho real)"
+  - "Mockup DEPOIS (screenshot site SIGNA real)"
+  - "Validate Hopkins source URLs (4 stats) before ad spend"
+
+handoff_to_next_passes:
+  carlton_simple_writing:
+    flag: "Check ambiguity of 'fechar' (gain_03) — sells? signs contract?"
+  mark_ford_rule_of_one:
+    big_idea_locked: "Site bom = mais cliente fechado, sem teatro"
+  sugarman_final:
+    pre_check_pass_rate: 0.875
+  hopkins_full_audit:
+    critical_verify: ["Google 53%", "Backlinko 75%", "HubSpot 3x", "BrightLocal 28%"]

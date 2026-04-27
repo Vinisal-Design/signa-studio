@@ -2,84 +2,133 @@
 
 import { FadeIn, StaggerContainer, StaggerItem, MeshBackground, LineReveal } from "@/components/animated";
 
-const steps = [
+const whyItMatters = [
+  {
+    label: "01",
+    title: "Site ruim espanta cliente.",
+    description:
+      "9 em cada 10 pessoas pesquisam você no Google antes de marcar. Se elas caem num site lento, feio ou amador, vão pro concorrente do lado. Você nem fica sabendo.",
+  },
+  {
+    label: "02",
+    title: "Site bom multiplica venda.",
+    description:
+      "Um site que passa confiança em 3 segundos vira orçamento em venda fechada. Aparece no Google. É recomendado quando alguém procura. Trabalha por você 24 horas por dia.",
+  },
+  {
+    label: "03",
+    title: "Você não precisa entender de tecnologia.",
+    description:
+      "Você manda WhatsApp. A gente cuida do design, dos textos, do domínio, da hospedagem, do SEO, de tudo. Em 24h você tem o site no ar. Se não gostar, refazemos. Se ainda não gostar, devolvemos seu dinheiro.",
+  },
+];
+
+const sprintSteps = [
   {
     number: "01",
-    title: "Conte o que precisa",
+    title: "Você manda WhatsApp",
     description:
-      "Uma conversa rapida de 15 minutos pelo WhatsApp. Voce conta sobre seu negocio, publico e estilo. Sem briefing de 47 paginas.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-      </svg>
-    ),
+      "Conversa rápida de 15 minutos. Você fala do seu negócio, do que vende, de quem é seu cliente. Pronto. Sem briefing de 47 páginas. Sem call de discovery.",
   },
   {
     number: "02",
-    title: "Nos criamos",
+    title: "Construímos o site",
     description:
-      "Design profissional, textos persuasivos, otimizado para celular e Google. Tudo em ate 24 horas.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
-      </svg>
-    ),
+      "A gente desenvolve seu site em até 24 horas: visual com cara própria, textos que vendem, código que aparece no Google, integração com WhatsApp. Tudo pronto pro ar.",
   },
   {
     number: "03",
-    title: "Seu site vai ao ar",
+    title: "Aprovou? No ar.",
     description:
-      "Voce revisa, pede ajustes inclusos e pronto. Site no ar gerando credibilidade e atraindo clientes.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
-      </svg>
-    ),
+      "Você revisa, pede ajustes inclusos, publicamos. Site entregue com domínio, hospedagem e SSL configurados. Seu cliente já pode acessar e fechar com você.",
   },
+];
+
+const includes = [
+  "Visual feito do zero, sem template",
+  "Textos escritos pra vender",
+  "Domínio + hospedagem inclusos",
+  "Aparece quando o cliente procura",
+  "Integração WhatsApp",
+  "100% perfeito no celular",
 ];
 
 export function HowItWorks() {
   return (
-    <section id="como-funciona" className="relative overflow-hidden bg-black px-4 py-28 sm:py-36" aria-labelledby="how-it-works-heading">
+    <section id="como-funciona" className="section-radial-tl relative overflow-hidden bg-black px-4 py-28 sm:py-36" aria-labelledby="how-it-works-heading">
       <MeshBackground />
 
       <div className="relative z-10 mx-auto max-w-5xl">
         <LineReveal className="mb-20" />
 
-        <FadeIn className="text-center">
-          <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-light">
-            Metodo Sprint 24
-          </span>
-          <h2 id="how-it-works-heading" className="mt-5 text-[clamp(2rem,5vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.03em]">
-            Seu site novo em{" "}
-            <span className="text-gradient-accent">3 passos</span>
-          </h2>
-          <p className="mx-auto mt-5 max-w-md text-text-muted">
-            Sem reunioes interminaveis. Sem burocracia.
-            Processo testado em +200 projetos.
+        {/* Micro-Meta 1 — frame destino (proof autorreferencial via velocidade) */}
+        <FadeIn className="mb-16">
+          <p className="mx-auto max-w-xl text-center text-[0.95rem] leading-[1.65] text-text-dim italic">
+            Você chegou até aqui em segundos.
+            <br />
+            <span className="text-text-muted">Seu cliente também vai chegar.</span>
           </p>
         </FadeIn>
 
-        <StaggerContainer className="mt-20 grid gap-5 sm:grid-cols-3" stagger={0.15}>
-          {steps.map((step, i) => (
+        <FadeIn className="text-center">
+          <span className="eyebrow-mono text-text-muted">
+            01 · Método
+          </span>
+          <h2 id="how-it-works-heading" className="mt-5 text-[clamp(2rem,5vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.03em]">
+            Em 3 segundos sua porta abre.{" "}
+            <span className="text-gradient-accent">Ou seu cliente vai embora.</span>
+          </h2>
+          <p className="mx-auto mt-5 max-w-xl text-text-muted">
+            É o tempo que ele leva pra abrir seu site e decidir se você é a escolha
+            certa, ou se vai voltar pro Google e clicar no concorrente.
+          </p>
+        </FadeIn>
+
+        <StaggerContainer className="mt-16 space-y-4" stagger={0.1}>
+          {whyItMatters.map((item) => (
+            <StaggerItem key={item.label}>
+              <article className="card-glow rounded-2xl border border-white/[0.04] bg-white/[0.02] p-7 sm:p-9 transition-all duration-500 hover:border-white/[0.08] hover:bg-white/[0.04]">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-light">
+                  {item.label}
+                </span>
+                <h3 className="mt-3 text-[1.4rem] sm:text-[1.6rem] font-bold tracking-tight leading-tight">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-[14px] sm:text-[15px] leading-[1.7] text-text-muted">
+                  {item.description}
+                </p>
+              </article>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+
+        <FadeIn className="mt-24 text-center">
+          <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-light">
+            Como funciona
+          </span>
+          <h3 className="mt-5 text-[clamp(1.8rem,4vw,2.8rem)] font-bold leading-[1.05] tracking-[-0.03em]">
+            3 passos. Você no controle.
+          </h3>
+          <p className="mx-auto mt-4 max-w-xl text-text-muted">
+            Nada de reunião de 2 horas. Nada de proposta de 40 páginas.
+            Você fala, a gente entrega, você aprova.
+          </p>
+        </FadeIn>
+
+        <StaggerContainer className="mt-16 grid gap-5 sm:grid-cols-3" stagger={0.15}>
+          {sprintSteps.map((step, i) => (
             <StaggerItem key={step.number}>
               <article className="card-glow group relative h-full rounded-2xl bg-white/[0.02] border border-white/[0.04] p-8 pt-10 transition-all duration-500 hover:bg-white/[0.04] hover:border-white/[0.08]">
                 <span className="block text-center text-[4rem] font-black leading-none text-white/[0.06] select-none mb-4">
                   {step.number}
                 </span>
 
-                <div className="relative">
-                  <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/[0.08] text-accent-light transition-all duration-500 group-hover:bg-accent/[0.15] group-hover:shadow-[0_0_30px_-8px_rgba(79,70,229,0.3)]">
-                    {step.icon}
-                  </div>
+                <h4 className="text-center text-lg font-semibold tracking-tight">{step.title}</h4>
+                <p className="mt-3 text-center text-[14px] leading-relaxed text-text-muted">
+                  {step.description}
+                </p>
 
-                  <h3 className="text-center text-lg font-semibold tracking-tight">{step.title}</h3>
-                  <p className="mt-3 text-center text-[14px] leading-relaxed text-text-muted">
-                    {step.description}
-                  </p>
-                </div>
-
-                {i < steps.length - 1 && (
+                {i < sprintSteps.length - 1 && (
                   <div className="absolute -right-3 top-1/2 hidden -translate-y-1/2 text-text-dim/30 sm:block">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                       <path d="M5 12h14M12 5l7 7-7 7" />
@@ -90,6 +139,36 @@ export function HowItWorks() {
             </StaggerItem>
           ))}
         </StaggerContainer>
+
+        <FadeIn className="mt-16">
+          <div className="mx-auto max-w-3xl rounded-2xl bg-white/[0.02] border border-white/[0.04] p-8">
+            <p className="text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-light mb-5">
+              Tudo que entregamos no seu site
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {includes.map((item) => (
+                <div key={item} className="flex items-center gap-3 rounded-lg bg-white/[0.02] border border-white/[0.04] px-4 py-3">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="shrink-0 text-accent-light">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <span className="text-[13px] text-text-muted">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-center text-[12px] text-text-dim leading-relaxed">
+              Sem cobrança extra. Sem letra miúda. O site que você precisa pra começar a vender amanhã.
+            </p>
+          </div>
+        </FadeIn>
+
+        {/* Showcase Frame Klaff — multiplicador silencioso (movido da Transformation por Mark Ford) */}
+        <FadeIn className="mt-20">
+          <p className="mx-auto max-w-2xl text-center text-[0.95rem] leading-[1.65] text-text-dim italic">
+            Esse site que você tá lendo agora? A gente fez em 24 horas.
+            <br />
+            <span className="text-text-muted">Você acabou de ver o que entrega.</span>
+          </p>
+        </FadeIn>
       </div>
     </section>
   );
