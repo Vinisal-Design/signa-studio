@@ -163,7 +163,7 @@ export function Hero() {
           {marqueeItems.map((item, i) => (
             <span key={i} className="mx-10 text-[12px] font-medium uppercase tracking-[0.2em] text-text-dim/60">
               {item}
-              <span className="mx-10 text-accent-light/20">&mdash;</span>
+              <span className="mx-10 text-accent-light/20">&bull;</span>
             </span>
           ))}
         </Marquee>
