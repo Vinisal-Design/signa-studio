@@ -98,21 +98,27 @@ export function CharReveal({
   className = "",
   delay = 0,
   staggerMs = 30,
+  trigger = "inView",
 }: {
   text: string;
   className?: string;
   delay?: number;
   staggerMs?: number;
+  trigger?: "inView" | "mount";
 }) {
   const words = text.split(" ");
 
+  const containerProps =
+    trigger === "mount"
+      ? { initial: "hidden" as const, animate: "visible" as const }
+      : {
+          initial: "hidden" as const,
+          whileInView: "visible" as const,
+          viewport: { once: true, margin: "-40px", amount: 0 as const },
+        };
+
   return (
-    <motion.span
-      className={className}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-40px" }}
-    >
+    <motion.span className={className} {...containerProps}>
       <span className="sr-only">{text}</span>
       <span aria-hidden>
         {words.map((word, wi) => (

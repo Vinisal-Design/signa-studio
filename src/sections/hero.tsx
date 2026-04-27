@@ -37,13 +37,13 @@ export function Hero() {
       <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 pt-24 pb-16 sm:px-6 sm:pt-28">
         <h1 id="hero-heading" className="text-center text-[clamp(2rem,5.2vw,4rem)] font-bold leading-[0.95] tracking-[-0.035em]">
           <span className="block -mb-[0.18em]">
-            <CharReveal text="Sites profissionais" delay={0.3} staggerMs={22} />
+            <CharReveal text="Sites profissionais" delay={0.3} staggerMs={22} trigger="mount" />
           </span>
           <span className="block -mb-[0.18em]">
-            <CharReveal text="de agência." delay={0.65} staggerMs={22} />
+            <CharReveal text="de agência." delay={0.65} staggerMs={22} trigger="mount" />
           </span>
           <span className="block text-gradient-accent">
-            <CharReveal text="Em 24 horas." delay={0.95} staggerMs={22} />
+            <CharReveal text="Em 24 horas." delay={0.95} staggerMs={22} trigger="mount" />
           </span>
         </h1>
 
