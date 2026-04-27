@@ -175,7 +175,7 @@ export function Team() {
         </StaggerContainer>
 
         {/* Manifesto contra-mercado (absorvido da About removida) */}
-        <FadeIn className="mt-20">
+        <FadeIn className="mt-14 sm:mt-20">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-[15px] leading-[1.75] text-text-muted">
               A gente nasceu cansado da equação que o mercado oferece. Agência cobra R$ 8.000 e

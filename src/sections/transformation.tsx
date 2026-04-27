@@ -136,7 +136,7 @@ export function Transformation() {
   return (
     <section
       id="transformation"
-      className="section-radial-tr relative overflow-hidden bg-black px-4 py-32 sm:px-6"
+      className="section-radial-tr relative overflow-hidden bg-black px-4 py-20 sm:px-6 sm:py-32"
       aria-labelledby="transformation-heading"
     >
       <div className="pointer-events-none absolute inset-0 dot-grid opacity-[0.012]" />
@@ -159,10 +159,7 @@ export function Transformation() {
           transition={{ duration: 0.7, ease, delay: 0.1 }}
           className="mt-8 text-center text-[clamp(2rem,5.5vw,4rem)] font-bold leading-[1.05] tracking-[-0.03em]"
         >
-          Seu site demora 4 segundos pra abrir.
-          <br />
-          O cliente já fechou a aba.
-          <br />
+          Seu site demora 4 segundos pra abrir. O cliente já fechou a aba.{" "}
           <span className="text-text-muted">Você acabou de pagar Google pra perder dinheiro.</span>
         </motion.h2>
 
@@ -170,10 +167,9 @@ export function Transformation() {
         <motion.p
           {...fadeIn}
           transition={{ duration: 0.6, ease, delay: 0.2 }}
-          className="mx-auto mt-8 max-w-2xl text-center text-[1.05rem] leading-[1.7] text-text-muted sm:text-[1.15rem]"
+          className="mx-auto mt-8 max-w-2xl text-center text-[1.05rem] leading-[1.7] text-text-muted text-pretty sm:text-[1.15rem]"
         >
-          Cliente que entra num site ruim sai. Não compra, não chama, não volta.
-          <br />
+          Cliente que entra num site ruim sai. Não compra, não chama, não volta.{" "}
           <span className="text-foreground">E você paga pra trazer ele. Duas vezes.</span>
         </motion.p>
 
@@ -293,7 +289,7 @@ export function Transformation() {
         <motion.div
           {...fadeIn}
           transition={{ duration: 0.7, ease, delay: 0.15 }}
-          className="mx-auto mt-24 max-w-5xl"
+          className="mx-auto mt-16 sm:mt-24 max-w-5xl"
         >
           <div className="text-center">
             <span className="text-[11px] font-medium uppercase tracking-[0.24em] text-accent-light">
@@ -377,7 +373,7 @@ export function Transformation() {
         </motion.div>
 
         {/* ─── 5 GAIN BLOCKS ────────────────────────────────────────────────── */}
-        <div className="mt-24 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 sm:mt-24 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {gains.map((gain, i) => {
             const Icon = gain.Icon;
             const isLastRow = i >= 3;
@@ -416,7 +412,7 @@ export function Transformation() {
         </div>
 
         {/* Ponte Filosófica Ícaro v2-Wiebe — Per-word illumination cascade */}
-        <p className="mx-auto mt-24 max-w-2xl text-center text-[1.1rem] leading-[1.65] text-text-muted sm:text-[1.2rem]">
+        <p className="mx-auto mt-16 sm:mt-24 max-w-2xl text-center text-[1.1rem] leading-[1.65] text-text-muted text-pretty sm:text-[1.2rem]">
           <WordIllumination text="Estar bem na internet não é coisa só de empresa grande." staggerMs={45} />
           <br />
           <span className="text-foreground">

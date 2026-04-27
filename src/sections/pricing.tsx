@@ -75,11 +75,11 @@ export function Pricing() {
             Não é gasto.{" "}
             <span className="text-gradient-peach">É o cliente que você ainda não fechou.</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-[1rem] leading-[1.7] text-text-muted">
+          <p className="mx-auto mt-6 max-w-2xl text-[1rem] leading-[1.7] text-text-muted text-pretty">
             <span className="text-foreground">O preço é esse porque a gente cortou o que agência cobra e não entrega:</span>{" "}
             60 dias de reunião pra te empurrar fatura. Mesmo trabalho, mesma qualidade.
           </p>
-          <p className="mx-auto mt-4 max-w-xl text-[14px] leading-[1.6] text-text-dim">
+          <p className="mx-auto mt-4 max-w-xl text-[14px] leading-[1.6] text-text-dim text-pretty">
             Um site que passa confiança fecha 1 cliente novo na primeira semana.
             Esse cliente paga o site. O resto vira lucro, todo dia, no mesmo orçamento.
           </p>
@@ -152,7 +152,7 @@ export function Pricing() {
           ))}
         </StaggerContainer>
 
-        <FadeIn className="mt-20">
+        <FadeIn className="mt-14 sm:mt-20">
           <div className="mx-auto max-w-4xl">
             <p className="text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-light mb-3">
               Quanto tempo até o site se pagar
@@ -199,7 +199,7 @@ export function Pricing() {
           </div>
         </FadeIn>
 
-        <FadeIn className="mt-20">
+        <FadeIn className="mt-14 sm:mt-20">
           <div className="mx-auto max-w-4xl">
             <p className="text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-light mb-6">
               Comparação direta

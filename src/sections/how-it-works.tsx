@@ -102,7 +102,7 @@ export function HowItWorks() {
           ))}
         </StaggerContainer>
 
-        <FadeIn className="mt-24 text-center">
+        <FadeIn className="mt-16 sm:mt-24 text-center">
           <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-light">
             Como funciona
           </span>
@@ -162,7 +162,7 @@ export function HowItWorks() {
         </FadeIn>
 
         {/* Showcase Frame Klaff — multiplicador silencioso (movido da Transformation por Mark Ford) */}
-        <FadeIn className="mt-20">
+        <FadeIn className="mt-14 sm:mt-20">
           <p className="mx-auto max-w-2xl text-center text-[0.95rem] leading-[1.65] text-text-dim italic">
             Esse site que você tá lendo agora? A gente fez em 24 horas.
             <br />

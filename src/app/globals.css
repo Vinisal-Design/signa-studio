@@ -562,6 +562,17 @@ html.lenis body {
   font-variant-numeric: tabular-nums;
 }
 
+/* ═══ TYPOGRAPHIC HYGIENE — anti-widow, balanced wrap ═══ */
+/* All H1/H2/H3 get text-wrap balance (browser distributes lines evenly). */
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+/* Long subheading paragraphs get pretty wrap (better last-line, no widow). */
+.text-pretty {
+  text-wrap: pretty;
+}
+
 /* ═══ AMBIENT WARM GLOW (subtle peach orb) ═══ */
 .glow-warm {
   position: absolute;

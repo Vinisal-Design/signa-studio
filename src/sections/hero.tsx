@@ -58,7 +58,7 @@ export function Hero() {
         </motion.p>
 
         <motion.p
-          className="mx-auto mt-6 max-w-xl text-center text-[1rem] leading-[1.65] text-text-muted"
+          className="mx-auto mt-6 max-w-xl text-center text-[1rem] leading-[1.65] text-text-muted text-pretty"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1.5, ease }}
