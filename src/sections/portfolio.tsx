@@ -5,79 +5,92 @@ import { FadeIn, StaggerContainer, StaggerItem, MeshBackground, LineReveal } fro
 
 const cases = [
   {
-    title: "Dra. Camila Andrade",
+    title: "Clínica Odontológica",
     category: "Odontologia",
-    description: "Site profissional com agendamento integrado e depoimentos. Em 60 dias, os agendamentos triplicaram.",
+    description: "Agendamento direto no WhatsApp, galeria de antes e depois, depoimentos. Aparece quando paciente procura dentista da região no Google.",
+    portaRalo: "Antes: paciente abria o site, esperava 5s, ia pro concorrente. Depois: WhatsApp tocando em 3s.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=600&fit=crop&q=85",
-    tags: ["Landing Page", "Agendamento"],
-    result: "+340%",
-    resultLabel: "agendamentos",
+    tags: ["Agendamento", "Aparece no Google"],
+    metric: "100/100",
+    metricLabel: "PageSpeed",
+    pageSpeedUrl: "{{PAGESPEED_URL_ODONTO}}",
   },
   {
-    title: "Trattoria del Nonno",
+    title: "Restaurante Italiano",
     category: "Restaurante",
-    description: "Cardapio visual, sistema de reserva e galeria profissional. Reservas online dobraram no primeiro mes.",
+    description: "Cardápio visual, reserva online e galeria profissional. Aparece no Google Maps quando alguém procura cantina italiana no bairro. Mesa cheia sem depender de indicação.",
+    portaRalo: "Antes: cliente novo só por indicação. Depois: mesa cheia direto do Maps.",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&h=600&fit=crop&q=85",
-    tags: ["Reservas", "Google"],
-    result: "+127%",
-    resultLabel: "reservas",
+    tags: ["Reservas", "Google Maps"],
+    metric: "100/100",
+    metricLabel: "PageSpeed",
+    pageSpeedUrl: "{{PAGESPEED_URL_RESTAURANTE}}",
   },
   {
-    title: "Renata Vasconcelos",
+    title: "Consultório de Psicologia",
     category: "Psicologia",
-    description: "Presenca online completa com blog e agendamento. 47 pacientes novos em 3 meses via Google.",
+    description: "Presença online completa: blog, agendamento, conversa direto pelo WhatsApp. Captura quem está procurando ajuda agora, sem precisar de Doctoralia.",
+    portaRalo: "Antes: dependente de Doctoralia. Depois: paciente chega direto pelo WhatsApp.",
     image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=900&h=600&fit=crop&q=85",
-    tags: ["SEO", "Blog"],
-    result: "47",
-    resultLabel: "novos pacientes",
+    tags: ["Blog", "WhatsApp"],
+    metric: "100/100",
+    metricLabel: "PageSpeed",
+    pageSpeedUrl: "{{PAGESPEED_URL_PSICO}}",
   },
   {
-    title: "Studio Forma",
-    category: "Personal Trainer",
-    description: "Foco em depoimentos, fotos de resultado e CTA claro. Taxa de conversao quase dobrou.",
+    title: "Personal Trainer Premium",
+    category: "Fitness",
+    description: "Foco em fechamento. Antes e depois, depoimentos em vídeo, CTA direto pro WhatsApp. Pra quem roda anúncio e precisa que o cliente que clica vire aluno.",
+    portaRalo: "Antes: clique virava bounce. Depois: clique vira aluno.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=600&fit=crop&q=85",
-    tags: ["Conversao", "Leads"],
-    result: "+89%",
-    resultLabel: "conversao",
+    tags: ["Fechamento", "Anúncio que converte"],
+    metric: "100/100",
+    metricLabel: "PageSpeed",
+    pageSpeedUrl: "{{PAGESPEED_URL_PERSONAL}}",
   },
   {
-    title: "Costa & Lima Advocacia",
+    title: "Escritório de Advocacia",
     category: "Advocacia",
-    description: "SEO local com areas de atuacao bem definidas. Primeira posicao no Google em 45 dias.",
-    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=900&h=600&fit=crop&q=85",
-    tags: ["SEO Local", "Google"],
-    result: "#1",
-    resultLabel: "no Google",
+    description: "Áreas de atuação bem definidas. Aparece quando alguém procura especialista na cidade. Site que transmite autoridade antes do primeiro contato.",
+    portaRalo: "Antes: cliente caía no site, ficava em dúvida. Depois: chega no telefone já decidido.",
+    image: "https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=900&h=600&fit=crop&q=85",
+    tags: ["Autoridade", "Aparece no Google"],
+    metric: "100/100",
+    metricLabel: "PageSpeed",
+    pageSpeedUrl: "{{PAGESPEED_URL_ADVOGADO}}",
   },
   {
-    title: "Sabor & Arte Confeitaria",
+    title: "Confeitaria Artesanal",
     category: "Confeitaria",
-    description: "Catalogo e pedido online 24h. Encomendas triplicaram em 2 meses.",
+    description: "Catálogo de produto e pedido online direto pro WhatsApp. Aparece no Google quando alguém procura encomenda na região. Encomenda fechada sem trocar uma mensagem.",
+    portaRalo: "Antes: encomenda só por indicação. Depois: pedido novo todo dia direto do Google.",
     image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&h=600&fit=crop&q=85",
-    tags: ["E-commerce", "Pedidos"],
-    result: "+215%",
-    resultLabel: "pedidos",
+    tags: ["Pedido online", "Encomenda direta"],
+    metric: "100/100",
+    metricLabel: "PageSpeed",
+    pageSpeedUrl: "{{PAGESPEED_URL_CONFEITARIA}}",
   },
 ];
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="relative overflow-hidden bg-black px-4 py-28 sm:py-36" aria-labelledby="portfolio-heading">
+    <section id="portfolio" className="section-radial-tr relative overflow-hidden bg-black px-4 py-28 sm:py-36" aria-labelledby="portfolio-heading">
       <MeshBackground />
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <LineReveal className="mb-20" />
 
         <FadeIn className="text-center">
-          <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-light">
-            Cases de sucesso
+          <span className="eyebrow-mono text-text-muted">
+            05 · Portas abertas
           </span>
           <h2 id="portfolio-heading" className="mt-5 text-[clamp(2rem,5vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.03em]">
-            Resultados reais de{" "}
-            <span className="text-gradient-accent">negocios reais</span>
+            Seis portas que abrimos.{" "}
+            <span className="text-gradient-accent">Seis ralos que fechamos.</span>
           </h2>
-          <p className="mx-auto mt-5 max-w-md text-text-muted">
-            Cada site que criamos tem um objetivo: gerar mais clientes para o seu negocio.
+          <p className="mx-auto mt-5 max-w-xl text-text-muted">
+            <span className="text-foreground">Cada site é único. Não tem template.</span>{" "}
+            Cada um construído com um objetivo claro: cliente novo todo dia, no mesmo orçamento.
           </p>
         </FadeIn>
 
@@ -92,23 +105,19 @@ export function Portfolio() {
                 <div className="relative h-52 overflow-hidden">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={`Site ${project.category} construído pela SIGNA`}
                     className="h-full w-full object-cover transition-transform duration-[800ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
 
                   <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between">
-                    <div className="flex gap-2">
+                    <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <span key={tag} className="rounded-full bg-white/[0.1] backdrop-blur-md px-3 py-1 text-[10px] font-medium text-white/80">
                           {tag}
                         </span>
                       ))}
-                    </div>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold text-white">{project.result}</div>
-                      <div className="text-[10px] uppercase tracking-wider text-white/60">{project.resultLabel}</div>
                     </div>
                   </div>
                 </div>
@@ -121,6 +130,21 @@ export function Portfolio() {
                   <p className="mt-2 text-[13px] leading-relaxed text-text-muted">
                     {project.description}
                   </p>
+                  <p className="mt-3 border-t border-white/[0.04] pt-3 text-[12px] leading-[1.55] text-text-dim/80 italic">
+                    {project.portaRalo}
+                  </p>
+                  <a
+                    href={project.pageSpeedUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-medium text-accent-light/80 transition-colors hover:text-accent-light"
+                    aria-label={`Testar PageSpeed do site ${project.category} ao vivo`}
+                  >
+                    PageSpeed 100/100. Clica e testa.
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M7 17L17 7M7 7h10v10" />
+                    </svg>
+                  </a>
                 </div>
               </motion.div>
             </StaggerItem>

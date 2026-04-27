@@ -1,22 +1,39 @@
 @import "tailwindcss";
 
 @theme inline {
+  /* Base */
   --color-background: #000000;
   --color-foreground: #f0ece6;
+  --color-surface: #050505;
+  --color-surface-elevated: #0a0a0a;
+
+  /* Cool accent — primary (indigo) */
   --color-accent: #4f46e5;
   --color-accent-light: #818cf8;
   --color-accent-glow: rgba(79, 70, 229, 0.4);
-  --color-surface: #050505;
-  --color-surface-elevated: #0a0a0a;
+
+  /* Warm accent — secondary (peach/amber, derivado do foreground) */
+  --color-accent-warm: #e9a96d;
+  --color-accent-warm-light: #f4c89a;
+  --color-accent-warm-glow: rgba(233, 169, 109, 0.35);
+
+  /* Borders */
   --color-border: rgba(255, 255, 255, 0.04);
   --color-border-hover: rgba(255, 255, 255, 0.1);
+
+  /* Text scale */
   --color-text-muted: #8a8680;
   --color-text-dim: #5a5652;
+
+  /* Mesh */
   --color-mesh-1: #111111;
   --color-mesh-2: #0d0d0d;
   --color-mesh-3: #080808;
+
+  /* Type */
   --font-display: var(--font-inter);
   --font-body: var(--font-inter);
+  --font-mono: var(--font-mono);
 }
 
 html {
@@ -69,6 +86,20 @@ body {
 
 .text-gradient-warm {
   background: linear-gradient(135deg, #f0ece6 0%, #c8c0b4 50%, #a09888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-peach {
+  background: linear-gradient(135deg, #f4c89a 0%, #e9a96d 50%, #d4884a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-duo {
+  background: linear-gradient(110deg, #818cf8 0%, #f4c89a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -193,9 +224,12 @@ html.lenis body {
   overflow: hidden;
 }
 
-/* ═══ PREMIUM HOVER GLOW ═══ */
+/* ═══ PREMIUM HOVER GLOW (cool→warm gradient mantle) ═══ */
 .card-glow {
   position: relative;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.5s ease,
+              background-color 0.5s ease;
 }
 
 .card-glow::before {
@@ -203,7 +237,13 @@ html.lenis body {
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: linear-gradient(135deg, rgba(129, 140, 248, 0) 0%, rgba(129, 140, 248, 0.06) 50%, rgba(129, 140, 248, 0) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(129, 140, 248, 0) 0%,
+    rgba(129, 140, 248, 0.08) 35%,
+    rgba(244, 200, 154, 0.05) 65%,
+    rgba(129, 140, 248, 0) 100%
+  );
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: -1;
@@ -211,6 +251,10 @@ html.lenis body {
 
 .card-glow:hover::before {
   opacity: 1;
+}
+
+.card-glow:hover {
+  transform: translateY(-2px);
 }
 
 /* ═══ SHIMMER TEXT ═══ */
@@ -243,4 +287,315 @@ html.lenis body {
 
 .animate-scroll-bounce {
   animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+/* ═══ ELEGANT UNDERLINE (highlight phrase) ═══ */
+.underline-glow {
+  position: relative;
+  display: inline-block;
+  padding: 0 0.06em;
+  white-space: nowrap;
+}
+
+.underline-glow::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.08em;
+  height: 1.5px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(244, 200, 154, 0.55) 20%,
+    rgba(244, 200, 154, 0.85) 50%,
+    rgba(244, 200, 154, 0.55) 80%,
+    transparent 100%
+  );
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: underline-reveal 1.4s 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.underline-glow::before {
+  content: '';
+  position: absolute;
+  left: -2%;
+  right: -2%;
+  bottom: -0.45em;
+  height: 0.8em;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(244, 200, 154, 0.16) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  animation: underline-glow 1.6s 2.2s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes underline-reveal {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+@keyframes underline-glow {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ═══ CTA HALO (ambient glow ring, no displacement) ═══ */
+.cta-halo {
+  position: relative;
+  isolation: isolate;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cta-halo::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(129, 140, 248, 0) 0deg,
+    rgba(129, 140, 248, 0.25) 90deg,
+    rgba(244, 200, 154, 0.2) 180deg,
+    rgba(129, 140, 248, 0.25) 270deg,
+    rgba(129, 140, 248, 0) 360deg
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  filter: blur(8px);
+  animation: cta-rotate 6s linear infinite paused;
+}
+
+.cta-halo:hover {
+  transform: scale(1.015);
+  box-shadow: 0 0 60px -8px rgba(129, 140, 248, 0.2),
+              0 0 100px -16px rgba(244, 200, 154, 0.12);
+}
+
+.cta-halo:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+.cta-halo:active {
+  transform: scale(0.985);
+}
+
+@keyframes cta-rotate {
+  to { transform: rotate(360deg); }
+}
+
+/* ═══ SHIMMER SHEEN (CTA internal light) ═══ */
+.cta-sheen {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-sheen::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.cta-sheen:hover::after {
+  left: 125%;
+}
+
+/* ═══ GRAIN TEXTURE (richness without noise) ═══ */
+.grain {
+  position: relative;
+}
+
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.7 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.035;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+
+/* ═══ HERO BG V2 — state-of-art ambient ═══ */
+.hero-bg-mesh {
+  background:
+    radial-gradient(ellipse 60% 50% at 18% 30%, rgba(129, 140, 248, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 82% 65%, rgba(244, 200, 154, 0.06) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 35% at 50% 100%, rgba(20, 20, 35, 0.5) 0%, transparent 70%),
+    #000000;
+}
+
+.hero-bg-beams {
+  background: conic-gradient(
+    from 220deg at 50% 50%,
+    transparent 0deg,
+    rgba(129, 140, 248, 0.03) 60deg,
+    transparent 120deg,
+    rgba(244, 200, 154, 0.025) 200deg,
+    transparent 260deg,
+    rgba(129, 140, 248, 0.02) 320deg,
+    transparent 360deg
+  );
+  filter: blur(60px);
+  animation: hero-beams-spin 80s linear infinite;
+}
+
+@keyframes hero-beams-spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.hero-bg-grain {
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.95 0 0 0 0 0.92 0 0 0 0 0.88 0 0 0 0.4 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 220px 220px;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  animation: hero-grain-shift 8s steps(8) infinite;
+}
+
+@keyframes hero-grain-shift {
+  0%   { transform: translate(0, 0); }
+  10%  { transform: translate(-3%, -2%); }
+  20%  { transform: translate(2%, 4%); }
+  30%  { transform: translate(-4%, 2%); }
+  40%  { transform: translate(3%, -3%); }
+  50%  { transform: translate(-2%, 4%); }
+  60%  { transform: translate(4%, -1%); }
+  70%  { transform: translate(-3%, -4%); }
+  80%  { transform: translate(2%, 3%); }
+  90%  { transform: translate(-4%, 1%); }
+  100% { transform: translate(0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-beams,
+  .hero-bg-grain {
+    animation: none;
+  }
+}
+
+/* ═══ SECTION CORNER-ANCHORED RADIALS (Agência Lendária pattern, adapted) ═══ */
+.section-radial-tl::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(35% 50% at 0% 0%, rgba(129, 140, 248, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.section-radial-tr::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(35% 50% at 100% 0%, rgba(244, 200, 154, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.section-radial-bl::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(35% 50% at 0% 100%, rgba(244, 200, 154, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.section-radial-br::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(35% 50% at 100% 100%, rgba(129, 140, 248, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.section-radial-center::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(35% 35% at 50% 50%, rgba(129, 140, 248, 0.05) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ═══ MONO EYEBROW (Academia/AWSMD pattern) ═══ */
+.eyebrow-mono {
+  font-family: var(--font-mono), ui-monospace, Menlo, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.eyebrow-mono::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #818cf8 0%, #f4c89a 100%);
+  box-shadow: 0 0 8px rgba(129, 140, 248, 0.4);
+}
+
+/* ═══ STAT NUMBER (letter-spacing normal — Agência discipline) ═══ */
+.stat-number {
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ═══ TYPOGRAPHIC HYGIENE — anti-widow, balanced wrap ═══ */
+/* All H1/H2/H3 get text-wrap balance (browser distributes lines evenly). */
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+/* Long subheading paragraphs get pretty wrap (better last-line, no widow). */
+.text-pretty {
+  text-wrap: pretty;
+}
+
+/* ═══ AMBIENT WARM GLOW (subtle peach orb) ═══ */
+.glow-warm {
+  position: absolute;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle at center,
+    rgba(244, 200, 154, 0.08) 0%,
+    rgba(244, 200, 154, 0.03) 40%,
+    transparent 70%
+  );
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.glow-cool {
+  position: absolute;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle at center,
+    rgba(129, 140, 248, 0.1) 0%,
+    rgba(129, 140, 248, 0.04) 40%,
+    transparent 70%
+  );
+  filter: blur(70px);
+  pointer-events: none;
 }

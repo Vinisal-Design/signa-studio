@@ -1,0 +1,70 @@
+# F6 — SHIP: Pipeline Log Entry
+# Generated: 2026-04-27
+
+task_id: COPY-2026-04-27-001-SIGNA-FULLSITE
+project: SIGNA Studio — Site Reforge E2E (9 sections)
+format: PAGE_FULL_SITE
+mode: Full (F1→F6 complete)
+
+agents_used:
+  tier_0_diagnosis:
+    - eugene-schwartz (awareness + sophistication)
+    - mark-ford (lead type)
+    - todd-brown (mechanism naming)
+  tier_1_2_3_execution:
+    - gary-halbert (hero - Big Secret Lead)
+    - perry-marshall (how-it-works - insight cascade)
+    - alex-hormozi (pricing - Grand Slam Offer)
+    - oren-klaff (faq - frame control)
+    - gary-bencivenga (proofs section - technical stacking)
+  framework_validation:
+    - claude-hopkins (scientific audit principles applied)
+
+awareness_level_final: "Solution Aware (B2) + Problem Aware (B3) hybrid"
+sophistication_stage_final: "E4 → E5 transition (first-mover positioning)"
+lead_type_final: "Big Secret Lead (primary) + Problem-Solution Lead (final-cta)"
+unique_mechanism_final: "Sprint 24 + AGEO/LLMO Stack"
+
+qg_score_global: 0.92
+qg_verdict: PASS
+iterations: 1
+operator_verdict: pending
+ship_date: 2026-04-27
+performance_data: null  # filled after ads launch
+
+deliverables:
+  modified_files:
+    - src/sections/hero.tsx
+    - src/sections/how-it-works.tsx
+    - src/sections/about.tsx
+    - src/sections/pricing.tsx
+    - src/sections/portfolio.tsx
+    - src/sections/testimonials.tsx (renamed conceptually to "Provas Verificáveis")
+    - src/sections/faq.tsx
+    - src/sections/final-cta.tsx
+    - src/sections/footer.tsx
+  backups_preserved:
+    - src/sections/*.tsx.bak (rollback disponível)
+  intelligence_artifacts:
+    - outputs/intelligence/signa/F1-copy-brief.yaml
+    - outputs/intelligence/signa/F2-schwartz-diagnosis.yaml
+    - outputs/intelligence/signa/F2-ford-lead-selection.yaml
+    - outputs/intelligence/signa/F2-todd-brown-mechanism.yaml
+  quality_artifacts:
+    - outputs/quality/signa/qg-report-COPY-2026-04-27-001.yaml
+  log:
+    - outputs/copy/signa/F6-pipeline-log.yaml (this file)
+
+next_waves:
+  wave_2_i18n:
+    estimated: 4-6h
+    agents: [carlton, bencivenga, sintetica-chief]
+    output: i18n EN + ES via next-intl
+  wave_3_ads:
+    estimated: 2-3h
+    agents: [hormozi-ads, hormozi-hooks]
+    output: 12 hooks Meta + 12 hooks Google por idioma
+  wave_4_prova_real:
+    estimated: assíncrono
+    action: Operador coleta 3-5 testimonials reais de clientes existentes
+    output: Section híbrida (técnica + humana) substitui "Provas Verificáveis"

@@ -54,7 +54,7 @@ export function WhatsAppCTA({
       href={WA_LINK}
       target="_blank"
       rel="noopener noreferrer"
-      className={`group inline-flex items-center justify-center gap-2.5 rounded-full px-6 py-3.5 text-[14px] font-semibold transition-all duration-300 active:scale-[0.97] whitespace-nowrap sm:px-8 sm:py-4 sm:text-[15px] ${styles[variant]} ${className}`}
+      className={`cta-halo cta-sheen group inline-flex items-center justify-center gap-2.5 rounded-full px-6 py-3.5 text-[14px] font-semibold whitespace-nowrap sm:px-8 sm:py-4 sm:text-[15px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-light focus-visible:ring-offset-2 focus-visible:ring-offset-black ${styles[variant]} ${className}`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

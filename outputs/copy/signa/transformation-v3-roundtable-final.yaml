@@ -1,0 +1,248 @@
+---
+# transformation-v3-roundtable-final.yaml
+# Section: transformation v3 — pós-roundtable de 6 mestres
+# Pipeline: COPY FORGE v3 ELITE — Bloco 4 — Section 2 of 9 (FINAL)
+# Created: 2026-04-27
+# Status: SHIPPED to src/sections/transformation.tsx
+# Big Idea constitucional: "Site bom é a porta da clínica aberta 24h. Site ruim é cliente caro indo no ralo."
+
+meta:
+  section_id: "transformation"
+  funnel_position: 3
+  version: "v3-roundtable-final"
+  big_idea_constitucional: "Site bom é a porta da clínica aberta 24h. Site ruim é cliente caro indo no ralo."
+  one_promise: "Site profissional no ar em 24 horas, sem pagar nada antes de gostar."
+  one_story: "Você paga Google pra trazer cliente. Site ruim espanta antes de fechar. SIGNA faz site que segura — em 24h, sem teatro."
+  one_offer: "Manda um oi no WhatsApp. A gente conversa 15min. Aprovou? Sobe em 24h. Não pagou nada ainda."
+  awareness_schwartz: "Stage 3-4 (Solution-Aware → Product-Aware)"
+  lead_type_mark_ford: "Problem-Solution Lead"
+  selo_mark_ford: "APPROVED FOR SHIP — Copy Logic estimado 87/100"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# ROUNDTABLE — Contribuição de cada mestre (atribuição pra rastreabilidade)
+# ═══════════════════════════════════════════════════════════════════════════════
+roundtable_contributions:
+  halbert:
+    headline: "Seu site demora 4 segundos pra abrir. O cliente já fechou a aba. Você acabou de pagar Google pra perder dinheiro."
+    gain_blocks_originais: 5  # 3 mantidos integrais + 2 ajustados pela Wiebe
+    razao: "Provocação masculina + passado consumado + tense presente brutal"
+
+  icaro:
+    ancora_filosofica_v2_wiebe: "Site não é decoração. Site é a porta da clínica que tá aberta 24h por dia."
+    ponte_filosofica_v2_wiebe: "Estar bem na internet não é coisa só de empresa grande. Hoje, é o único jeito de existir."
+    manifesto_v2_wiebe: "A gente não faz site. Faz o jeito que seu cliente vai te encontrar pela primeira vez."
+    razao: "Peso ontológico brasileiro sem coach speak"
+
+  bencivenga:
+    subheadline: "Cliente que entra num site ruim sai. Não compra, não chama, não volta. E você paga pra trazer ele — duas vezes."
+    cenario_a_marcelo: "R$ 4.000/mês × mais da metade = R$ 2.120 indo no ralo. Todo mês. R$ 25.440/ano queimando."
+    cenario_b_claudia: "Concorrente novo do bairro com site Maps captura 5 clientes/mês. R$ 21k/ano em mesa que era sua."
+    proof_stack:
+      - "53% dos clientes fecham o site se ele demora — Google"
+      - "75% dos cliques vão pros 3 primeiros do Google — Backlinko"
+      - "Cliente que chega já decidido fecha 3x mais — HubSpot"
+      - "Negócio com site novo fatura 28% mais — BrightLocal"
+    fechamento_matematico: "Site novo paga em 21 dias. Depois é cliente novo, todo dia, no mesmo orçamento."
+    razao: "Aritmética inquestionável que o leitor refaz na cabeça"
+
+  klaff:
+    frame_reversal_preco: "O preço é esse porque a gente cortou o que agência cobra e não entrega: 60 dias de reunião pra te empurrar fatura."
+    micro_cta: "Se faz sentido pra você, manda um oi no WhatsApp. Se não faz, fecha aba. Sem drama."
+    showcase_frame_movido: "Esse site que você tá lendo agora? A gente fez em 24 horas. Você acabou de ver o que entrega."
+    showcase_frame_destino: "how-it-works.tsx (Mark Ford realocou)"
+    razao: "Frame control + prize positioning + status alignment"
+
+  wiebe:
+    audit_resultados:
+      passa_intacto: 8
+      ajustar: 5
+      agencia_speak_descartado: 1
+    fixes_verbatim_aplicados:
+      - "vitrine→decoração, porta→porta da clínica que tá aberta 24h por dia"
+      - "evaporados→indo no ralo"
+      - "5 cliente→5 clientes (concordância)"
+      - "lead→cliente que chega já decidido"
+      - "copy preguiçosa→texto desleixado / cliente repara em tudo"
+      - "online→internet"
+      - "a forma como→o jeito que"
+    objecoes_nao_cobertas_descobertas: 3
+    razao: "Voice of customer test = filtro final que separa copy que ressoa de copy que apenas vende"
+
+  mark_ford:
+    veredicto_rule_of_one: "Big Idea sobreviveu intacta após 5 vozes. Aprovado pra ship com 1 realinhamento (Showcase frame movido pra how-it-works)."
+    copy_logic_estimado: "87/100"
+    lead_match: "Problem-Solution para Solution Aware = 9/10"
+    selo: "APPROVED FOR SHIP"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CONTRIBUIÇÃO DO OPERATOR — Frames Meta-Destino
+# ═══════════════════════════════════════════════════════════════════════════════
+operator_contribution:
+  description: "Frame meta-destino: prova autorreferencial via experiência do leitor enquanto navega"
+  micro_metas_distribuidas:
+    micro_meta_1:
+      text: "Você chegou até aqui em segundos. Seu cliente também vai chegar."
+      location: "how-it-works.tsx — antes do primeiro FadeIn"
+      mecanismo: "Cialdini consistency + Klaff inception"
+    micro_meta_2:
+      text: "Esse site abriu rápido pra você. Por isso você ainda tá lendo. Mesmo princípio funciona pro seu cliente."
+      location: "transformation.tsx — caption sob slider antes/depois"
+      mecanismo: "Proof autorreferencial + Halbert hook 1 amplificado"
+    micro_meta_3:
+      text: "Se você nos encontrou, é porque o site fez o trabalho dele. Imagina o seu fazendo o mesmo."
+      location: "transformation.tsx — pré micro-CTA Klaff"
+      mecanismo: "Frame destino brasileiro + ponte pra ação"
+    micro_meta_4:
+      text: "Você chegou aqui sem a gente te empurrar. É como cliente bom chega."
+      location: "footer.tsx — antes do copyright"
+      mecanismo: "Anti-hard-sell + signature 'sem teatro' SIGNA"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# COPY FINAL — ESTRUTURA SHIPPED
+# ═══════════════════════════════════════════════════════════════════════════════
+copy_final:
+  eyebrow: "Antes e depois"
+
+  ancora_ico:
+    text: "Site não é decoração. Site é a porta da clínica que tá aberta 24h por dia."
+    autor: "Ícaro v2-Wiebe"
+
+  headline:
+    text: "Seu site demora 4 segundos pra abrir. O cliente já fechou a aba. Você acabou de pagar Google pra perder dinheiro."
+    autor: "Halbert"
+    word_count: 22
+    schwartz_target: "Solution-Aware → ataque dor verbatim Marcelo"
+
+  subheadline:
+    text: "Cliente que entra num site ruim sai. Não compra, não chama, não volta. E você paga pra trazer ele — duas vezes."
+    autor: "Bencivenga"
+    word_count: 22
+    cobertura: "B2 (Marcelo ads) + B3 (Cláudia local)"
+
+  slider_caption: "Site profissional liberal típico (2019–2023) vs. site SIGNA. Mesmo ramo, mesma cidade."
+
+  micro_meta_2_pos_slider: "Esse site abriu rápido pra você. Por isso você ainda tá lendo. Mesmo princípio funciona pro seu cliente."
+
+  bloco_prova_dupla:
+    eyebrow: "Faz a conta com a gente"
+    cenario_a:
+      label: "Se você roda anúncio"
+      lines:
+        - "R$ 4.000 por mês em anúncio. Mais da metade clica e fecha o site antes de carregar."
+        - "R$ 2.120 indo no ralo. Todo mês."
+        - "R$ 25.440 por ano pagando pra Google espantar cliente seu."
+    cenario_b:
+      label: "Se você não roda anúncio"
+      lines:
+        - "O concorrente novo do bairro abriu há 6 meses. Tem site. Aparece no Google quando alguém procura."
+        - "Você não."
+        - "5 clientes novos por mês indo pra ele. R$ 21.000 por ano em mesa que era sua."
+
+  proof_stack:
+    eyebrow: "Os números que mandam"
+    items:
+      - "53% dos clientes fecham o site se ele demora — Google"
+      - "75% dos cliques vão pros 3 primeiros do Google — Backlinko"
+      - "Cliente que chega já decidido fecha 3x mais — HubSpot"
+      - "Negócio com site novo fatura 28% mais — BrightLocal"
+
+  frame_reversal_klaff:
+    text: "O preço é esse porque a gente cortou o que agência cobra e não entrega: 60 dias de reunião pra te empurrar fatura."
+    objecao_alvo: "Tá barato demais, tem pegadinha?"
+
+  fechamento_matematico:
+    text: "Site novo paga em 21 dias. Depois é cliente novo, todo dia, no mesmo orçamento."
+
+  gain_blocks:
+    - id: "gain_01"
+      label: "Velocidade"
+      headline: "Se carrega devagar, você já perdeu"
+      body: "Antes do cliente decidir esperar, ele já desistiu. Site lento é cliente caro indo no ralo."
+      proof: "53% dos clientes fecham o site se ele demora — Google"
+    - id: "gain_02"
+      label: "Encontrabilidade"
+      headline: "Quem não aparece no Google não existe"
+      body: "Existe pro contador, não pro cliente. Site novo, código limpo, sobe pra primeira página em 30–60 dias."
+      proof: "75% dos cliques vão pros 3 primeiros do Google — Backlinko"
+    - id: "gain_03"
+      label: "Autoridade"
+      headline: "Cliente decide antes de chamar no WhatsApp"
+      body: "Site amador é como receber cliente de chinelo na clínica. Ele vê e já decidiu — antes de você abrir a boca."
+      proof: "Cliente que chega já decidido fecha 3x mais — HubSpot"
+    - id: "gain_04"
+      label: "Detalhe"
+      headline: "Cliente repara em tudo"
+      body: "Se o texto do site é desleixado, o cliente pensa que o atendimento também é. Cada detalhe fala antes de você."
+      proof: "Negócio com site novo fatura 28% mais — BrightLocal"
+    - id: "gain_05"
+      label: "Encantamento"
+      headline: "Site bom não precisa convencer"
+      body: "O cliente entra, sente que tá no lugar certo, e já chega no WhatsApp resolvido. Você fecha em 2 minutos, não em 20."
+      proof: "Aprova segunda. Sobe terça. 24h úteis."
+
+  ponte_filosofica:
+    text: "Estar bem na internet não é coisa só de empresa grande. Hoje, é o único jeito de existir."
+
+  manifesto_fechamento:
+    text: "A gente não faz site. Faz o jeito que seu cliente vai te encontrar pela primeira vez."
+
+  micro_meta_3_pre_cta:
+    text: "Se você nos encontrou, é porque o site fez o trabalho dele. Imagina o seu fazendo o mesmo."
+
+  micro_cta_klaff:
+    text: "Se faz sentido pra você, manda um oi no WhatsApp. Se não faz, fecha aba. Sem drama."
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# IMPLEMENTAÇÃO TÉCNICA
+# ═══════════════════════════════════════════════════════════════════════════════
+implementation:
+  files_modified:
+    - "src/sections/transformation.tsx (v3 completa — copy + slider + micro-metas 2,3)"
+    - "src/sections/how-it-works.tsx (recebe Showcase Frame Klaff + Micro-Meta 1)"
+    - "src/sections/footer.tsx (recebe Micro-Meta 4)"
+  files_created:
+    - "outputs/copy/signa/transformation-v3-roundtable-final.yaml (este arquivo)"
+    - "outputs/quality/signa/qg-report-COPY-2026-04-27-003-transformation-v3.yaml"
+  type_check: "PASS (npx tsc --noEmit, zero errors)"
+  dependencies_added: 0
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# OBJECÕES NÃO-COBERTAS (Wiebe revelou — roteamento Mark Ford)
+# ═══════════════════════════════════════════════════════════════════════════════
+objections_routing:
+  obj_1_trauma_wix:
+    text: "E se eu fizer e não funcionar igual eu fiz com o Wix em 2022?"
+    routed_to: "FAQ + Pricing"
+    status: "Pendente — próximas sections"
+  obj_2_abandono_pos_venda:
+    text: "Esses caras vão me responder em 2 meses ou são daqueles que somem?"
+    routed_to: "About (nominalização 4 founders + presença pós-venda)"
+    status: "Pendente — próxima section a abordar"
+    flag_critico: "Se SIGNA não tem promessa explícita de presença pós-venda, isso É um buraco no produto"
+  obj_3_template_generico:
+    text: "Se ficar igual aos outros sites, foi pior do que ter o velho. Pelo menos o velho é meu."
+    routed_to: "Portfolio (visualmente prova diversidade) + Microcopy 'Cada site é único. Não tem template.'"
+    status: "Pendente — aguardando mockups reais"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PRÓXIMAS SECTIONS — REGRA CONSTITUCIONAL
+# ═══════════════════════════════════════════════════════════════════════════════
+constitutional_law:
+  rule: "Cada section futura passa pelo crivo: 'Esta frase reforça PORTA-ABERTA-24H vs CLIENTE-CARO-NO-RALO ou dispersa?' Dispersa = corta."
+  next_section_priority:
+    - "1. About — nominalizar 4 founders + resolve obj_2"
+    - "2. Pricing — Frame Reversal Klaff já travado como hook"
+    - "3. Portfolio — aguarda mockups + microcopy 'Cada site é único'"
+    - "4. FAQ — absorve obj_1 (trauma Wix)"
+    - "5. Final-CTA — espelha hero CTA + Subhead B Halbert pra Cláudia"
+    - "6. Hero subheadline polish — pendente (operator flagou copy fraca)"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PENDENTES OPERATOR
+# ═══════════════════════════════════════════════════════════════════════════════
+operator_pending_inputs:
+  - "Mockup ANTES (screenshot site velho real) — placeholder marcado"
+  - "Mockup DEPOIS (screenshot site SIGNA real) — placeholder marcado"
+  - "Validar 4 fontes do Proof Stack antes de ad spend (Google 53% / Backlinko 75% / HubSpot 3x / BrightLocal 28%)"
+  - "WhatsApp number real — atualmente 5511999999999 placeholder"
+  - "Instagram handle real — atualmente signastudio placeholder"

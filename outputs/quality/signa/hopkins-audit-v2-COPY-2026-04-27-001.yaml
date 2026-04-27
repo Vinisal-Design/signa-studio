@@ -1,0 +1,149 @@
+hopkins_audit_v2:
+  task_id: COPY-2026-04-27-001-SIGNA-FULLSITE
+  framework: "Scientific Advertising — 16 Principles Audit"
+  invoked_by: copy-chief
+  invoked_at: 2026-04-27
+  pass_threshold: 85/100 per section (production-ready)
+
+  scorecard_summary:
+    overall_v2_score: 67/100
+    sections_passing_85: ["pricing"]
+    sections_failing: ["hero", "how-it-works", "about", "portfolio", "testimonials", "faq", "final-cta", "footer"]
+    section_scores:
+      hero: 62
+      how-it-works: 65
+      about: 58
+      pricing: 86
+      portfolio: 54
+      testimonials: 70
+      faq: 72
+      final-cta: 76
+      footer: 64
+    critical_failures_systemic:
+      - "Buzzword tech (AGEO/LLMO/Schema.org) em portfolio — viola SOUL §4.2 e veto_phrases do Marcelo"
+      - "Specificity inflada/inventada ('9 em cada 10', 'dezenas de vezes') — viola Hopkins P6"
+      - "Reason Why ausente nos claims tecnicos — viola Hopkins P13"
+      - "Linguagem corporativa generica ('especialistas', 'caminho do meio') — viola Hopkins P12 + SOUL §4.2"
+      - "Trust badges = features list, nao prova testavel — viola Hopkins P10"
+
+  systemic_findings:
+    most_violated_principle: "P9 (samples_proof) — media 3.7/10. Sistema carece de PROVA verificavel."
+    most_violated_banned_vocab: "AGEO + LLMO + Schema.org — 5 instances no PORTFOLIO. Auto-fail."
+    cross_section_anti_pattern: |
+      ANONIMATO DOS 4 FOUNDERS. Os nomes Enzo de Farias, Vinicius Almeida, Joao Lozano,
+      Victor Ferreira NAO aparecem em about (deveria), nem em footer (deveria). Operador
+      validou. Schwartz prescreveu. Collier explicou (antidoto trauma "vai sumir"). Sistema
+      persiste anonimo. Auto-fail repetido.
+    cross_section_strength_to_preserve: |
+      DNA "Cada dia sem site bom = cliente fechando com concorrente" (final-cta) e
+      "Nao e gasto. E o cliente que voce ainda nao fechou" (pricing) sao VOZ NUCLEAR
+      executada. Replicar essa cadencia em hero (rewrite) e about (rewrite).
+
+  ranked_priority_for_v3_rewrite:
+    1: "portfolio (54/100) — buzzword overload + Unsplash + zero prova nominal. Reescrita profunda."
+    2: "about (58/100) — anonimato 4 founders + corporate-speak. Rewrite cabeca."
+    3: "hero (62/100) — opening violates Collier conversation entry. Rewrite headline + sub + trust badges."
+    4: "footer (64/100) — anonimato 4 founders + placeholders. Cirurgia + dados reais."
+    5: "how-it-works (65/100) — stat fabricada + sem reason-why + sem CTA. Rewrite com Marshall insight."
+    6: "testimonials (70/100) — boa estrutura, falta refinamento Bencivenga + reordenacao Schwartz."
+    7: "faq (72/100) — boa base, falta 2 silent questions Collier + Klaff frame."
+    8: "final-cta (76/100) — voz nuclear ja correta, polimento Schwartz + Collier."
+    9: "pricing (86/100) — PASS. Polimento cirurgico Hormozi, nao reescrita."
+
+  banimento_substitution_table:
+    - found: "AGEO"
+      replace_with: "site preparado pro ChatGPT te recomendar"
+      where_found: "portfolio.tsx L13, L48"
+    - found: "LLMO"
+      replace_with: "aparece quando cliente pergunta pra IA"
+      where_found: "portfolio.tsx L21"
+    - found: "Schema.org de Restaurant / Schema.org de Product"
+      replace_with: "estrutura que o Google Maps entende / formato que o Google Shopping entende"
+      where_found: "portfolio.tsx L19, L55"
+    - found: "PageSpeed 100/100 (em 6 cards)"
+      replace_with: "Beneficio HUMANIZADO especifico por nicho"
+      where_found: "portfolio.tsx L14, L22, L31, L40, L49, L58"
+    - found: "9 em cada 10 pessoas pesquisam voce no Google"
+      replace_with: "REMOVER (stat fabricada)"
+      where_found: "how-it-works.tsx L9-10"
+    - found: "Trabalha por voce 24h por dia"
+      replace_with: "REMOVER (corporate-speak)"
+      where_found: "how-it-works.tsx L16"
+    - found: "4 especialistas. Um unico objetivo."
+      replace_with: "Quatro devs. Sem teatro corporativo."
+      where_found: "about.tsx L42-44"
+    - found: "A SIGNA e o caminho do meio que faltava"
+      replace_with: "REMOVER (literary flourish)"
+      where_found: "about.tsx L55"
+    - found: "passa confianca, fecha venda"
+      replace_with: "pra voce parar de perder cliente pro concorrente que ja tem site bom"
+      where_found: "hero.tsx L67-68"
+    - found: "dezenas de vezes / Sempre 24h"
+      replace_with: "10+ sites no ar / Atrasamos 1h, manutencao do mes e gratis (em contrato)"
+      where_found: "testimonials.tsx L11; faq.tsx L14"
+    - found: "Atendem fora do Brasil?"
+      replace_with: "REMOVER (i18n e Onda 2)"
+      where_found: "faq.tsx L37-39"
+    - found: "Aparece no Google e na IA"
+      replace_with: "Aparece no Google. E no ChatGPT, Perplexity, Gemini quando cliente pergunta."
+      where_found: "testimonials.tsx L40; pricing.tsx L40"
+    - found: "5511999999999 (placeholder WhatsApp)"
+      replace_with: "Numero real — operador entrega antes do go-live"
+      where_found: "footer.tsx L59"
+    - found: "instagram.com/signastudio (placeholder)"
+      replace_with: "Handle real — operador valida"
+      where_found: "footer.tsx L70"
+    - found: "3 vagas abertas esta semana"
+      replace_with: "Validar se REAL. Se nao, REMOVER."
+      where_found: "hero.tsx L47; final-cta.tsx L23-29"
+
+  hero_audit:
+    score: 62
+    verdict: FAIL
+    weakest_lines:
+      - "L67-68: 'passa confianca, fecha venda e esta no ar amanha' — generic agency-speak"
+      - "L107-114: trust badges = features list sem prova"
+      - "L47: '3 vagas abertas esta semana' — se nao for real, fabricated urgency"
+      - "L51: opening 'Site profissional' viola Collier Enter the Conversation"
+    strongest_lines:
+      - "L51-58: 'Site profissional. Em 24 horas. Por 1/3 do preco.' — 3 ancoras concretas"
+      - "L69: 'Sem reuniao de 2 horas. Sem proposta de 40 paginas.' — anti-padroes especificos"
+    prescription: |
+      Sobe pra 85+ se: (1) opening Collier conversation_entry, (2) trust badges = PROVA testavel,
+      (3) adicionar reason-why ('Por que 1/3? Cortamos teatro corporativo'), (4) substituir
+      'passa confianca' por linguagem do Marcelo, (5) validar/remover '3 vagas'.
+
+  pricing_audit:
+    score: 86
+    verdict: PASS
+    strongest_lines:
+      - "L94-97: 'Nao e gasto. E o cliente que voce ainda nao fechou.' — voice nuclear"
+      - "L77-82: ROI table por profissao — Hopkins specificity tabular"
+      - "L240-251: garantia tripla bem detalhada"
+    prescription: |
+      Sobe pra 92+ se: (1) Collier prescription antes do anchor table ('Voce esta se perguntando:
+      por que tao barato?'), (2) traduzir 'IA' → 'ChatGPT, Perplexity, Gemini', (3) cada feature
+      com 'feature → significa que → beneficio'. ESTRUTURA: PASS. Polimento cirurgico.
+
+  handoff_to_copy_chief:
+    next_action: |
+      F4 DRAFT comecar por HERO — Halbert + Carlton com payload completo. Depois final-cta
+      (Halbert + Makepeace) — so polimento (76 → 85+). Depois pricing (Hormozi + Kennedy)
+      — so polimento (86 → 92+). Esqueleto fechado, miolo na ordem de prioridade.
+    critical_warnings:
+      - "PORTFOLIO: AGEO/LLMO/Schema.org VETO ABSOLUTO. Sem remover, QG falha em C1 (auto-fail)."
+      - "ABOUT + FOOTER: NOMES REAIS (Enzo, Vinicius, Joao, Victor) DEVEM aparecer."
+      - "HERO + FINAL-CTA: '3 vagas' — operador deve validar. Se nao real, REMOVER."
+      - "Stat '9 em cada 10' (how-it-works) — REMOVER."
+      - "Pergunta 'Atendem fora do Brasil' (FAQ) — REMOVER agora (i18n e Onda 2)."
+    quality_gate_recommendation: |
+      QG-COPY v3 threshold:
+      - PASS: ≥ 85 Hopkins + ≥ 0.85 QG-COPY 6 criterios + ≥ 80% Sugarman 30 triggers
+      - CONDITIONAL: 75-84 Hopkins + 0.75-0.84 QG-COPY (1 iteracao)
+      - FAIL: < 75 Hopkins ou < 0.75 QG-COPY (CB4: trocar agente)
+      Auto-fail criteria:
+      - Banned vocab violation
+      - Stat fabricado sem fonte
+      - Placeholder em producao
+      - Anonimato dos 4 founders em about ou footer
+      - Vaga mentirosa nao validada

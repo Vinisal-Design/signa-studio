@@ -1,0 +1,70 @@
+# F2 — INTELLIGENCE: Mark Ford 6 Leads Selection
+# Generated: 2026-04-27
+
+task_id: COPY-2026-04-27-001-SIGNA-FULLSITE
+
+ford_six_leads_analysis:
+  context:
+    audience_primary: Solution Aware (Nível 3) + sofisticação E4→E5
+    audience_secondary: Problem Aware (Nível 2)
+
+  six_leads_options:
+    - name: Offer Lead
+      use_when: Most Aware audience (level 5)
+      fit: LOW
+      reason: "Audiência ainda compara opções, oferta direta queima"
+
+    - name: Promise Lead
+      use_when: Product Aware (level 4)
+      fit: MEDIUM
+      reason: "Funciona mas commodity em E4"
+
+    - name: Problem-Solution Lead
+      use_when: Problem Aware (level 2-3)
+      fit: HIGH (B3 secondary)
+      reason: "Bom para B3, mas perde força em B2 que já conhece soluções"
+
+    - name: Big Secret Lead
+      use_when: Solution Aware com mecanismo virgem
+      fit: VERY HIGH (B2 primary)
+      reason: "PERFECT FIT — E5 first-mover, mecanismo nomeado, curiosidade"
+
+    - name: Proclamation Lead
+      use_when: Mudança de paradigma + autoridade
+      fit: HIGH
+      reason: "Funciona como lead complementar para B3"
+
+    - name: Story Lead
+      use_when: Unaware, Problem Aware (level 1-2)
+      fit: MEDIUM
+      reason: "Pode funcionar em VSL/About, não em hero"
+
+  selected_lead_primary:
+    type: Big Secret Lead
+    rationale: |
+      Solution Aware (Nível 3) + transição E4→E5 = audiência sabe que
+      existem soluções (Wix, freelance, agência) mas não sabe da arma
+      nova (AGEO/LLMO). "Big Secret" gera curiosidade controlada e
+      revela mecanismo único como descoberta, não claim.
+
+    structure:
+      hook: "Em 2026, [shift que ninguém te contou]"
+      reveal: "[Mecanismo Sprint 24 + AGEO/LLMO Stack]"
+      proof: "[Stack técnico verificável]"
+      bridge: "[Implicação pro negócio do leitor]"
+      cta: "[Acionar antes da janela fechar]"
+
+  selected_lead_secondary:
+    type: Problem-Solution Lead (final-cta)
+    use_in: final-cta para capturar B3 (Problem Aware)
+    rationale: |
+      No final do funil, depois de educação acontecer (mid-page),
+      capturar quem chegou Problem Aware com PAS clássico:
+      "Cada dia sem site otimizado = cliente indo pro concorrente".
+
+rule_of_one_check:
+  one_idea: "Site otimizado para IA recomendar é o novo padrão"
+  one_promise: "Em 24h seu site está no ar, encontrado pelo Google E pela IA"
+  one_offer: "Site Sprint 24 + AGEO/LLMO Stack por R$ 2.000, com garantia tripla"
+  one_audience: "Profissional liberal/negócio que JÁ roda ads + negócio local que perde cliente"
+  rule_of_one_pass: TRUE
