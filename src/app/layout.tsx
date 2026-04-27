@@ -16,7 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const SITE_NAME = "SIGNA STUDIO";
-const SITE_URL = "https://site-express-rho.vercel.app";
+const SITE_URL = "https://signa-studios.vercel.app";
 const SITE_DESC =
   "Site profissional no ar em 24 horas. Visual com cara propria, aparece no Google, integrado com WhatsApp. A partir de R$ 1.500. Voce so paga depois de aprovar. Para dentistas, advogados, psicologos, restaurantes e negocio local que precisa de cliente novo todo dia.";
 
