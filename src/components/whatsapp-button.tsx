@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 
 const WA_NUMBER = "5511999999999";
+// PLG message — calibrated to the ad/LP promise. Prospect arrives at WhatsApp
+// expecting the demo workflow, not a sales call. Keeps message-match intact
+// across ad → LP → WhatsApp triple-handoff.
 const WA_MESSAGE = encodeURIComponent(
-  "Oi! Quero saber mais sobre a criação do meu site profissional."
+  "Oi! Quero ver meu site grátis em 24h, conforme o site da SIGNA."
 );
 const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${WA_MESSAGE}`;
 
@@ -30,7 +33,7 @@ export function WhatsAppFloat() {
 }
 
 export function WhatsAppCTA({
-  text = "Quero meu site agora",
+  text = "Ver meu site grátis em 24h",
   variant = "primary",
   className = "",
 }: {

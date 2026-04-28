@@ -2,18 +2,30 @@
 
 import { motion } from "framer-motion";
 import { WhatsAppCTA } from "@/components/whatsapp-button";
+import { LeadForm } from "@/components/lead-form";
 import { MeshBackground, WordReveal } from "@/components/animated";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
+const closingPromises = [
+  "Resposta em 15 minutos",
+  "Briefing em 15 min no WhatsApp",
+  "Demo grátis em 24h pra você ver",
+  "Você só paga se gostar",
+];
+
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-black px-4 py-32 sm:py-40" aria-labelledby="final-cta-heading">
+    <section
+      id="cta"
+      className="relative overflow-hidden bg-black px-4 py-32 sm:py-40"
+      aria-labelledby="final-cta-heading"
+    >
       <MeshBackground />
 
-      <div className="pointer-events-none absolute inset-0">
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         {/* Duo glow — closure visual: cool primary + warm hope */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[55vh] w-[55vh] rounded-full bg-accent/[0.05] blur-[180px] animate-glow-breathe" />
+        <div className="absolute top-1/2 left-1/2 h-[55vh] w-[55vh] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/[0.05] blur-[180px] animate-glow-breathe" />
         <div className="glow-warm absolute top-[55%] left-[55%] h-[40vh] w-[40vh] -translate-x-1/2 -translate-y-1/2" />
       </div>
 
@@ -24,24 +36,30 @@ export function FinalCTA() {
         viewport={{ once: true, margin: "-10%" }}
         transition={{ duration: 0.8, ease }}
       >
-        {/* Eyebrow agnóstico, sem urgência fabricada */}
         <span className="text-[11px] font-medium uppercase tracking-[0.24em] text-accent-light">
           Última parada
         </span>
 
-        {/* Headline alinhada à Big Idea constitucional */}
         <h2
           id="final-cta-heading"
           className="mt-6 text-[clamp(2rem,5.5vw,4rem)] font-bold leading-[1.05] tracking-[-0.035em]"
         >
-          <WordReveal text="Cada dia sem site bom" delay={0.2} />
-          <br />
+          {/* sr-only owns the accessible name; WordReveal halves are silenced
+              so AT does not stutter the headline across two clauses. */}
+          <span className="sr-only">
+            Cada dia sem site bom é cliente caro indo no ralo.
+          </span>
+          <WordReveal text="Cada dia sem site bom" delay={0.2} silent />
+          <br aria-hidden="true" />
           <span className="text-gradient-accent">
-            <WordReveal text="é cliente caro indo no ralo." delay={0.5} />
+            <WordReveal
+              text="é cliente caro indo no ralo."
+              delay={0.5}
+              silent
+            />
           </span>
         </h2>
 
-        {/* Subhead B Halbert (Cláudia "mesa que era sua") universalizada — agora distribuída */}
         <motion.p
           className="mx-auto mt-8 max-w-xl text-[1.05rem] leading-[1.7] text-text-muted"
           initial={{ opacity: 0, y: 16 }}
@@ -55,7 +73,6 @@ export function FinalCTA() {
           </span>
         </motion.p>
 
-        {/* Linha de garantia em PT-BR popular (sem money-back) */}
         <motion.p
           className="mx-auto mt-6 max-w-lg text-[0.95rem] leading-[1.65] text-text-muted"
           initial={{ opacity: 0 }}
@@ -63,11 +80,12 @@ export function FinalCTA() {
           viewport={{ once: true }}
           transition={{ delay: 1, duration: 0.6 }}
         >
-          Manda WhatsApp agora. Em 2 horas você tem orçamento. Em 24 horas, site no ar.{" "}
-          <span className="text-foreground">Não gostou, devolvemos cada centavo. O risco é nosso.</span>
+          Manda WhatsApp agora. Briefing rápido em 15 min. Em 24 horas você abre o link do seu site pronto.{" "}
+          <span className="text-foreground">
+            Aí decide se quer ficar com ele. O risco é nosso.
+          </span>
         </motion.p>
 
-        {/* CTA único Klaff prize positioning */}
         <motion.div
           className="mt-12 flex flex-col items-center gap-8"
           initial={{ opacity: 0, y: 20 }}
@@ -77,26 +95,47 @@ export function FinalCTA() {
         >
           <WhatsAppCTA text="Manda um oi no WhatsApp" variant="whatsapp" />
 
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[12px] text-text-dim">
-            {[
-              "Resposta em 15 minutos",
-              "Orçamento em 2 horas",
-              "Site no ar em 24 horas",
-              "Você só paga depois de aprovar",
-            ].map((item) => (
-              <span key={item} className="flex items-center gap-2">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-accent-light/80">
+          <ul
+            className="flex list-none flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[12px] text-text-dim"
+            aria-label="Promessas de atendimento"
+          >
+            {closingPromises.map((item) => (
+              <li key={item} className="flex items-center gap-2">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  className="text-accent-light/80"
+                  aria-hidden="true"
+                >
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
                 {item}
-              </span>
+              </li>
             ))}
-          </div>
+          </ul>
         </motion.div>
 
-        {/* Micro-meta destino fechando o loop (Cialdini consistency final) */}
+        {/* Secondary capture path — for prospects who prefer email or arrive
+            outside business hours. WhatsApp remains the primary CTA above. */}
+        <motion.div
+          className="mx-auto mt-16 max-w-md"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 1.4, duration: 0.6 }}
+        >
+          <p className="mb-5 text-center text-[12px] uppercase tracking-[0.18em] text-text-dim">
+            Ou deixa seu contato — chamamos a gente
+          </p>
+          <LeadForm />
+        </motion.div>
+
         <motion.p
-          className="mx-auto mt-14 max-w-lg text-[13px] leading-[1.7] text-text-dim/80 italic"
+          className="mx-auto mt-14 max-w-lg text-[13px] italic leading-[1.7] text-text-dim"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -104,7 +143,9 @@ export function FinalCTA() {
         >
           Você leu até aqui. Isso já diz alguma coisa.
           <br />
-          <span className="text-text-muted">A próxima frase pode ser sua, no seu site.</span>
+          <span className="text-text-muted">
+            A próxima frase pode ser sua, no seu site.
+          </span>
         </motion.p>
       </motion.div>
     </section>

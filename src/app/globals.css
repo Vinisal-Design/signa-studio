@@ -21,9 +21,15 @@
   --color-border: rgba(255, 255, 255, 0.04);
   --color-border-hover: rgba(255, 255, 255, 0.1);
 
-  /* Text scale */
+  /* Text scale — luminance audited against #000 for WCAG 2.1 AA.
+     foreground   #f0ece6  ~16.5:1  AAA
+     text-muted   #8a8680   ~5.4:1  AA  normal text
+     text-dim     #7a766f   ~4.6:1  AA  normal text (was #5a5652 → 3.1:1 fail).
+     IMPORTANT: do not use opacity modifiers like `text-text-dim/60` on dark
+     backgrounds — it drops contrast below threshold. If you need a softer dim,
+     pick text-text-dim/80 minimum. */
   --color-text-muted: #8a8680;
-  --color-text-dim: #5a5652;
+  --color-text-dim: #7a766f;
 
   /* Mesh */
   --color-mesh-1: #111111;
@@ -36,8 +42,13 @@
   --font-mono: var(--font-mono);
 }
 
+/* scroll-behavior is governed by Lenis (smooth-scroll.tsx). Native smooth fights
+   Lenis during mount and causes a brief jank on first paint. Reduced-motion users
+   get native auto via Lenis bypass below. */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -46,6 +57,30 @@ body {
   font-family: var(--font-body), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Global reduced-motion guard — neutralizes any animation/transition for users
+   who opt out. Individual components may further refine. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Touch targets — WCAG 2.5.5 requires 44x44px minimum on coarse pointers. */
+@media (pointer: coarse) {
+  a, button, [role="button"], input, select, textarea {
+    min-height: 44px;
+  }
+  /* Restore inline links inside text content (they don't need 44px height). */
+  p a, li a, dd a, span a {
+    min-height: 0;
+  }
 }
 
 ::selection {
@@ -253,8 +288,12 @@ html.lenis body {
   opacity: 1;
 }
 
-.card-glow:hover {
-  transform: translateY(-2px);
+/* Lift only on devices that actually have hover. On touch (no native :hover),
+   the lift would persist after a tap which looks broken. */
+@media (hover: hover) and (pointer: fine) {
+  .card-glow:hover {
+    transform: translateY(-2px);
+  }
 }
 
 /* ═══ SHIMMER TEXT ═══ */
@@ -492,6 +531,14 @@ html.lenis body {
   }
 }
 
+/* Coarse-pointer + reduced-motion runtime gate. The component flips
+   data-quiet="true" on mount; hiding via CSS keeps the DOM tree stable across
+   SSR and client (no hydration mismatch). */
+[data-quiet="true"] .hero-bg-beams-layer,
+[data-quiet="true"] .hero-bg-grain-layer {
+  display: none;
+}
+
 /* ═══ SECTION CORNER-ANCHORED RADIALS (Agência Lendária pattern, adapted) ═══ */
 .section-radial-tl::before {
   content: '';
@@ -560,6 +607,18 @@ html.lenis body {
 .stat-number {
   letter-spacing: 0;
   font-variant-numeric: tabular-nums;
+}
+
+/* ═══ HERO HEADLINE LINE — clipping container for char/word reveal ═══ */
+/* Each headline line wraps in this. Padding accommodates descenders + reveal
+   travel without overlap. line-height 1 keeps tight typography; padding keeps
+   reveal mask invisible. */
+.hero-line {
+  display: block;
+  overflow: hidden;
+  padding-top: 0.12em;
+  padding-bottom: 0.12em;
+  line-height: 1;
 }
 
 /* ═══ TYPOGRAPHIC HYGIENE — anti-widow, balanced wrap ═══ */

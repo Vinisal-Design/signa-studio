@@ -1,0 +1,26 @@
+/* TEAM */
+
+  Estúdio: SIGNA Studio
+  Site: https://lp.signastudio.app
+  Contato: contact@signastudio.app
+  Localização: Arujá, São Paulo, Brasil
+
+  Sócios:
+    Enzo de Farias
+    Vinicius Almeida
+    João Lozano
+    Victor Ferreira
+
+/* SITE */
+
+  Última atualização: 2026-04-28
+  Idiomas: pt-BR (primário), EN, ES
+  Padrões: HTML5, CSS3, ES2022, WCAG 2.1 AA
+  Stack: Next.js 16 · React 19 · TypeScript · Tailwind v4 · Framer Motion · Lenis
+  Hospedagem: Vercel (LP) · Cloudflare Workers (API/D1)
+  Construído com cuidado humano — não há geração automática de copy aqui.
+
+/* AGRADECIMENTOS */
+
+  Aos primeiros clientes que confiaram antes da garantia tripla virar contrato.
+  Aos clientes que recusamos por honestidade — vocês ajudaram a definir o ICP.

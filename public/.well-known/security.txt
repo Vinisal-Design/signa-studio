@@ -1,0 +1,9 @@
+# SIGNA Studio — Security disclosure
+# https://lp.signastudio.app/.well-known/security.txt
+# Standard: RFC 9116
+
+Contact: mailto:contact@signastudio.app
+Expires: 2027-04-28T00:00:00.000Z
+Preferred-Languages: pt-BR, en, es
+Canonical: https://lp.signastudio.app/.well-known/security.txt
+Policy: https://lp.signastudio.app/politica-privacidade

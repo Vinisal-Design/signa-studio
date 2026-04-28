@@ -1,6 +1,13 @@
 "use client";
 
-import { FadeIn, StaggerContainer, StaggerItem, MeshBackground, LineReveal } from "@/components/animated";
+import { motion } from "framer-motion";
+import {
+  FadeIn,
+  StaggerContainer,
+  StaggerItem,
+  MeshBackground,
+  LineReveal,
+} from "@/components/animated";
 
 const whyItMatters = [
   {
@@ -32,15 +39,15 @@ const sprintSteps = [
   },
   {
     number: "02",
-    title: "Construímos o site",
+    title: "Construímos pra você ver",
     description:
-      "A gente desenvolve seu site em até 24 horas: visual com cara própria, textos que vendem, código que aparece no Google, integração com WhatsApp. Tudo pronto pro ar.",
+      "A gente desenvolve seu site em até 24 horas: visual com cara própria, textos que vendem, código que aparece no Google, integração com WhatsApp. Te mandamos o link no WhatsApp pra você abrir e navegar — antes de pagar nada.",
   },
   {
     number: "03",
-    title: "Aprovou? No ar.",
+    title: "Aprovou? Aí sim, no ar.",
     description:
-      "Você revisa, pede ajustes inclusos, publicamos. Site entregue com domínio, hospedagem e SSL configurados. Seu cliente já pode acessar e fechar com você.",
+      "Você revisa o site pronto, pede ajustes inclusos, e só então paga. Publicamos com domínio, hospedagem e SSL no seu nome. Não gostou? Refazemos. Ainda não? Custou zero.",
   },
 ];
 
@@ -55,13 +62,17 @@ const includes = [
 
 export function HowItWorks() {
   return (
-    <section id="como-funciona" className="section-radial-tl relative overflow-hidden bg-black px-4 py-28 sm:py-36" aria-labelledby="how-it-works-heading">
+    <section
+      id="como-funciona"
+      className="section-radial-tl relative overflow-hidden bg-black px-4 py-28 sm:py-36"
+      aria-labelledby="how-it-works-heading"
+    >
       <MeshBackground />
 
       <div className="relative z-10 mx-auto max-w-5xl">
         <LineReveal className="mb-20" />
 
-        {/* Micro-Meta 1 — frame destino (proof autorreferencial via velocidade) */}
+        {/* Micro-meta — autoreferential proof through speed itself */}
         <FadeIn className="mb-16">
           <p className="mx-auto max-w-xl text-center text-[0.95rem] leading-[1.65] text-text-dim italic">
             Você chegou até aqui em segundos.
@@ -71,10 +82,11 @@ export function HowItWorks() {
         </FadeIn>
 
         <FadeIn className="text-center">
-          <span className="eyebrow-mono text-text-muted">
-            01 · Método
-          </span>
-          <h2 id="how-it-works-heading" className="mt-5 text-[clamp(2rem,5vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.03em]">
+          <span className="eyebrow-mono text-text-muted">01 · Método</span>
+          <h2
+            id="how-it-works-heading"
+            className="mt-5 text-[clamp(2rem,5vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.03em]"
+          >
             Em 3 segundos sua porta abre.{" "}
             <span className="text-gradient-accent">Ou seu cliente vai embora.</span>
           </h2>
@@ -87,14 +99,17 @@ export function HowItWorks() {
         <StaggerContainer className="mt-16 space-y-4" stagger={0.1}>
           {whyItMatters.map((item) => (
             <StaggerItem key={item.label}>
-              <article className="card-glow rounded-2xl border border-white/[0.04] bg-white/[0.02] p-7 sm:p-9 transition-all duration-500 hover:border-white/[0.08] hover:bg-white/[0.04]">
-                <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-light">
+              <article className="card-glow rounded-2xl border border-white/[0.04] bg-white/[0.02] p-7 transition-[border-color,background-color] duration-500 ease-out hover:border-white/[0.08] hover:bg-white/[0.04] sm:p-9">
+                <span
+                  className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-light"
+                  aria-hidden="true"
+                >
                   {item.label}
                 </span>
-                <h3 className="mt-3 text-[1.4rem] sm:text-[1.6rem] font-bold tracking-tight leading-tight">
+                <h3 className="mt-3 text-[1.4rem] font-bold leading-tight tracking-tight sm:text-[1.6rem]">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-[14px] sm:text-[15px] leading-[1.7] text-text-muted">
+                <p className="mt-3 text-[14px] leading-[1.7] text-text-muted sm:text-[15px]">
                   {item.description}
                 </p>
               </article>
@@ -102,10 +117,8 @@ export function HowItWorks() {
           ))}
         </StaggerContainer>
 
-        <FadeIn className="mt-16 sm:mt-24 text-center">
-          <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-light">
-            Como funciona
-          </span>
+        <FadeIn className="mt-20 text-center sm:mt-24">
+          <span className="eyebrow-mono text-accent-light">Como funciona</span>
           <h3 className="mt-5 text-[clamp(1.8rem,4vw,2.8rem)] font-bold leading-[1.05] tracking-[-0.03em]">
             3 passos. Você no controle.
           </h3>
@@ -115,53 +128,94 @@ export function HowItWorks() {
           </p>
         </FadeIn>
 
-        <StaggerContainer className="mt-16 grid gap-5 sm:grid-cols-3" stagger={0.15}>
+        {/* Sprint steps — semantic <ol> because order is meaningful (1 → 2 → 3).
+            Using motion.ol directly keeps the list element flat — wrapping in a
+            motion.div would inject an extra <div> between the heading region
+            and the list, weakening AT semantics. */}
+        <motion.ol
+          className="mt-16 grid list-none gap-5 sm:grid-cols-3"
+          aria-label="Etapas do processo"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ staggerChildren: 0.15 }}
+        >
           {sprintSteps.map((step, i) => (
             <StaggerItem key={step.number}>
-              <article className="card-glow group relative h-full rounded-2xl bg-white/[0.02] border border-white/[0.04] p-8 pt-10 transition-all duration-500 hover:bg-white/[0.04] hover:border-white/[0.08]">
-                <span className="block text-center text-[4rem] font-black leading-none text-white/[0.06] select-none mb-4">
-                  {step.number}
-                </span>
+              <li>
+                  <article className="card-glow group relative h-full rounded-2xl border border-white/[0.04] bg-white/[0.02] p-8 pt-10 transition-[border-color,background-color] duration-500 ease-out hover:border-white/[0.08] hover:bg-white/[0.04]">
+                    <span
+                      className="mb-4 block select-none text-center text-[4rem] font-black leading-none text-white/[0.06]"
+                      aria-hidden="true"
+                    >
+                      {step.number}
+                    </span>
 
-                <h4 className="text-center text-lg font-semibold tracking-tight">{step.title}</h4>
-                <p className="mt-3 text-center text-[14px] leading-relaxed text-text-muted">
-                  {step.description}
-                </p>
+                    <h3 className="text-center text-lg font-semibold tracking-tight">
+                      <span className="sr-only">Passo {i + 1}: </span>
+                      {step.title}
+                    </h3>
+                    <p className="mt-3 text-center text-[14px] leading-relaxed text-text-muted">
+                      {step.description}
+                    </p>
 
-                {i < sprintSteps.length - 1 && (
-                  <div className="absolute -right-3 top-1/2 hidden -translate-y-1/2 text-text-dim/30 sm:block">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                )}
-              </article>
+                    {/* Decorative arrow between cards — text-text-dim/40 is
+                        intentionally faint; aria-hidden so AT skips it and
+                        contrast requirements do not apply. */}
+                    {i < sprintSteps.length - 1 && (
+                      <div
+                        className="absolute -right-3 top-1/2 hidden -translate-y-1/2 text-text-dim/40 sm:block"
+                        aria-hidden="true"
+                      >
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                        >
+                          <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                    )}
+                  </article>
+              </li>
             </StaggerItem>
           ))}
-        </StaggerContainer>
+        </motion.ol>
 
         <FadeIn className="mt-16">
-          <div className="mx-auto max-w-3xl rounded-2xl bg-white/[0.02] border border-white/[0.04] p-8">
-            <p className="text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-light mb-5">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-white/[0.04] bg-white/[0.02] p-8">
+            <p className="mb-5 text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-light">
               Tudo que entregamos no seu site
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <ul className="grid list-none grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
               {includes.map((item) => (
-                <div key={item} className="flex items-center gap-3 rounded-lg bg-white/[0.02] border border-white/[0.04] px-4 py-3">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="shrink-0 text-accent-light">
+                <li key={item} className="flex items-center gap-3">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    className="shrink-0 text-accent-light"
+                    aria-hidden="true"
+                  >
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                   <span className="text-[13px] text-text-muted">{item}</span>
-                </div>
+                </li>
               ))}
-            </div>
-            <p className="mt-6 text-center text-[12px] text-text-dim leading-relaxed">
+            </ul>
+            <p className="mt-6 text-center text-[12px] leading-relaxed text-text-dim">
               Sem cobrança extra. Sem letra miúda. O site que você precisa pra começar a vender amanhã.
             </p>
           </div>
         </FadeIn>
 
-        {/* Showcase Frame Klaff — multiplicador silencioso (movido da Transformation por Mark Ford) */}
+        {/* Showcase frame — autoreferential close (Klaff-grade) */}
         <FadeIn className="mt-14 sm:mt-20">
           <p className="mx-auto max-w-2xl text-center text-[0.95rem] leading-[1.65] text-text-dim italic">
             Esse site que você tá lendo agora? A gente fez em 24 horas.

@@ -54,10 +54,10 @@ export function Navbar() {
           </nav>
 
           <a
-            href="#precos"
+            href="#cta"
             className="hidden sm:inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-2.5 text-[13px] font-semibold text-background transition-all duration-300 hover:bg-white hover:shadow-[0_0_40px_-8px_rgba(255,255,255,0.2)]"
           >
-            Comecar agora
+            Ver site grátis
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
@@ -103,14 +103,14 @@ export function Navbar() {
             </motion.a>
           ))}
           <motion.a
-            href="#precos"
+            href="#cta"
             onClick={() => setMenuOpen(false)}
             className="mt-4 rounded-full bg-foreground px-10 py-4 text-lg font-semibold text-background"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.4 }}
           >
-            Comecar agora
+            Ver site grátis
           </motion.a>
         </motion.div>
       )}

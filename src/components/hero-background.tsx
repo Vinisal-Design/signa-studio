@@ -1,26 +1,44 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useSyncExternalStore } from "react";
 
 /**
- * HeroBackgroundSilk — flowing silk texture canvas.
- * 1:1 with the reference silk-background-animation. No optimizations,
- * no time-delta hacks. Just runs.
- *
- * SIGNA-only changes:
- *   - Base gradient (deep ink) instead of #1a1a1a
- *   - Color: indigo→peach diagonal blend instead of #7B7481 purple
- *   - Dim multiplier 0.20
- *   - Heavier vignette overlay
+ * useMatchMedia — SSR-safe, change-aware media query hook.
+ * Server returns the `defaultValue` (avoids hydration mismatch); client
+ * subscribes to MediaQueryList changes so device rotation / preference flips
+ * (rare but real on iPad split-view, or when a user toggles reduced-motion in
+ * system settings) re-render the consumer without a remount.
+ */
+function useMatchMedia(query: string, defaultValue = false): boolean {
+  const subscribe = (cb: () => void) => {
+    if (typeof window === "undefined") return () => {};
+    const mql = window.matchMedia(query);
+    mql.addEventListener("change", cb);
+    return () => mql.removeEventListener("change", cb);
+  };
+  const getSnapshot = () =>
+    typeof window === "undefined" ? defaultValue : window.matchMedia(query).matches;
+  const getServerSnapshot = () => defaultValue;
+  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+}
+
+/**
+ * HeroBackgroundSilk — flowing canvas texture (DESKTOP ONLY).
+ * Pixel-by-pixel rAF loop is ~60% CPU on mobile — never use on touch devices.
+ * Kept for niche desktop creative direction; not the default in the LP.
  */
 export function HeroBackgroundSilk() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const coarse = window.matchMedia("(pointer: coarse)").matches;
+    if (reduce || coarse) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
@@ -34,7 +52,6 @@ export function HeroBackgroundSilk() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
@@ -47,8 +64,6 @@ export function HeroBackgroundSilk() {
 
     const animate = () => {
       const { width, height } = canvas;
-
-      // Base — deep ink gradient (SIGNA dark)
       const gradient = ctx.createLinearGradient(0, 0, width, height);
       gradient.addColorStop(0, "#040406");
       gradient.addColorStop(0.5, "#070709");
@@ -63,11 +78,9 @@ export function HeroBackgroundSilk() {
         for (let y = 0; y < height; y += 2) {
           const u = (x / width) * scale;
           const v = (y / height) * scale;
-
           const tOffset = speed * time;
           const tex_x = u;
           const tex_y = v + 0.03 * Math.sin(8.0 * tex_x - tOffset);
-
           const pattern =
             0.6 +
             0.4 *
@@ -79,28 +92,22 @@ export function HeroBackgroundSilk() {
                     0.02 * tOffset) +
                   Math.sin(20.0 * (tex_x + tex_y - 0.1 * tOffset))
               );
-
           const rnd = noise(x, y);
           const intensity = Math.max(0, pattern - (rnd / 15.0) * noiseIntensity);
-
-          // SIGNA color blend
           const mixFactor = Math.min(1, (x / width + y / height) / 2);
           const cr = 129 + (244 - 129) * mixFactor;
           const cg = 140 + (200 - 140) * mixFactor;
           const cb = 248 + (154 - 248) * mixFactor;
-
           const r = Math.floor(cr * intensity * dim);
           const g = Math.floor(cg * intensity * dim);
           const b = Math.floor(cb * intensity * dim);
           const a = 255;
-
           const index = (y * width + x) * 4;
           if (index < data.length) {
             data[index] = r;
             data[index + 1] = g;
             data[index + 2] = b;
             data[index + 3] = a;
-            // step=2 fill block — avoid gaps
             const right = index + 4;
             const below = index + width * 4;
             const diag = below + 4;
@@ -125,7 +132,6 @@ export function HeroBackgroundSilk() {
           }
         }
       }
-
       ctx.putImageData(imageData, 0, 0);
 
       const overlayGradient = ctx.createRadialGradient(
@@ -150,9 +156,7 @@ export function HeroBackgroundSilk() {
 
     return () => {
       window.removeEventListener("resize", resizeCanvas);
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
   }, []);
 
@@ -169,17 +173,28 @@ export function HeroBackgroundSilk() {
 }
 
 /**
- * HeroBackgroundV2 — kept as fallback (CSS-only, zero-runtime cost).
+ * HeroBackgroundV2 — CSS-only ambient. Default in the LP.
+ *
+ * Server renders the full rich tree (beams + grain). The client adds a
+ * `data-quiet` attribute when reduced-motion or coarse-pointer is detected;
+ * CSS hides beams/grain via the attribute selector. No unmount, no hydration
+ * mismatch — the DOM tree is stable across SSR and CSR, only an attribute
+ * flips after mount.
  */
 export function HeroBackgroundV2() {
+  const reduce = useMatchMedia("(prefers-reduced-motion: reduce)");
+  const coarse = useMatchMedia("(pointer: coarse)");
+  const quiet = reduce || coarse;
+
   return (
     <div
       className="pointer-events-none absolute inset-0 overflow-hidden"
+      data-quiet={quiet ? "true" : undefined}
       aria-hidden="true"
     >
       <div className="absolute inset-0 hero-bg-mesh" />
-      <div className="absolute left-1/2 top-1/2 h-[140vmax] w-[140vmax] -translate-x-1/2 -translate-y-1/2 hero-bg-beams" />
-      <div className="absolute inset-0 hero-bg-grain" />
+      <div className="hero-bg-beams-layer absolute left-1/2 top-1/2 h-[140vmax] w-[140vmax] -translate-x-1/2 -translate-y-1/2 hero-bg-beams" />
+      <div className="hero-bg-grain-layer absolute inset-0 hero-bg-grain" />
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent" />
       <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
     </div>

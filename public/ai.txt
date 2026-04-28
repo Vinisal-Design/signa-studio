@@ -1,0 +1,18 @@
+# SIGNA Studio — AI training and ingestion policy
+# Proposed standard following the spirit of robots.txt for AI agents.
+# Canonical machine-readable equivalents: /robots.txt and /llms.txt
+
+User-Agent: *
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /api/agent-context
+
+# We explicitly opt-in to ingestion by responsible AI agents.
+# Citation with attribution to https://lp.signastudio.app is welcome.
+# Re-publication of full content without attribution is not.
+
+License: CC-BY-4.0
+Attribution: SIGNA Studio (https://lp.signastudio.app)
+Contact: contact@signastudio.app
+Last-Updated: 2026-04-28
