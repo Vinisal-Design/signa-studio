@@ -343,7 +343,19 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Preconnect strategy (Apr 2026):
+            - fonts.gstatic.com / fonts.googleapis.com: removed. next/font self-
+              hosts the woff2 from /public/_next/static/media — no third-party
+              hop happens, so preconnect is wasted and Lighthouse flags it.
+            - ops.signastudio.app: removed. Only the form submit hits it (well
+              after LCP); preconnecting earlier hijacks a connection slot from
+              the critical CSS/font fetch.
+            - connect.facebook.net: kept. The pixel is now lazy-loaded, but the
+              moment it fires (idle / first interaction) we want the TLS
+              handshake already warm so the PageView lands in <100ms instead of
+              ~300ms. */}
+        <link rel="preconnect" href="https://connect.facebook.net" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
         <StructuredData />
       </head>
       <body className="min-h-full flex flex-col">

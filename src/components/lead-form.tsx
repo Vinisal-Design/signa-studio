@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useState } from "react";
-import { eventUuid, readFbCookies } from "@/components/meta-pixel";
+import { ensurePixelLoaded, eventUuid, readFbCookies } from "@/components/meta-pixel";
 
 const ENDPOINT =
   process.env.NEXT_PUBLIC_LP_LEAD_ENDPOINT ||
@@ -216,6 +216,7 @@ export function LeadForm() {
   return (
     <form
       onSubmit={onSubmit}
+      onFocus={ensurePixelLoaded}
       noValidate
       className="space-y-3.5 text-left"
       aria-label="Formulário de contato SIGNA Studio"
